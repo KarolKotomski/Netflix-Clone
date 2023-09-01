@@ -1,3 +1,5 @@
+import "./Styles/App.css";
+
 import Banner from "./Components/Banner";
 import Navbar from "./Components/Navbar";
 import Row from "./Components/Row";
