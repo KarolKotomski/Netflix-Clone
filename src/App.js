@@ -1,15 +1,10 @@
 import "./Styles/App.css";
-
-import Banner from "./Components/Banner";
-import Navbar from "./Components/Navbar";
-import Row from "./Components/Row";
+import Landing from "./Screens/Landing";
 
 function App() {
 	return (
 		<div className='App'>
-			<Navbar />
-			<Banner />
-			<Row />
+			<Landing />
 		</div>
 	);
 }
