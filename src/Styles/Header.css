@@ -1,1 +1,21 @@
-/*# sourceMappingURL=Header.css.map */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  margin: 0 32px;
+  align-items: center;
+}
+.header-container img {
+  height: 24px;
+  width: 89px;
+}
+.header-container button {
+  background-color: rgb(229, 9, 20);
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  padding: 4px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  min-height: 2rem;
+}/*# sourceMappingURL=Header.css.map */

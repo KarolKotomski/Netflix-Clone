@@ -1,1 +1,18 @@
 @import "../Variables/Variables.scss";
+
+.header-container {
+	display: flex;
+	justify-content: space-between;
+	height: 80px;
+	margin: 0 32px;
+	align-items: center;
+
+	img {
+		height: 24px;
+		width: 89px;
+	}
+
+	button {
+		@include buttonStyle(14px, 4px 16px, 2rem);
+	}
+}

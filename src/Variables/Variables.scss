@@ -1,2 +1,19 @@
+//COLORS
 $blackColor: black;
 $whiteColor: white;
+$redColor: rgb(229, 9, 20);
+
+//FONTS
+$font: sans-serif;
+
+//BUTTONS
+@mixin buttonStyle($fontSize, $padding, $minHeight) {
+	background-color: $redColor;
+	border-radius: 4px;
+	cursor: pointer;
+	border: none;
+	padding: $padding;
+	font-size: $fontSize;
+	font-weight: 500;
+	min-height: $minHeight;
+}

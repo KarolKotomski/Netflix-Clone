@@ -5,4 +5,14 @@
   scroll-behavior: smooth;
   background-color: black;
   color: white;
+  font-family: sans-serif;
+}
+
+.container {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
 }/*# sourceMappingURL=App.css.map */

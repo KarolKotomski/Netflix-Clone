@@ -7,4 +7,14 @@
 	scroll-behavior: smooth;
 	background-color: $blackColor;
 	color: $whiteColor;
+	font-family: $font;
+}
+
+.container {
+	max-width: 1500px;
+	margin: 0 auto;
+}
+
+a {
+	text-decoration: none;
 }
