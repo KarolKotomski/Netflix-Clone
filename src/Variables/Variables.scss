@@ -2,6 +2,7 @@
 $blackColor: black;
 $whiteColor: white;
 $redColor: rgb(229, 9, 20);
+$greyColor: rgb(35, 35, 35);
 
 //FONTS
 $font: sans-serif;
@@ -9,6 +10,7 @@ $font: sans-serif;
 //BUTTONS
 @mixin buttonStyle($fontSize, $padding, $minHeight) {
 	background-color: $redColor;
+	color: $whiteColor;
 	border-radius: 4px;
 	cursor: pointer;
 	border: none;
@@ -16,4 +18,5 @@ $font: sans-serif;
 	font-size: $fontSize;
 	font-weight: 500;
 	min-height: $minHeight;
+	text-align: center;
 }

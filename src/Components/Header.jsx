@@ -4,14 +4,14 @@ import logo from "../images/netflix_logo.png";
 
 const Header = () => {
 	return (
-		<div className='header'>
+		<header className='header'>
 			<div className='container'>
-				<div className='header-container'>
+				<div className='header_container'>
 					<img src={logo} alt='netflix logo' />
 					<button>Sign In</button>
 				</div>
 			</div>
-		</div>
+		</header>
 	);
 };
 

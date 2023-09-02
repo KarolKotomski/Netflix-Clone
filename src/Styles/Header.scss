@@ -1,15 +1,25 @@
 @import "../Variables/Variables.scss";
 
-.header-container {
-	display: flex;
-	justify-content: space-between;
+.header {
+	background-color: transparent;
 	height: 5.375rem;
-	margin: 0 2rem;
-	align-items: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+
+	.header_container {
+		height: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 2rem;
+	}
 
 	img {
 		height: 2.5rem;
 		width: 9.25rem;
+		background-color: transparent;
 	}
 
 	button {

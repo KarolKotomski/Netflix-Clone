@@ -1,16 +1,26 @@
-.header-container {
+.header {
+  background-color: transparent;
+  height: 5.375rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.header .header_container {
+  height: 100%;
   display: flex;
   justify-content: space-between;
-  height: 5.375rem;
-  margin: 0 2rem;
   align-items: center;
+  padding: 0 2rem;
 }
-.header-container img {
+.header img {
   height: 2.5rem;
   width: 9.25rem;
+  background-color: transparent;
 }
-.header-container button {
+.header button {
   background-color: rgb(229, 9, 20);
+  color: white;
   border-radius: 4px;
   cursor: pointer;
   border: none;
@@ -18,4 +28,5 @@
   font-size: 14px;
   font-weight: 500;
   min-height: 2rem;
+  text-align: center;
 }/*# sourceMappingURL=Header.css.map */

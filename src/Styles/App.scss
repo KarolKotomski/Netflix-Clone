@@ -1,6 +1,6 @@
 @import "../Variables/Variables.scss";
 
-* {
+html {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
@@ -8,13 +8,14 @@
 	background-color: $blackColor;
 	color: $whiteColor;
 	font-family: $font;
-}
 
-.container {
-	max-width: 1500px;
-	margin: 0 auto;
-}
+	a {
+		text-decoration: none;
+	}
 
-a {
-	text-decoration: none;
+	.container {
+		max-width: 95rem;
+		margin: 0 auto;
+		height: 100%;
+	}
 }
