@@ -15,11 +15,13 @@ const Tv = () => {
 						</p>
 					</div>
 					<div className='screen'>
-						<img
-							src={tv}
-							alt='tv standing on the table and showing different movies'
-						/>
-						<video src={tv_video} autoPlay loop muted playsInline></video>
+						<div className='wrapper'>
+							<img
+								src={tv}
+								alt='tv standing on the table and showing different movies'
+							/>
+							<video src={tv_video} autoPlay loop muted playsInline></video>
+						</div>
 					</div>
 				</div>
 			</div>

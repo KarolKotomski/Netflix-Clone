@@ -108,16 +108,23 @@ p {
 }
 
 .tv_container {
-	video {
-		position: absolute;
-		bottom: -13.5rem;
-	}
-	img {
-		z-index: 1;
-	}
-
 	.screen {
 		align-items: flex-start;
+
+		.wrapper {
+			display: flex;
+			justify-content: center;
+			position: relative;
+		}
+
+		video {
+			position: absolute;
+			bottom: 23%;
+		}
+
+		img {
+			z-index: 1;
+		}
 	}
 }
 

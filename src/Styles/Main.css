@@ -107,15 +107,20 @@ p {
   flex-direction: column;
 }
 
-.tv_container video {
-  position: absolute;
-  bottom: -13.5rem;
-}
-.tv_container img {
-  z-index: 1;
-}
 .tv_container .screen {
   align-items: flex-start;
+}
+.tv_container .screen .wrapper {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.tv_container .screen video {
+  position: absolute;
+  bottom: 23%;
+}
+.tv_container .screen img {
+  z-index: 1;
 }
 
 .mobile_container .screen {
