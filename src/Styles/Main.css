@@ -140,4 +140,12 @@ p {
 }
 .download_box .download_circle img {
   height: 3.5rem;
+}
+
+.tv_container video {
+  position: absolute;
+  bottom: -13.5rem;
+}
+.tv_container img {
+  z-index: 1;
 }/*# sourceMappingURL=Main.css.map */
