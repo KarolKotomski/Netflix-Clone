@@ -15,11 +15,18 @@ const AppleTv = () => {
 						</p>
 					</div>
 					<div className='screen'>
-						<img
-							src={appleTv}
-							alt='apple tv standing on the table and showing different movies'
-						/>
-						<video src={apple_tv_video} autoPlay loop muted playsInline></video>
+						<div className='wrapper'>
+							<img
+								src={appleTv}
+								alt='apple tv standing on the table and showing different movies'
+							/>
+							<video
+								src={apple_tv_video}
+								autoPlay
+								loop
+								muted
+								playsInline></video>
+						</div>
 					</div>
 				</div>
 			</div>

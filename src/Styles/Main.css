@@ -164,16 +164,21 @@ p {
   height: 3.5rem;
 }
 
-.appleTv_container video {
-  position: absolute;
-  bottom: -87rem;
-  width: 25rem;
-}
-.appleTv_container img {
-  z-index: 1;
-}
 .appleTv_container .screen {
   align-items: flex-start;
+}
+.appleTv_container .screen .wrapper {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.appleTv_container .screen .wrapper video {
+  position: absolute;
+  bottom: 42%;
+  width: 26rem;
+}
+.appleTv_container .screen .wrapper img {
+  z-index: 1;
 }
 
 .kids_container .screen {

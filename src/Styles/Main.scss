@@ -179,16 +179,23 @@ p {
 }
 
 .appleTv_container {
-	video {
-		position: absolute;
-		bottom: -87rem;
-		width: 25rem;
-	}
-	img {
-		z-index: 1;
-	}
 	.screen {
 		align-items: flex-start;
+
+		.wrapper {
+			display: flex;
+			justify-content: center;
+			position: relative;
+
+			video {
+				position: absolute;
+				bottom: 42%;
+				width: 26rem;
+			}
+			img {
+				z-index: 1;
+			}
+		}
 	}
 }
 
