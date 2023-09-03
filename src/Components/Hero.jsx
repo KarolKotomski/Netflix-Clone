@@ -3,6 +3,7 @@ import React from "react";
 const Hero = () => {
 	return (
 		<div className='hero'>
+			<div className='background_mask'></div>
 			<div className='container'>
 				<div className='hero_container'>
 					<h2>
@@ -16,7 +17,7 @@ const Hero = () => {
 							membership.
 						</h3>
 						<div className='get_started_menu'>
-							<input type='email' name='' id='' />
+							<input type='email' name='email' minLength='5' maxLength='50' placeholder="Email address" />
 							<button>{"Get Started" + " >"}</button>
 						</div>
 					</div>

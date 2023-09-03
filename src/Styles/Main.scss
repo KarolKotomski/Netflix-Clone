@@ -1,10 +1,18 @@
 @import "../Variables/Variables.scss";
 
 .hero {
-	background-image: url("../images/landing_background_picture.jpg");
+	background-image: url("../images/landing_background_picture.jpg"),
+		linear-gradient(
+			to top,
+			rgba(0, 0, 0, 0.8) 0,
+			rgba(0, 0, 0, 0) 60%,
+			rgba(0, 0, 0, 0.8) 100%
+		);
 	background-size: cover;
 	background-position: center center;
 	height: 75vh;
+	background-color: rgb(0 0 0 / 40%);
+	background-blend-mode: color;
 
 	.hero_container {
 		padding: 25vh 3rem 0 3rem;
@@ -59,7 +67,18 @@ p {
 
 	input {
 		min-width: 50%;
-		width: auto;
+		line-height: 1.5rem;
+		min-height: 1rem;
+		background-color: $inputBackgroundColor;
+		color: $whiteColor;
+		font-size: 1rem;
+		border: 1px solid $frameBorderColor;
+		border-radius: 0.25rem;
+		padding: 0.5rem 1rem;
+
+		&::placeholder {
+			color: $inputPlaceholderColor;
+		}
 	}
 }
 .spacing {

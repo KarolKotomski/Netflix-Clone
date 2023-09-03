@@ -1,8 +1,10 @@
 .hero {
-  background-image: url("../images/landing_background_picture.jpg");
+  background-image: url("../images/landing_background_picture.jpg"), linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%);
   background-size: cover;
   background-position: center center;
   height: 75vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  background-blend-mode: color;
 }
 .hero .hero_container {
   padding: 25vh 3rem 0 3rem;
@@ -63,7 +65,20 @@ p {
 }
 .get_started_menu input {
   min-width: 50%;
-  width: auto;
+  line-height: 1.5rem;
+  min-height: 1rem;
+  background-color: rgba(22, 22, 22, 0.7);
+  color: white;
+  font-size: 1rem;
+  border: 1px solid rgba(128, 128, 128, 0.7);
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+}
+.get_started_menu input::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+.get_started_menu input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .spacing {
