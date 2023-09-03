@@ -156,3 +156,14 @@ p {
 		z-index: 1;
 	}
 }
+
+.appleTv_container {
+	video {
+		position: absolute;
+		bottom: -87rem;
+		width: 25rem;
+	}
+	img {
+		z-index: 1;
+	}
+}

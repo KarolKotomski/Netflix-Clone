@@ -1,5 +1,6 @@
 import React from "react";
 import appleTv from "../images/apple-tv.png";
+import apple_tv_video from "../videos/apple-video.m4v";
 
 const AppleTv = () => {
 	return (
@@ -18,6 +19,7 @@ const AppleTv = () => {
 							src={appleTv}
 							alt='apple tv standing on the table and showing different movies'
 						/>
+						<video src={apple_tv_video} autoPlay loop muted playsInline></video>
 					</div>
 				</div>
 			</div>

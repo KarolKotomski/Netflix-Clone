@@ -148,4 +148,13 @@ p {
 }
 .tv_container img {
   z-index: 1;
+}
+
+.appleTv_container video {
+  position: absolute;
+  bottom: -87rem;
+  width: 25rem;
+}
+.appleTv_container img {
+  z-index: 1;
 }/*# sourceMappingURL=Main.css.map */
