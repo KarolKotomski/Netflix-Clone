@@ -105,46 +105,6 @@ p {
 	width: 50%;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-	justify-content: flex-end;
-}
-
-.download_box {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	position: absolute;
-	margin-bottom: 2rem;
-	width: 20rem;
-	border: 2px solid $frameBorderColor;
-	border-radius: 0.75rem;
-	padding: 0.5rem 0.75rem;
-	background-color: $blackColor;
-
-	.boxshot img {
-		height: 5rem;
-		padding-right: 0.75rem;
-	}
-
-	.content {
-		display: flex;
-		flex-direction: column;
-		width: 100%;
-
-		.process {
-			font-size: 0.875rem;
-			color: $blueColor;
-		}
-	}
-
-	.download_circle {
-		display: flex;
-		align-items: center;
-
-		img {
-			height: 3.5rem;
-		}
-	}
 }
 
 .tv_container {
@@ -154,6 +114,60 @@ p {
 	}
 	img {
 		z-index: 1;
+	}
+
+	.screen {
+		align-items: flex-start;
+	}
+}
+
+.mobile_container {
+	.screen {
+		align-items: flex-end;
+	}
+
+	.wrapper {
+		position: relative;
+		display: flex;
+		justify-content: center;
+
+		.download_box {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			position: absolute;
+			bottom: 10%;
+			width: 20rem;
+			border: 2px solid $frameBorderColor;
+			border-radius: 0.75rem;
+			padding: 0.5rem 0.75rem;
+			background-color: $blackColor;
+
+			.boxshot img {
+				height: 5rem;
+				padding-right: 0.75rem;
+			}
+
+			.content {
+				display: flex;
+				flex-direction: column;
+				width: 100%;
+
+				.process {
+					font-size: 0.875rem;
+					color: $blueColor;
+				}
+			}
+
+			.download_circle {
+				display: flex;
+				align-items: center;
+
+				img {
+					height: 3.5rem;
+				}
+			}
+		}
 	}
 }
 
@@ -165,5 +179,14 @@ p {
 	}
 	img {
 		z-index: 1;
+	}
+	.screen {
+		align-items: flex-start;
+	}
+}
+
+.kids_container {
+	.screen {
+		align-items: flex-end;
 	}
 }
