@@ -1,0 +1,39 @@
+.kids_container {
+  display: flex;
+  align-items: center;
+  padding: 4.5rem 0;
+}
+.kids_container h2 {
+  font-size: 3rem;
+  font-weight: 900;
+  text-align: left;
+  margin: 0;
+}
+.kids_container h3 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  text-align: center;
+  margin: 0;
+}
+.kids_container p {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  font-weight: 400;
+}
+.kids_container .text {
+  width: 50%;
+}
+.kids_container .screen {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.kids_container .screen {
+  align-items: flex-end;
+}
+.kids .spacing {
+  background-color: rgb(35, 35, 35);
+  height: 0.5rem;
+  position: relative;
+  bottom: 0.5rem;
+}/*# sourceMappingURL=Kids.css.map */

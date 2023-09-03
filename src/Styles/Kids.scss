@@ -1,0 +1,13 @@
+@import "../Variables/Variables.scss";
+
+.kids {
+	&_container {
+		@include sectionStyle();
+		.screen {
+			align-items: flex-end;
+		}
+	}
+	.spacing {
+		@include spacingStyle();
+	}
+}

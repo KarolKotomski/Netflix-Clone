@@ -1,0 +1,29 @@
+@import "../Variables/Variables.scss";
+
+.tv {
+	&_container {
+		@include sectionStyle();
+
+		.screen {
+			align-items: flex-start;
+
+			.wrapper {
+				display: flex;
+				justify-content: center;
+				position: relative;
+			}
+
+			video {
+				position: absolute;
+				bottom: 23%;
+			}
+
+			img {
+				z-index: 1;
+			}
+		}
+	}
+	.spacing {
+		@include spacingStyle();
+	}
+}

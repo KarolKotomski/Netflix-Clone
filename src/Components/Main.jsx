@@ -1,5 +1,4 @@
 import React from "react";
-import "../Styles/Main.css";
 import Hero from "./Hero";
 import Tv from "../Components/Tv";
 import Mobile from "../Components/Mobile";

@@ -1,4 +1,6 @@
 import React from "react";
+import "../Styles/Hero.css";
+import GetStarted from "./GetStarted";
 
 const Hero = () => {
 	return (
@@ -11,16 +13,7 @@ const Hero = () => {
 						streaming here.
 					</h2>
 					<p>Watch anywhere. Cancel anytime.</p>
-					<div className='get_started_title'>
-						<h3>
-							Ready to watch? Enter your email to create or restart your
-							membership.
-						</h3>
-						<div className='get_started_menu'>
-							<input type='email' name='email' minLength='5' maxLength='50' placeholder="Email address" />
-							<button>{"Get Started" + " >"}</button>
-						</div>
-					</div>
+					<GetStarted />
 				</div>
 			</div>
 			<div className='spacing'></div>

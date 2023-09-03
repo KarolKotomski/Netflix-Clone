@@ -1,4 +1,5 @@
 import React from "react";
+import "../Styles/Mobile.css";
 import mobile from "../images/mobile.jpg";
 import boxshot from "../images/boxshot.png";
 import downloadGif from "../images/download-icon-gif.gif";
