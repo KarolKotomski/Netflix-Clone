@@ -7,10 +7,10 @@ const AppleTv = () => {
 			<div className='container'>
 				<div className='appleTv_container'>
 					<div className='text'>
-						<h2>Enjoy on your TV</h2>
+						<h2>Watch everywhere</h2>
 						<p>
-							Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV,
-							Blu-ray players, and more.
+							Stream unlimited movies and TV shows on your phone, tablet,
+							laptop, and TV.
 						</p>
 					</div>
 					<div className='screen'>
