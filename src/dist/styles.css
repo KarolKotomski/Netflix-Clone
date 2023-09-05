@@ -197,7 +197,7 @@ body {
   left: 0;
   width: 100%;
 }
-.header .header_container {
+.header_container {
   height: 100%;
   display: flex;
   justify-content: space-between;
@@ -208,19 +208,6 @@ body {
   width: 9.4rem;
   background-color: transparent;
 }
-.header button {
-  background-color: rgb(229, 9, 20);
-  color: white;
-  border-radius: 4px;
-  cursor: pointer;
-  border: none;
-  padding: 4px 16px;
-  font-size: 14px;
-  font-weight: 500;
-  min-height: 2rem;
-  text-align: center;
-  line-height: 1.5rem;
-}
 
 .hero {
   background-image: url("../images/landing_background_picture.jpg"), linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%);
@@ -230,7 +217,7 @@ body {
   background-color: rgba(0, 0, 0, 0.4);
   background-blend-mode: color;
 }
-.hero .hero_container {
+.hero_container {
   padding: 26.5vh 3rem 0 3rem;
   height: 50vh;
   display: flex;
@@ -329,6 +316,20 @@ body {
 }
 .mobile_container .wrapper .download_box .download_circle img {
   height: 3.5rem;
+}
+
+button {
+  background-color: rgb(229, 9, 20);
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  padding: 4px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  min-height: 2rem;
+  text-align: center;
+  line-height: 1.5rem;
 }
 
 .tv_container {

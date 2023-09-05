@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "../images/netflix_logo.png";
+import SignInButton from "./SignInButton";
 
 const Header = () => {
 	return (
@@ -7,7 +8,7 @@ const Header = () => {
 			<div className='container'>
 				<div className='header_container'>
 					<img src={logo} alt='netflix logo' />
-					<button>Sign In</button>
+					<SignInButton />
 				</div>
 			</div>
 		</header>
