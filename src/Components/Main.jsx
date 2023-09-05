@@ -8,14 +8,14 @@ import Faq from "./Faq";
 
 const Main = () => {
 	return (
-		<>
+		<main className='main'>
 			<Hero />
 			<Tv />
 			<Mobile />
 			<AppleTv />
 			<Kids />
 			<Faq />
-		</>
+		</main>
 	);
 };
 
