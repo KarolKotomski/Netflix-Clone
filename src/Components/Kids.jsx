@@ -1,5 +1,4 @@
 import React from 'react';
-import "../Styles/Kids.css";
 import kids from "../images/kids.png";
 
 const Kids = () => {

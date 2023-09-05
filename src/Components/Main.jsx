@@ -1,10 +1,10 @@
 import React from "react";
 import Hero from "./Hero";
-import Tv from "../Components/Tv";
-import Mobile from "../Components/Mobile";
-import AppleTv from "../Components/AppleTv";
-import Kids from "../Components/Kids";
-import Faq from "../Components/Faq";
+import Tv from "./Tv";
+import Mobile from "./Mobile";
+import AppleTv from "./AppleTv";
+import Kids from "./Kids";
+import Faq from "./Faq";
 
 const Main = () => {
 	return (

@@ -1,0 +1,22 @@
+@use "./colors" as *;
+@use "./typography" as *;
+
+html {
+	box-sizing: border-box;
+	font-size: 100%;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: $blackColor;
+	color: $whiteColor;
+	font-family: $font;
+	scroll-behavior: smooth;
+}
+
+.container {
+	max-width: 90rem;
+	margin: 0 auto;
+	height: 100%;
+}

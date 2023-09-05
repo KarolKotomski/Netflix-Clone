@@ -1,0 +1,13 @@
+@use "../globals" as *;
+
+.kids {
+	&_container {
+		@include sectionStyle();
+		.screen {
+			align-items: flex-end;
+		}
+	}
+	.spacing {
+		@include spacingStyle();
+	}
+}

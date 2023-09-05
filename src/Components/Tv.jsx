@@ -1,5 +1,4 @@
 import React from "react";
-import "../Styles/Tv.css"
 import tv from "../images/tv.png";
 import tv_video from "../videos/tv-video.m4v";
 

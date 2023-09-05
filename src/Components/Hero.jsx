@@ -1,5 +1,4 @@
 import React from "react";
-import "../Styles/Hero.css";
 import GetStarted from "./GetStarted";
 
 const Hero = () => {
