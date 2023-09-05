@@ -1,0 +1,19 @@
+@use "../globals" as *;
+
+.signIn_main {
+	background-image: url("../images/landing_background_picture.jpg");
+	background-size: cover;
+	background-position: center center;
+	height: 100vh;
+	background-color: rgb(0 0 0 / 40%);
+	background-blend-mode: color;
+
+	.wrapper {
+		margin: 0 auto;
+		width: 28.125rem;
+		background-color: $transparentBlackColor;
+		display: flex;
+		flex-direction: column;
+		padding: 3.75rem 4.25rem 2.5rem;
+	}
+}
