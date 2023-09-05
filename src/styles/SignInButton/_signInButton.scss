@@ -1,0 +1,5 @@
+@use "../globals" as *;
+
+button {
+    @include buttonStyle(14px, 4px 16px, 2rem);
+}
