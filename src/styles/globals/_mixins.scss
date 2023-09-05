@@ -13,6 +13,7 @@
 	font-weight: 500;
 	min-height: $minHeight;
 	text-align: center;
+	line-height: 1.5rem;
 }
 
 //LANDING PAGE SECTIONS STYLE
@@ -20,26 +21,6 @@
 	display: flex;
 	align-items: center;
 	padding: 4.5rem 0;
-
-	h2 {
-		font-size: 3rem;
-		font-weight: 900;
-		text-align: left;
-		margin: 0;
-	}
-
-	h3 {
-		font-size: 1.25rem;
-		font-weight: 400;
-		text-align: center;
-		margin: 0;
-	}
-
-	p {
-		font-size: 1.5rem;
-		margin-top: 1rem;
-		font-weight: 400;
-	}
 
 	.text {
 		width: 50%;

@@ -4,6 +4,26 @@ a:active {
   text-decoration: none;
 }
 
+p {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin: 1rem 0 0 0;
+}
+
+h1,
+h2 {
+  font-size: 3rem;
+  font-weight: 900;
+  margin: 0;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.875rem;
+  margin: 0;
+}
+
 html {
   box-sizing: border-box;
   font-size: 100%;
@@ -19,7 +39,7 @@ body {
 }
 
 .container {
-  max-width: 90rem;
+  max-width: 97rem;
   margin: 0 auto;
   height: 100%;
 }
@@ -28,23 +48,6 @@ body {
   display: flex;
   align-items: center;
   padding: 4.5rem 0;
-}
-.appleTv_container h2 {
-  font-size: 3rem;
-  font-weight: 900;
-  text-align: left;
-  margin: 0;
-}
-.appleTv_container h3 {
-  font-size: 1.25rem;
-  font-weight: 400;
-  text-align: center;
-  margin: 0;
-}
-.appleTv_container p {
-  font-size: 1.5rem;
-  margin-top: 1rem;
-  font-weight: 400;
 }
 .appleTv_container .text {
   width: 50%;
@@ -77,31 +80,56 @@ body {
   bottom: 0.5rem;
 }
 
-.get_started_title {
+.faq_container {
+  display: flex;
+  align-items: center;
+  padding: 4.5rem 0;
+  flex-direction: column;
+}
+.faq_container .text {
+  width: 50%;
+}
+.faq_container .screen {
+  width: 50%;
   display: flex;
   flex-direction: column;
 }
+.faq .spacing {
+  background-color: rgb(35, 35, 35);
+  height: 0.5rem;
+  position: relative;
+  bottom: 0.5rem;
+}
 
-.get_started_menu {
+.get_started {
+  padding-top: 1.5rem;
+}
+.get_started .title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.get_started .main {
   display: flex;
   justify-content: center;
   padding-top: 1rem;
 }
-.get_started_menu button {
+.get_started .main button {
   background-color: rgb(229, 9, 20);
   color: white;
   border-radius: 4px;
   cursor: pointer;
   border: none;
-  padding: 12px 24px;
-  font-size: 24px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.5rem;
   font-weight: 500;
-  min-height: 2rem;
+  min-height: 3.5rem;
   text-align: center;
+  line-height: 1.5rem;
   margin-left: 8px;
 }
-.get_started_menu input {
-  min-width: 50%;
+.get_started .main input {
+  width: 22rem;
   line-height: 1.5rem;
   min-height: 1rem;
   background-color: rgba(22, 22, 22, 0.7);
@@ -111,11 +139,17 @@ body {
   border-radius: 0.25rem;
   padding: 0.5rem 1rem;
 }
-.get_started_menu input::-moz-placeholder {
+.get_started .main input::-moz-placeholder {
   color: rgba(255, 255, 255, 0.7);
 }
-.get_started_menu input::placeholder {
+.get_started .main input::placeholder {
   color: rgba(255, 255, 255, 0.7);
+}
+.get_started .spacing {
+  background-color: rgb(35, 35, 35);
+  height: 0.5rem;
+  position: relative;
+  bottom: 0.5rem;
 }
 
 .header {
@@ -149,26 +183,25 @@ body {
   font-weight: 500;
   min-height: 2rem;
   text-align: center;
+  line-height: 1.5rem;
 }
 
 .hero {
   background-image: url("../images/landing_background_picture.jpg"), linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%);
   background-size: cover;
   background-position: center center;
-  height: 75vh;
+  height: 76.5vh;
   background-color: rgba(0, 0, 0, 0.4);
   background-blend-mode: color;
 }
 .hero .hero_container {
-  padding: 25vh 3rem 0 3rem;
+  padding: 26.5vh 3rem 0 3rem;
   height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .hero h2 {
-  font-size: 3rem;
-  font-weight: 900;
   text-align: center;
   margin: 0;
 }
@@ -183,23 +216,6 @@ body {
   display: flex;
   align-items: center;
   padding: 4.5rem 0;
-}
-.kids_container h2 {
-  font-size: 3rem;
-  font-weight: 900;
-  text-align: left;
-  margin: 0;
-}
-.kids_container h3 {
-  font-size: 1.25rem;
-  font-weight: 400;
-  text-align: center;
-  margin: 0;
-}
-.kids_container p {
-  font-size: 1.5rem;
-  margin-top: 1rem;
-  font-weight: 400;
 }
 .kids_container .text {
   width: 50%;
@@ -229,23 +245,6 @@ body {
   display: flex;
   align-items: center;
   padding: 4.5rem 0;
-}
-.mobile_container h2 {
-  font-size: 3rem;
-  font-weight: 900;
-  text-align: left;
-  margin: 0;
-}
-.mobile_container h3 {
-  font-size: 1.25rem;
-  font-weight: 400;
-  text-align: center;
-  margin: 0;
-}
-.mobile_container p {
-  font-size: 1.5rem;
-  margin-top: 1rem;
-  font-weight: 400;
 }
 .mobile_container .text {
   width: 50%;
@@ -300,23 +299,6 @@ body {
   display: flex;
   align-items: center;
   padding: 4.5rem 0;
-}
-.tv_container h2 {
-  font-size: 3rem;
-  font-weight: 900;
-  text-align: left;
-  margin: 0;
-}
-.tv_container h3 {
-  font-size: 1.25rem;
-  font-weight: 400;
-  text-align: center;
-  margin: 0;
-}
-.tv_container p {
-  font-size: 1.5rem;
-  margin-top: 1rem;
-  font-weight: 400;
 }
 .tv_container .text {
   width: 50%;

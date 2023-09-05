@@ -1,4 +1,5 @@
 import React from "react";
+
 import appleTv from "../images/apple-tv.png";
 import apple_tv_video from "../videos/apple-video.m4v";
 

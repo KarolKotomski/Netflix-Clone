@@ -28,6 +28,8 @@ const Faq = () => {
 					<GetStarted />
 				</div>
 			</div>
+
+			<div className='spacing'></div>
 		</div>
 	);
 };

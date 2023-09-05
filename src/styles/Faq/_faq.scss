@@ -1,0 +1,12 @@
+@use "../globals" as *;
+
+.faq {
+	&_container {
+		@include sectionStyle();
+		flex-direction: column;
+	}
+
+	.spacing {
+		@include spacingStyle();
+	}
+}
