@@ -47,7 +47,7 @@ body {
 .appleTv_container {
   display: flex;
   align-items: center;
-  padding: 4.5rem 0;
+  padding: 4.5rem 2rem;
 }
 .appleTv_container .text {
   width: 50%;
@@ -83,7 +83,7 @@ body {
 .faq_container {
   display: flex;
   align-items: center;
-  padding: 4.5rem 0;
+  padding: 4.5rem 2rem;
   flex-direction: column;
 }
 .faq_container .text {
@@ -99,6 +99,43 @@ body {
   height: 0.5rem;
   position: relative;
   bottom: 0.5rem;
+}
+
+.footer_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4.5rem 2rem;
+}
+.footer_container p,
+.footer_container li {
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 0.875rem;
+  font-weight: 400;
+  list-style: none;
+  line-height: 1.3125rem;
+  margin: 0;
+}
+.footer_container .list {
+  padding: 0.75rem 0;
+  width: 100%;
+}
+.footer_container .list ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding: 0.75rem 0;
+  margin: 0;
+}
+.footer_container .title {
+  padding: 0.75rem 0;
+  align-self: flex-start;
+}
+.footer_container .title p {
+  font-size: 1rem;
 }
 
 .get_started {
@@ -214,7 +251,7 @@ body {
 .kids_container {
   display: flex;
   align-items: center;
-  padding: 4.5rem 0;
+  padding: 4.5rem 2rem;
 }
 .kids_container .text {
   width: 50%;
@@ -243,7 +280,7 @@ body {
 .mobile_container {
   display: flex;
   align-items: center;
-  padding: 4.5rem 0;
+  padding: 4.5rem 2rem;
 }
 .mobile_container .text {
   width: 50%;
@@ -297,7 +334,7 @@ body {
 .tv_container {
   display: flex;
   align-items: center;
-  padding: 4.5rem 0;
+  padding: 4.5rem 2rem;
 }
 .tv_container .text {
   width: 50%;
