@@ -11,6 +11,14 @@
 	&_container {
 		height: 100vh;
 		padding-top: 5.375rem;
+
+		.netflix_logo {
+			width: 10.5rem;
+			height: 2.9rem;
+			position: absolute;
+			top: 2.5%;
+			left: 3%;
+		}
 	}
 
 	.wrapper {
@@ -22,7 +30,7 @@
 		padding: 3.75rem 4.25rem;
 		border-radius: 0.25rem;
 		min-height: 30rem;
-		
+
 		button {
 			@include buttonStyle();
 			margin-top: 2rem;
@@ -30,7 +38,6 @@
 			font-size: 1rem;
 			padding: 1rem;
 			line-height: 1rem;
-
 		}
 
 		h1 {
@@ -41,12 +48,13 @@
 			background-color: $inputBackgroundColor2;
 			border: none;
 			border-radius: 0.25rem;
-			padding: 1rem 1.25rem ;
+			padding: 1rem 1.25rem;
 			height: 3.125rem;
 			margin: 0.5rem 0;
 			color: $whiteColor;
 			line-height: 3.125rem;
-			
+			outline: none;
+
 			&::placeholder {
 				color: $inputPlaceholderColor;
 			}

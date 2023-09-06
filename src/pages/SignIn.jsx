@@ -6,7 +6,6 @@ import SignIn_Footer from "../components/SignIn_Footer";
 const SignIn = () => {
 	return (
 		<div className='sign_in'>
-			<Header />
 			<SignIn_Main />
 			<SignIn_Footer />
 		</div>

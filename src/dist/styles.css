@@ -397,6 +397,13 @@ body {
   height: 100vh;
   padding-top: 5.375rem;
 }
+.signIn_main_container .netflix_logo {
+  width: 10.5rem;
+  height: 2.9rem;
+  position: absolute;
+  top: 2.5%;
+  left: 3%;
+}
 .signIn_main .wrapper {
   margin: 0 auto;
   width: 28.125rem;
@@ -433,6 +440,7 @@ body {
   margin: 0.5rem 0;
   color: white;
   line-height: 3.125rem;
+  outline: none;
 }
 .signIn_main .wrapper input::-moz-placeholder {
   color: rgba(255, 255, 255, 0.7);

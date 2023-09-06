@@ -1,10 +1,12 @@
 import React from "react";
+import logo from "../images/netflix_logo.png";
 
 const SignIn_Main = () => {
 	return (
 		<main className='signIn_main'>
 			<div className='container'>
                 <div className='signIn_main_container'>
+                <img className="netflix_logo" src={logo} alt='netflix logo' />
                     <div className="wrapper">
                         <h1>Sign In</h1>
                         <input type="email" name="" id="" placeholder="Email or phone number"/>
