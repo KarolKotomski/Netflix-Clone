@@ -22,12 +22,12 @@ a:active {
   margin: 0;
 }
 
-.sign_in p {
+.signIn_main_container p {
   font-size: 1rem;
   font-weight: 400;
   margin: 1rem 0 0 0;
 }
-.sign_in h1 {
+.signIn_main_container h1 {
   font-size: 2rem;
   font-weight: 500;
   margin: 0;
@@ -338,6 +338,51 @@ body {
 }
 .mobile_container .wrapper .download_box .download_circle img {
   height: 3.5rem;
+}
+
+.signIn_footer {
+  background-color: rgba(0, 0, 0, 0.75);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.signIn_footer_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.875rem 2rem;
+}
+.signIn_footer_container p {
+  color: rgb(115, 115, 115);
+  font-size: 1rem;
+  font-weight: 400;
+  list-style: none;
+  line-height: 1.3125rem;
+  margin: 0;
+}
+.signIn_footer_container .list {
+  padding: 0.75rem 0;
+  width: 70%;
+}
+.signIn_footer_container .list ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 0.75rem;
+  padding: 0.75rem 0;
+  margin: 0;
+}
+.signIn_footer_container .list ul li {
+  color: rgb(115, 115, 115);
+  font-size: 0.875rem;
+  font-weight: 400;
+  list-style: none;
+  line-height: 1.3125rem;
+  margin: 0;
+}
+.signIn_footer_container .title {
+  width: 70%;
+  margin-bottom: 1.875rem;
 }
 
 .signIn_main {
