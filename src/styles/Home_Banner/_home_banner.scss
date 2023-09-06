@@ -1,0 +1,46 @@
+@use "../globals" as *;
+
+.home_banner {
+	background-image: url("https://i.pinimg.com/564x/eb/ef/8e/ebef8e6fe21486bafe0041d691f07fa1.jpg");
+	background-size: cover;
+	background-position: center center;
+	height: 56.25vw;
+
+	.content {
+		position: relative;
+		top: 30%;
+		width: 40%;
+
+		.play_button,
+		.more_info_button {
+			background-color: $whiteColor;
+			border-radius: 0.25rem;
+			color: $blackColor;
+			font-size: 1.5rem;
+			border: none;
+			font-weight: 500;
+			outline: none;
+			cursor: pointer;
+			line-height: 2.4rem;
+            min-width: 10rem;
+            height: 3rem;
+		}
+
+		.more_info_button {
+			margin-left: 1rem;
+			background-color: $greyColorHomePage2;
+            color: $whiteColor;
+		}
+
+		p {
+			font-size: 1.2vw;
+			line-height: 1.3;
+		}
+
+		.title {
+			font-size: 4vw;
+			font-weight: 800;
+			padding-bottom: 0.3rem;
+		}
+	}
+}
