@@ -6,12 +6,11 @@ import SignIn from "./SignIn";
 
 const Landing = () => {
 	return (
-		<SignIn />
-		// <div className='landing'>
-		// 	<Header />
-		// 	<Main />
-		// 	<Footer />
-		// </div>
+		<div className='landing'>
+			<Header />
+			<Main />
+			<Footer />
+		</div>
 	);
 };
 

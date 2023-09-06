@@ -231,6 +231,44 @@ body {
   padding: 0.25rem 1rem;
 }
 
+.home_header {
+  position: absolute;
+  width: 100%;
+  height: 4.375rem;
+}
+.home_header_container {
+  display: flex;
+  background-color: transparent;
+  padding: 0 3.75rem;
+  height: 100%;
+}
+.home_header_container .bar {
+  display: flex;
+  align-items: center;
+  width: 80%;
+}
+.home_header_container .bar img {
+  height: 1.6rem;
+}
+.home_header_container .bar ul {
+  display: flex;
+  list-style-type: none;
+  gap: 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: rgb(229, 229, 229);
+}
+.home_header_container .user_panel {
+  width: 20%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1.5rem;
+}
+.home_header_container .user_panel .avatar {
+  height: 1.5rem;
+}
+
 .hero {
   background-image: url("../images/landing_background_picture.jpg"), linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%);
   background-size: cover;
