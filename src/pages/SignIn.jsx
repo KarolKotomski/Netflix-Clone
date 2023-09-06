@@ -1,16 +1,16 @@
-import React from 'react';
-import Header from '../components/Header';
+import React from "react";
+import Header from "../components/Header";
 import SignIn_Main from "../components/SignIn_Main";
 import SignIn_Footer from "../components/SignIn_Footer";
 
 const SignIn = () => {
-  return (
-		<>
+	return (
+		<div className='sign_in'>
 			<Header />
 			<SignIn_Main />
 			<SignIn_Footer />
-		</>
-  )
-}
+		</div>
+	);
+};
 
-export default SignIn
+export default SignIn;

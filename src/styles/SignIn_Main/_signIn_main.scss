@@ -8,12 +8,55 @@
 	background-color: rgb(0 0 0 / 40%);
 	background-blend-mode: color;
 
+	&_container {
+		height: 100vh;
+		padding-top: 5.375rem;
+	}
+
 	.wrapper {
 		margin: 0 auto;
 		width: 28.125rem;
 		background-color: $transparentBlackColor;
 		display: flex;
 		flex-direction: column;
-		padding: 3.75rem 4.25rem 2.5rem;
+		padding: 3.75rem 4.25rem;
+		border-radius: 0.25rem;
+		min-height: 30rem;
+		
+		button {
+			@include buttonStyle();
+			margin-top: 2rem;
+			margin-bottom: 2rem;
+			font-size: 1rem;
+			padding: 1rem;
+			line-height: 1rem;
+
+		}
+
+		h1 {
+			margin-bottom: 1.75rem;
+		}
+
+		input {
+			background-color: $inputBackgroundColor2;
+			border: none;
+			border-radius: 0.25rem;
+			padding: 1rem 1.25rem ;
+			height: 3.125rem;
+			margin: 0.5rem 0;
+			color: $whiteColor;
+			line-height: 3.125rem;
+			
+			&::placeholder {
+				color: $inputPlaceholderColor;
+			}
+		}
+
+		p {
+			color: $greyColorSignIn;
+			span {
+				color: $whiteColor;
+			}
+		}
 	}
 }

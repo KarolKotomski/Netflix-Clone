@@ -20,4 +20,12 @@
 		width: 9.4rem;
 		background-color: transparent;
 	}
+
+	button {
+		@include buttonStyle();
+		font-size: 0.875rem;
+		line-height: 0.875rem;
+		min-height: 2rem;
+		padding: 0.25rem 1rem;
+	}
 }

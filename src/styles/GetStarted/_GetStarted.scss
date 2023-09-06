@@ -14,12 +14,16 @@
 		padding-top: 1rem;
 
 		button {
-			@include buttonStyle(1.5rem, 0.75rem 1.5rem, 3.5rem);
-			margin-left: 8px;
+			@include buttonStyle();
+			margin-left: 0.5rem;
+			line-height: 1.5rem;
+			min-height: 3.5rem;
+			padding: 0.75rem 1.5rem;
+			font-size: 1.5rem;
 		}
 
 		input {
-			width: 22rem;
+			width: 24rem;
 			line-height: 1.5rem;
 			min-height: 1rem;
 			background-color: $inputBackgroundColor;
@@ -30,7 +34,7 @@
 			padding: 0.5rem 1rem;
 
 			&::placeholder {
-				color: $inputPlaceholderColor;
+				color: $inputPlaceholderColor2;
 			}
 		}
 	}

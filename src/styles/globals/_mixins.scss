@@ -2,18 +2,14 @@
 @use "./typography" as *;
 
 //BUTTONS
-@mixin buttonStyle($fontSize, $padding, $minHeight) {
+@mixin buttonStyle {
 	background-color: $redColor;
 	color: $whiteColor;
 	border-radius: 4px;
 	cursor: pointer;
 	border: none;
-	padding: $padding;
-	font-size: $fontSize;
 	font-weight: 500;
-	min-height: $minHeight;
 	text-align: center;
-	line-height: 1.5rem;
 }
 
 //LANDING PAGE SECTIONS STYLE

@@ -7,12 +7,12 @@ const SignIn_Main = () => {
                 <div className='signIn_main_container'>
                     <div className="wrapper">
                         <h1>Sign In</h1>
-                        <input type="email" name="" id="" />
-                        <input type="password" name="" id="" />
-                        <button type="submit"></button>
+                        <input type="email" name="" id="" placeholder="Email or phone number"/>
+                        <input type="password" name="" id="" placeholder="Password" minLength="4" maxLength="60"/>
+                        <button type="submit">Sign In</button>
                         <div className="newTo">
                             <p>New to Netflix? <span>Sign up now</span>.</p>
-                        </div>
+                        </div> 
                     </div>
                 </div>
 			</div>

@@ -1,9 +1,10 @@
 @use "./colors" as *;
 @use "./typography" as *;
 
-html {
+* {
 	box-sizing: border-box;
 	font-size: 100%;
+	font-family: $font;
 }
 
 body {
@@ -11,7 +12,6 @@ body {
 	padding: 0;
 	background-color: $blackColor;
 	color: $whiteColor;
-	font-family: $font;
 	scroll-behavior: smooth;
 }
 
