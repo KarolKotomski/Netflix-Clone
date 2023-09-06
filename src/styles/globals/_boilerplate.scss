@@ -16,7 +16,13 @@ body {
 }
 
 .container {
-	max-width: 97rem;
+	max-width: 92rem;
+	margin: 0 auto;
+	height: 100%;
+}
+
+.container_long {
+	max-width: 160rem;
 	margin: 0 auto;
 	height: 100%;
 }

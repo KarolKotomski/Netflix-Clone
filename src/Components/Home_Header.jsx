@@ -7,8 +7,8 @@ import search from "../icons/search.png";
 const Home_Header = () => {
 	return (
 		<header className='home_header'>
-			<div className='container'>
-				<div className='home_header_container'>
+			<div className='container_long'>
+				<div className='home_header_container_long'>
 					<div className='bar'>
 						<img src={logo} alt='netflix logo' />
 						<div className='list'>
