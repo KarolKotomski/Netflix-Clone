@@ -1,1 +1,44 @@
 @use "../globals" as *;
+
+.home_footer {
+	background-color: $blackColorBackgroundHome;
+
+	&_container_long {
+		display: flex;
+		flex-direction: column;
+		padding: 4.5rem 2rem;
+		max-width: 75rem;
+		margin: 0 auto;
+
+		.icons {
+            display: flex;
+            gap: 1.5rem;
+
+			img {
+				height: 1.5rem;
+			}
+		}
+		p,
+		li {
+			color: $greyColorHomeFooter;
+			font-size: 0.875rem;
+			list-style: none;
+			line-height: 1.3125rem;
+			margin: 0;
+		}
+
+		.list {
+			padding: 0.75rem 0;
+			width: 100%;
+
+			ul {
+				display: grid;
+				grid-template-columns: 1fr 1fr 1fr 1fr;
+				flex-wrap: wrap;
+				gap: 0.75rem;
+				padding: 0.75rem 0;
+				margin: 0;
+			}
+		}
+	}
+}
