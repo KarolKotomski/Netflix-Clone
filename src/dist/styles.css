@@ -244,8 +244,9 @@ body {
 }
 .home_banner .content {
   position: relative;
-  top: 25vh;
-  width: 40%;
+}
+.home_banner .content .description {
+  width: 50%;
 }
 .home_banner .content .play_button,
 .home_banner .content .more_info_button {

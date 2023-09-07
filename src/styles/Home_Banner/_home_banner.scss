@@ -7,8 +7,11 @@
 
 	.content {
 		position: relative;
-		top: 25vh;
-		width: 40%;
+		// bottom: -40rem;
+
+		.description {
+			width: 50%;
+		}
 
 		.play_button,
 		.more_info_button {
