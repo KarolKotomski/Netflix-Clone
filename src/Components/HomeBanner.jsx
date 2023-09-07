@@ -22,24 +22,27 @@ const Home_Banner = () => {
 	console.log(movie);
 
 	return (
-		<div
-			className='home_banner'
-			style={{
-				backgroundImage: `url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`,
-			}}>
-			<div className='container_long'>
-				<div className='home_header_container_long'>
-					<div className='content'>
-						<h1 className='title'>
-							{movie?.title || movie?.name || movie?.original_name}
-						</h1>
-						<button className='play_button'>Play</button>
-						<button className='more_info_button'>More Info</button>
-						<p className='description'>{movie?.overview}</p>
+	
+			<div
+				className='home_banner'
+				style={{
+					backgroundImage: `url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`,
+				}}>
+				<div className='container_long'>
+					<div className='home_banner_container_long'>
+						<div className='content'>
+							<h1 className='title'>
+								{movie?.title || movie?.name || movie?.original_name}
+							</h1>
+							<button className='play_button'>Play</button>
+							<button className='more_info_button'>More Info</button>
+							<p className='description'>{movie?.overview}</p>
+						</div>
 					</div>
 				</div>
+			<div className='home_banner_fade_bottom'></div>
 			</div>
-		</div>
+		
 	);
 };
 

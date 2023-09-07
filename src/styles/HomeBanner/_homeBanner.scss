@@ -1,47 +1,74 @@
 @use "../globals" as *;
 
 .home_banner {
+	background-image: linear-gradient(
+			180deg,
+			transparent 90%,
+			rgba(37, 37, 37, 0.6),
+			$blackColorBackgroundHome
+		);
 	background-size: cover;
 	background-position: center center;
 	height: 40rem;
 
-	.content {
+	&_fade_bottom {
+		height: 40rem;
+		width: 100%;
 		position: absolute;
-		top: 20rem;
+		top: 0;
+		left: 0;
+		background-image: linear-gradient(
+			180deg,
+			transparent 90%,
+			rgba(37, 37, 37, 0.6),
+			$blackColorBackgroundHome
+		);
+	}
 
-		.description {
-			width: 50%;
-		}
+	&_container_long {
+		padding: 0 3.75rem;
+        height: 100%;
 
-		.play_button,
-		.more_info_button {
-			background-color: $whiteColor;
-			border-radius: 0.25rem;
-			color: $blackColor;
-			font-size: 1.5rem;
-			border: none;
-			font-weight: 500;
-			outline: none;
-			cursor: pointer;
-			line-height: 2.4rem;
-			min-width: 10rem;
-			height: 3rem;
-		}
+		.content {
+			position: absolute;
+			top: 20rem;
+			z-index: 1;
 
-		.more_info_button {
-			margin-left: 1rem;
-			background-color: $greyColorHomePage2;
-			color: $whiteColor;
-		}
 
-		p {
-			line-height: 1.5;
-		}
+			.description {
+				width: 50%;
+			}
 
-		.title {
-			font-size: 3rem;
-			font-weight: 800;
-			padding-bottom: 0.3rem;
+			.play_button,
+			.more_info_button {
+				background-color: $whiteColor;
+				border-radius: 0.25rem;
+				color: $blackColor;
+				font-size: 1.5rem;
+				border: none;
+				font-weight: 500;
+				outline: none;
+				cursor: pointer;
+				line-height: 2.4rem;
+				min-width: 10rem;
+				height: 3rem;
+			}
+
+			.more_info_button {
+				margin-left: 1rem;
+				background-color: $greyColorHomePage2;
+				color: $whiteColor;
+			}
+
+			p {
+				line-height: 1.5;
+			}
+
+			.title {
+				font-size: 3rem;
+				font-weight: 800;
+				padding-bottom: 0.3rem;
+			}
 		}
 	}
 }
