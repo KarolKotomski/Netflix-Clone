@@ -30,12 +30,12 @@ const Home_Banner = () => {
 			<div className='container_long'>
 				<div className='home_header_container_long'>
 					<div className='content'>
-                        <h1 className='title'>{movie?.title || movie?.name || movie?.original_name}</h1>
+						<h1 className='title'>
+							{movie?.title || movie?.name || movie?.original_name}
+						</h1>
 						<button className='play_button'>Play</button>
 						<button className='more_info_button'>More Info</button>
-						<p className='description'>
-							{movie?.overview}
-						</p>
+						<p className='description'>{movie?.overview}</p>
 					</div>
 				</div>
 			</div>

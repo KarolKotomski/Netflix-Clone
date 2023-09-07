@@ -240,10 +240,11 @@ body {
 .home_banner {
   background-size: cover;
   background-position: center center;
-  height: 70vh;
+  height: 40rem;
 }
 .home_banner .content {
-  position: relative;
+  position: absolute;
+  top: 20rem;
 }
 .home_banner .content .description {
   width: 50%;

@@ -18,7 +18,7 @@ const GetStarted = () => {
 								maxLength='50'
 								placeholder='Email address'
 							/>
-							<button>{"Get Started" + " >"}</button>
+							<button>{`Get Started >`}</button>
 						</div>
 					</div>
 				</div>

@@ -3,11 +3,11 @@
 .home_banner {
 	background-size: cover;
 	background-position: center center;
-	height: 70vh;
+	height: 40rem;
 
 	.content {
-		position: relative;
-		// bottom: -40rem;
+		position: absolute;
+		top: 20rem;
 
 		.description {
 			width: 50%;
