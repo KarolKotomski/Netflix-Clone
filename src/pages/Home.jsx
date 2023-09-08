@@ -19,6 +19,7 @@ const Home = () => {
       <HomeRow
         title='Top Rated'
         fetchUrl={requests.fetchTopRated}
+        isLargeRow
         
       />
       <HomeRow

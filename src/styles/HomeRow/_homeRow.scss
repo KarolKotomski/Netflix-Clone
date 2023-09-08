@@ -1,40 +1,37 @@
 @use "../globals" as *;
 
 .home_row {
-    background-color: $backgroundColorHome;
+	background-color: $backgroundColorHome;
 	padding-left: 3.75rem;
-    padding-top: 3rem;
-    ::-webkit-scrollbar {
+	padding-top: 3rem;
+	::-webkit-scrollbar {
 		display: none;
 	}
-
 
 	.posters {
 		display: flex;
 		overflow-y: hidden;
 		overflow-x: scroll;
-        :hover {
-            transform: scale(1.08);
-            opacity: 1;
-        }
 
+		:hover {
+			transform: scale(1.08);
+		}
 
 		img {
-            max-height: 10rem;
+			max-height: 10rem;
 			margin-right: 1rem;
 			border-radius: 0.2rem;
-            cursor: pointer;
-            transition: transform 450ms;
+			cursor: pointer;
+			transition: transform 450ms;
+		}
 
+		.poster_large {
+			max-height: 15rem;
 		}
 	}
 
 	.title {
-		font-size: 1.3rem;
-        color: $greyColorHomePage;
-        
-        h2 {
-            margin: 0;
-        }
+		font-size: 1.5rem;
+		color: $greyColorHomePage;
 	}
 }

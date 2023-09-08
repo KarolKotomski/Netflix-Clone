@@ -326,6 +326,10 @@ body {
   width: fit-content;
   cursor: pointer;
 }
+.home_footer_container_long p:hover,
+.home_footer_container_long li:hover {
+  text-decoration: underline;
+}
 .home_footer_container_long .list {
   padding: 0.75rem 0;
   width: 100%;
@@ -399,7 +403,6 @@ body {
 }
 .home_row .posters :hover {
   transform: scale(1.08);
-  opacity: 1;
 }
 .home_row .posters img {
   max-height: 10rem;
@@ -408,12 +411,12 @@ body {
   cursor: pointer;
   transition: transform 450ms;
 }
-.home_row .title {
-  font-size: 1.3rem;
-  color: rgb(229, 229, 229);
+.home_row .posters .poster_large {
+  max-height: 15rem;
 }
-.home_row .title h2 {
-  margin: 0;
+.home_row .title {
+  font-size: 1.5rem;
+  color: rgb(229, 229, 229);
 }
 
 .hero {
