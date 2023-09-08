@@ -15,11 +15,7 @@ const Home = () => {
         fetchUrl={requests.fetchNetflixOriginals}
         isLargeRow
       />
-      <HomeRow
-        title='Trending Now'
-        fetchUrl={requests.fetchTrending}
-        
-      />
+
       <HomeRow
         title='Top Rated'
         fetchUrl={requests.fetchTopRated}

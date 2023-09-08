@@ -396,13 +396,17 @@ body {
   display: flex;
   overflow-y: hidden;
   overflow-x: scroll;
-  height: 10rem;
-  margin-top: 1rem;
+}
+.home_row .posters :hover {
+  transform: scale(1.08);
+  opacity: 1;
 }
 .home_row .posters img {
+  max-height: 10rem;
   margin-right: 1rem;
   border-radius: 0.2rem;
   cursor: pointer;
+  transition: transform 450ms;
 }
 .home_row .title {
   font-size: 1.3rem;

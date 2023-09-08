@@ -4,21 +4,28 @@
     background-color: $backgroundColorHome;
 	padding-left: 3.75rem;
     padding-top: 3rem;
-	::-webkit-scrollbar {
+    ::-webkit-scrollbar {
 		display: none;
 	}
+
 
 	.posters {
 		display: flex;
 		overflow-y: hidden;
 		overflow-x: scroll;
-		height: 10rem;
-        margin-top: 1rem;
+        :hover {
+            transform: scale(1.08);
+            opacity: 1;
+        }
+
 
 		img {
+            max-height: 10rem;
 			margin-right: 1rem;
 			border-radius: 0.2rem;
             cursor: pointer;
+            transition: transform 450ms;
+
 		}
 	}
 

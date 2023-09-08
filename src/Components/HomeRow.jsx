@@ -23,7 +23,7 @@ const HomeRow = ({ title, fetchUrl, isLargeRow = false }) => {
 			<div className='posters'>
 				{movies.map((movie) => (
 					<img
-						className={`poster ${isLargeRow && "poster_large"}`}
+						className={`${isLargeRow && "poster_large"}`}
 						src={`${base_url}${
 							isLargeRow ? movie.poster_path : movie.backdrop_path
 						}`}
