@@ -1,15 +1,56 @@
 import React from 'react';
 import HomeHeader from '../components/HomeHeader';
-import HomeMain from '../components/HomeMain';
+import HomeRow from '../components/HomeRow';
 import HomeFooter from '../components/HomeFooter';
 import HomeBanner from '../components/HomeBanner';
+import requests from '../axios/requests';
 
 const Home = () => {
   return (
 		<div className='home'>
       <HomeHeader />
       <HomeBanner/>
-      <HomeMain />
+      <HomeRow
+        title='NETFLIX ORIGINALS'
+        fetchUrl={requests.fetchNetflixOriginals}
+        isLargeRow
+      />
+      <HomeRow
+        title='Trending Now'
+        fetchUrl={requests.fetchTrending}
+        
+      />
+      <HomeRow
+        title='Top Rated'
+        fetchUrl={requests.fetchTopRated}
+        
+      />
+      <HomeRow
+        title='Action Movies'
+        fetchUrl={requests.fetchActionMovies}
+        
+      />
+      <HomeRow
+        title='Comedy Movies'
+        fetchUrl={requests.fetchComedyMovies}
+        
+      />
+      <HomeRow
+        title='Horror Movies'
+        fetchUrl={requests.fetchHorrorMovies}
+        
+      />
+      <HomeRow
+        title='Romance Movies'
+        fetchUrl={requests.fetchRomanceMovies}
+        
+      />
+      <HomeRow
+        title='Documentaries'
+        fetchUrl={requests.fetchDocumentaries}
+        
+      />
+   
       <HomeFooter/>
 		</div>
   )

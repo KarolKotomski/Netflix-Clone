@@ -4,7 +4,7 @@ import instagram from "../icons/insta_icon.png";
 import twitter from "../icons/twit_icon.png";
 import youtube from "../icons/yt_icon.png";
 
-const Home_Footer = () => {
+const HomeFooter = () => {
 	return (
 		<div className='home_footer'>
 			<div className='container_long'>
@@ -38,4 +38,4 @@ const Home_Footer = () => {
 	);
 };
 
-export default Home_Footer;
+export default HomeFooter;

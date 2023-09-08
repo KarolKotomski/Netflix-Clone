@@ -4,7 +4,7 @@ import avatar from "../icons/avatar.jpg";
 import bell from "../icons/bell.png";
 import search from "../icons/search.png";
 
-const Home_Header = () => {
+const HomeHeader = () => {
 	return (
 		<header className='home_header'>
 			<div className='container_long'>
@@ -32,4 +32,4 @@ const Home_Header = () => {
 	);
 };
 
-export default Home_Header;
+export default HomeHeader;
