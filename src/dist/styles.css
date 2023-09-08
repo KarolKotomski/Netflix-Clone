@@ -59,6 +59,10 @@ body {
   height: 100%;
 }
 
+.home {
+  background-color: rgb(20, 20, 20);
+}
+
 .appleTv_container {
   display: flex;
   align-items: center;
@@ -240,7 +244,7 @@ body {
 }
 
 .home_banner {
-  background-image: linear-gradient(180deg, transparent 90%, rgba(0, 0, 0, 0.6), black);
+  background-image: linear-gradient(180deg, transparent 90%, rgba(0, 0, 0, 0.6), rgb(128, 128, 128));
   background-size: cover;
   background-position: center center;
   height: 40rem;
@@ -251,7 +255,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  background-image: linear-gradient(180deg, transparent 90%, rgba(0, 0, 0, 0.6), black);
+  background-image: linear-gradient(180deg, transparent 90%, rgba(0, 0, 0, 0.6), rgb(20, 20, 20));
 }
 .home_banner_container_long {
   padding: 0 3.75rem;
@@ -293,6 +297,9 @@ body {
   padding-bottom: 0.3rem;
 }
 
+.home_footer {
+  background-color: rgb(20, 20, 20);
+}
 .home_footer_container_long {
   display: flex;
   flex-direction: column;
@@ -336,7 +343,7 @@ body {
   width: 100%;
   height: 4.375rem;
   background-image: linear-gradient(rgba(0, 0, 0, 0.7) 10%, rgba(0, 0, 0, 0));
-  z-index: 1;
+  z-index: 2;
 }
 .home_header_container_long {
   display: flex;
@@ -375,6 +382,34 @@ body {
 }
 .home_header_container_long .user_panel img {
   cursor: pointer;
+}
+
+.home_row {
+  background-color: rgb(20, 20, 20);
+  padding-left: 3.75rem;
+  padding-top: 3rem;
+}
+.home_row ::-webkit-scrollbar {
+  display: none;
+}
+.home_row .posters {
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  height: 10rem;
+  margin-top: 1rem;
+}
+.home_row .posters img {
+  margin-right: 1rem;
+  border-radius: 0.2rem;
+  cursor: pointer;
+}
+.home_row .title {
+  font-size: 1.3rem;
+  color: rgb(229, 229, 229);
+}
+.home_row .title h2 {
+  margin: 0;
 }
 
 .hero {

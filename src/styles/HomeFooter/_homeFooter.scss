@@ -1,6 +1,7 @@
 @use "../globals" as *;
 
 .home_footer {
+	background-color: $backgroundColorHome;
 
 	&_container_long {
 		display: flex;
@@ -20,7 +21,7 @@
 		}
 		p,
 		li {
-			color: $greyColorHomeFooter;
+			color: $greyColorHomePage3;
 			font-size: 0.875rem;
 			list-style: none;
 			line-height: 1.3125rem;
