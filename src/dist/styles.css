@@ -132,6 +132,8 @@ body {
   list-style: none;
   line-height: 1.3125rem;
   margin: 0;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 .footer_container .list {
   padding: 0.75rem 0;
@@ -307,6 +309,7 @@ body {
 }
 .home_footer_container_long .icons img {
   height: 1.5rem;
+  cursor: pointer;
 }
 .home_footer_container_long p,
 .home_footer_container_long li {
@@ -315,6 +318,9 @@ body {
   list-style: none;
   line-height: 1.3125rem;
   margin: 0;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
 }
 .home_footer_container_long .list {
   padding: 0.75rem 0;
@@ -323,14 +329,13 @@ body {
 .home_footer_container_long .list ul {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  flex-wrap: wrap;
   gap: 0.75rem;
   padding: 0.75rem 0;
   margin: 0;
 }
 
 .home_header {
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 4.375rem;
   background-image: linear-gradient(rgba(0, 0, 0, 0.7) 10%, rgba(0, 0, 0, 0));
@@ -358,6 +363,9 @@ body {
   font-weight: 500;
   color: rgb(229, 229, 229);
 }
+.home_header_container_long .bar ul li {
+  cursor: pointer;
+}
 .home_header_container_long .user_panel {
   width: 20%;
   display: flex;
@@ -367,6 +375,9 @@ body {
 }
 .home_header_container_long .user_panel .avatar {
   height: 1.5rem;
+}
+.home_header_container_long .user_panel img {
+  cursor: pointer;
 }
 
 .home_main {
@@ -545,6 +556,7 @@ body {
   position: absolute;
   top: 2.5%;
   left: 3%;
+  cursor: pointer;
 }
 .signIn_main .wrapper {
   margin: 0 auto;
@@ -595,6 +607,7 @@ body {
 }
 .signIn_main .wrapper p span {
   color: white;
+  cursor: pointer;
 }
 
 .tv_container {

@@ -18,6 +18,7 @@
 			position: absolute;
 			top: 2.5%;
 			left: 3%;
+			cursor: pointer;
 		}
 	}
 
@@ -64,6 +65,7 @@
 			color: $greyColorSignIn;
 			span {
 				color: $whiteColor;
+				cursor: pointer;
 			}
 		}
 	}

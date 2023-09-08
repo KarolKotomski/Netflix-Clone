@@ -13,13 +13,13 @@ const Home_Banner = () => {
 					Math.floor(Math.random() * request.data.results.length - 1)
 				]
 			);
+			
 			return request;
 		}
-
+		
 		fetchData();
+		
 	}, []);
-
-	console.log(movie);
 
 	return (
 	

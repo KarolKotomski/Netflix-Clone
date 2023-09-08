@@ -1,12 +1,12 @@
 import React from "react";
-import SignIn_Main from "../components/SignIn_Main";
-import SignIn_Footer from "../components/SignIn_Footer";
+import SignInMain from "../components/SignInMain";
+import SignInFooter from "../components/SignInFooter";
 
 const SignIn = () => {
 	return (
 		<div className='sign_in'>
-			<SignIn_Main />
-			<SignIn_Footer />
+			<SignInMain />
+			<SignInFooter />
 		</div>
 	);
 };
