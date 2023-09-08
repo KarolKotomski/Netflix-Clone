@@ -16,7 +16,7 @@ const SignIn_Footer = () => {
           <li>Privacy</li>
           <li>Cookie Preferences</li>
           <li>Corporate Information</li>
-          <li>Ad Choices</li>
+          <li>Ad Choices</li> 
         </ul>
         </div>
       </div>
