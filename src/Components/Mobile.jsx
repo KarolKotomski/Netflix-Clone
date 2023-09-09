@@ -1,7 +1,7 @@
 import React from "react";
 import mobile from "../images/mobile.jpg";
 import boxshot from "../images/boxshot.png";
-import downloadGif from "../images/download-icon-gif.gif";
+import downloadGif from "../icons/download-icon.gif";
 
 const Mobile = () => {
 	return (

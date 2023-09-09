@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "../axios/axios";
 import requests from "../axios/requests";
+import triangle from "../icons/triangle.png";
+import info from "../icons/info.png";
 
 const Home_Banner = () => {
 	const [movie, setMovie] = useState([]);
@@ -31,8 +33,21 @@ const Home_Banner = () => {
 						<h1 className='title'>
 							{movie?.title || movie?.name || movie?.original_name}
 						</h1>
-						<button className='play_button'>Play</button>
-						<button className='more_info_button'>More Info</button>
+						<div className='buttons'>
+							<button className='play_button'>
+								<img
+									className='traingle'
+									src={triangle}
+									alt='triangle play sign'
+								/>
+								Play
+							</button>
+							<button className='more_info_button'>
+								<img className='info' src={info} alt='info sign' />
+								More Info
+							</button>
+						</div>
+
 						<p className='description'>{movie?.overview}</p>
 					</div>
 				</div>

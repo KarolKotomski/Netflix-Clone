@@ -188,6 +188,9 @@ body:hover {
   min-height: 3.5rem;
   padding: 0.75rem 1.5rem;
   font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 .get_started .main input {
   width: 24rem;
@@ -275,8 +278,11 @@ body:hover {
 .home_banner_container_long .content .description {
   width: 50%;
 }
-.home_banner_container_long .content .play_button,
-.home_banner_container_long .content .more_info_button {
+.home_banner_container_long .content .buttons {
+  display: flex;
+}
+.home_banner_container_long .content .buttons .play_button,
+.home_banner_container_long .content .buttons .more_info_button {
   border-radius: 0.25rem;
   font-size: 1.5rem;
   border: none;
@@ -286,15 +292,28 @@ body:hover {
   line-height: 2.4rem;
   min-width: 10rem;
   height: 3rem;
+  padding: 0.5rem 1rem;
 }
-.home_banner_container_long .content .play_button {
+.home_banner_container_long .content .buttons .play_button {
   background-color: white;
   color: black;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+  margin: 0;
 }
-.home_banner_container_long .content .more_info_button {
+.home_banner_container_long .content .buttons .play_button img {
+  rotate: 90deg;
+}
+.home_banner_container_long .content .buttons .more_info_button {
   margin-left: 1rem;
   background-color: rgba(109, 109, 110, 0.7);
   color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 }
 .home_banner_container_long .content p {
   line-height: 1.5;

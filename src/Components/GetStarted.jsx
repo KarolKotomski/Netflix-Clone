@@ -1,4 +1,5 @@
 import React from "react";
+import gs_arrow from "../icons/gs_arrow.png";
 
 const GetStarted = () => {
 	return (
@@ -18,7 +19,10 @@ const GetStarted = () => {
 								maxLength='50'
 								placeholder='Email address'
 							/>
-							<button>{`Get Started >`}</button>
+							<button>
+								Get Started
+								<img className='gs_arrow' src={gs_arrow} alt='arrow sign' />
+							</button>
 						</div>
 					</div>
 				</div>
