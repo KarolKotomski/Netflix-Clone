@@ -46,6 +46,9 @@ body {
   color: white;
   scroll-behavior: smooth;
 }
+body:hover {
+  cursor: default;
+}
 
 .container {
   max-width: 92rem;
@@ -266,14 +269,15 @@ body {
   top: 20rem;
   z-index: 1;
 }
+.home_banner_container_long .content button:hover {
+  opacity: 0.8;
+}
 .home_banner_container_long .content .description {
   width: 50%;
 }
 .home_banner_container_long .content .play_button,
 .home_banner_container_long .content .more_info_button {
-  background-color: white;
   border-radius: 0.25rem;
-  color: black;
   font-size: 1.5rem;
   border: none;
   font-weight: 500;
@@ -282,6 +286,10 @@ body {
   line-height: 2.4rem;
   min-width: 10rem;
   height: 3rem;
+}
+.home_banner_container_long .content .play_button {
+  background-color: white;
+  color: black;
 }
 .home_banner_container_long .content .more_info_button {
   margin-left: 1rem;

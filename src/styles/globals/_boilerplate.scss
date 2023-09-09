@@ -13,6 +13,9 @@ body {
 	background-color: $blackColor;
 	color: $whiteColor;
 	scroll-behavior: smooth;
+	&:hover {
+		cursor: default;
+	}
 }
 
 .container {
