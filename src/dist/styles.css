@@ -116,45 +116,51 @@ body:hover {
   display: flex;
   flex-direction: column;
 }
+.faq_container h2 {
+  margin-bottom: 2rem;
+}
 .faq_container .full_list {
   display: flex;
   flex-direction: column;
-  width: 100%;
 }
-.faq_container .full_list li {
-  list-style-type: none;
-}
-.faq_container .full_list ul {
-  margin: 0 auto;
-  padding: 2rem 0;
-  width: 100%;
-}
-.faq_container .full_list .question,
-.faq_container .full_list .answer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.faq_container .full_list .item {
   background-color: rgb(45, 45, 45);
   color: white;
   border: none;
   padding: 1.5rem;
-  margin-bottom: 0.1rem;
-  width: 100%;
-}
-.faq_container .full_list .question h3,
-.faq_container .full_list .question span,
-.faq_container .full_list .answer h3,
-.faq_container .full_list .answer span {
-  font-size: 1.5rem;
-}
-.faq_container .full_list .question {
+  margin-bottom: 0.5rem;
   cursor: pointer;
-  transition: 0.3s;
-  margin-top: 1rem;
+  transition: all 0.25s cubic-bezier(0.5, 0, 0.1, 1);
 }
-.faq_container .full_list .question:hover {
+.faq_container .full_list .item:hover {
   background-color: rgb(65, 65, 65);
-  transition-timing-function: ease-in-out;
+}
+.faq_container .full_list .item .question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.5, 0, 0.1, 1);
+}
+.faq_container .full_list .item .question img {
+  height: 2.25rem;
+}
+.faq_container .full_list .item .rotated_sign img {
+  transform: rotate(45deg);
+}
+.faq_container .full_list .item .answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.5, 0, 0.1, 1);
+}
+.faq_container .full_list .item .answer_show {
+  height: auto;
+  padding-top: 1.5rem;
+  transition: all 0.5s cubic-bezier(0.5, 0, 0.1, 1);
+}
+.faq_container .full_list .item h3,
+.faq_container .full_list .item span {
+  font-size: 1.5rem;
 }
 .faq .spacing {
   background-color: rgb(35, 35, 35);
@@ -244,10 +250,10 @@ body:hover {
   padding: 0.5rem 1rem;
 }
 .get_started .main input::-moz-placeholder {
-  color: rgb(140, 140, 140);
+  color: rgba(255, 255, 255, 0.7);
 }
 .get_started .main input::placeholder {
-  color: rgb(140, 140, 140);
+  color: rgba(255, 255, 255, 0.7);
 }
 .get_started .spacing {
   background-color: rgb(35, 35, 35);
