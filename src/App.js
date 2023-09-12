@@ -1,13 +1,22 @@
 import "./dist/styles.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
 import Landing from "./pages/Landing";
-// import Home from "./pages/Home";
-// import SignIn from "./pages/SignIn";
+import SignIn from "./pages/SignIn";
 
 function App() {
 	return (
-		<div className='App'>
-			<Landing />
-		</div>
+		<BrowserRouter>
+			<Routes>
+				<Route path='/' element={<Landing />} />
+				<Route path='signin' element={<SignIn />} />
+				<Route path='home' element={<Home />}>
+					<Route path="seriale i programy" element/>
+					<Route path="filmy" element/>
+					<Route path="nowe i popularne" element/>
+				</Route>
+			</Routes>
+		</BrowserRouter>
 	);
 }
 

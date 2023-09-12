@@ -444,10 +444,10 @@ body:hover {
   gap: 1.5rem;
   font-size: 0.875rem;
   font-weight: 500;
-  color: rgb(229, 229, 229);
 }
 .home_header_container_long .bar ul li {
   cursor: pointer;
+  color: rgb(229, 229, 229);
 }
 .home_header_container_long .user_panel {
   width: 20%;
@@ -703,6 +703,7 @@ body:hover {
   font-size: 1rem;
   padding: 1rem;
   line-height: 1rem;
+  width: 100%;
 }
 .signIn_main .wrapper h1 {
   margin-bottom: 1.75rem;
