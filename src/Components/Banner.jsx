@@ -4,7 +4,7 @@ import requests from "../axios/requests";
 import triangle from "../icons/triangle.png";
 import info from "../icons/info.png";
 
-const Home_Banner = () => {
+const Banner = () => {
 	const [movie, setMovie] = useState([]);
 
 	useEffect(() => {
@@ -23,12 +23,12 @@ const Home_Banner = () => {
 
 	return (
 		<div
-			className='home_banner'
+			className='banner'
 			style={{
 				backgroundImage: `url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`,
 			}}>
 			<div className='container_long'>
-				<div className='home_banner_container_long'>
+				<div className='banner_container_long'>
 					<div className='content'>
 						<h1 className='title'>
 							{movie?.title || movie?.name || movie?.original_name}
@@ -52,9 +52,9 @@ const Home_Banner = () => {
 					</div>
 				</div>
 			</div>
-			<div className='home_banner_fade_bottom'></div>
+			<div className='banner_fade_bottom'></div>
 		</div>
 	);
 };
 
-export default Home_Banner;
+export default Banner;

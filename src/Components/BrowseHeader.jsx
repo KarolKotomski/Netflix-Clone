@@ -5,7 +5,7 @@ import bell from "../icons/bell.png";
 import search from "../icons/search.png";
 import { Link, NavLink } from "react-router-dom";
 
-const HomeHeader = () => {
+const BrowseHeader = () => {
 	const [show, handleShow] = useState(false);
 
 	const transitionHeader = () => {
@@ -24,16 +24,16 @@ const HomeHeader = () => {
 	}, []);
 
 	return (
-		<header className={`home_header ${show && "black_background"}`}>
+		<header className={`browse_header ${show && "black_background"}`}>
 			<div className='container_long'>
-				<div className='home_header_container_long'>
+				<div className='browse_header_container_long'>
 					<div className='bar'>
-						<Link to='/home' onClick={() => window.scrollTo(0, 0)}>
+						<Link to='/browse' onClick={() => window.scrollTo(0, 0)}>
 							<img src={logo} alt='netflix logo' />
 						</Link>
 						<div className='list'>
 							<ul>
-								<NavLink to='/home' onClick={() => window.scrollTo(0, 0)}>
+								<NavLink to='/browse' onClick={() => window.scrollTo(0, 0)}>
 									<li>Home</li>
 								</NavLink>
 								<NavLink to='tvshows' onClick={() => window.scrollTo(0, 0)}>
@@ -60,4 +60,4 @@ const HomeHeader = () => {
 	);
 };
 
-export default HomeHeader;
+export default BrowseHeader;

@@ -1,15 +1,15 @@
 import React from 'react';
-import HomeHeader from '../components/HomeHeader';
+import BrowseHeader from '../components/BrowseHeader';
 import Row from '../components/Row';
 import HomeFooter from '../components/HomeFooter';
-import HomeBanner from '../components/HomeBanner';
+import Banner from '../components/Banner';
 import requests from '../axios/requests';
 
 const Home = () => {
   return (
-		<div className='home'>
-      <HomeHeader />
-      <HomeBanner/>
+		<div className='browse'>
+      <BrowseHeader />
+      <Banner/>
       <Row
         title='NETFLIX ORIGINALS'
         fetchUrl={requests.fetchNetflixOriginals}

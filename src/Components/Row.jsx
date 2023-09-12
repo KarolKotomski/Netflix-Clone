@@ -16,7 +16,7 @@ const Row = ({ title, fetchUrl, isLargeRow = false }) => {
 	}, [fetchUrl]);
 
 	return (
-		<main className='home_row'>
+		<main className='row'>
 			<div className='title'>
 				<h2>{title}</h2>
 			</div>

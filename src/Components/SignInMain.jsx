@@ -26,7 +26,7 @@ const SignIn_Main = () => {
 							minLength='4'
 							maxLength='60'
 						/>
-						<Link to='/home' onClick={() => window.scrollTo(0, 0)}>
+						<Link to='/browse' onClick={() => window.scrollTo(0, 0)}>
 							<button type='submit'>Sign In</button>
 						</Link>
 						<div className='newTo'>
