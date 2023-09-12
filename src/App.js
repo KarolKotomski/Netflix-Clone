@@ -11,9 +11,6 @@ function App() {
 				<Route path='/' element={<Landing />} />
 				<Route path='signin' element={<SignIn />} />
 				<Route path='home' element={<Home />}>
-					<Route path="seriale i programy" element/>
-					<Route path="filmy" element/>
-					<Route path="nowe i popularne" element/>
 				</Route>
 			</Routes>
 		</BrowserRouter>

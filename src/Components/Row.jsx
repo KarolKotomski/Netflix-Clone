@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "../axios/axios";
 
-const HomeRow = ({ title, fetchUrl, isLargeRow = false }) => {
+const Row = ({ title, fetchUrl, isLargeRow = false }) => {
 	const [movies, setMovies] = useState([]);
 
 	const base_url = "https://image.tmdb.org/t/p/original/";
@@ -39,4 +39,4 @@ const HomeRow = ({ title, fetchUrl, isLargeRow = false }) => {
 	);
 };
 
-export default HomeRow;
+export default Row;

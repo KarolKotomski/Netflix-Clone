@@ -28,23 +28,24 @@ const HomeHeader = () => {
 			<div className='container_long'>
 				<div className='home_header_container_long'>
 					<div className='bar'>
-						<Link to='home' onClick={() => window.scrollTo(0, 0)}>
+						<Link to='/home' onClick={() => window.scrollTo(0, 0)}>
 							<img src={logo} alt='netflix logo' />
 						</Link>
 						<div className='list'>
 							<ul>
-								<NavLink onClick={() => window.scrollTo(0, 0)}>
+								<NavLink to='/home' onClick={() => window.scrollTo(0, 0)}>
 									<li>Home</li>
 								</NavLink>
-								<NavLink onClick={() => window.scrollTo(0, 0)}>
+								<NavLink to='tvshows' onClick={() => window.scrollTo(0, 0)}>
 									<li>TV Shows</li>
 								</NavLink>
-								<NavLink onClick={() => window.scrollTo(0, 0)}>
+								<NavLink to='movies' onClick={() => window.scrollTo(0, 0)}>
 									<li>Movies</li>
 								</NavLink>
-								<NavLink onClick={() => window.scrollTo(0, 0)}>
+								<NavLink to='new&popular' onClick={() => window.scrollTo(0, 0)}>
 									<li>New & Popular</li>
 								</NavLink>
+								
 							</ul>
 						</div>
 					</div>

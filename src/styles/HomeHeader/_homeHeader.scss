@@ -29,6 +29,10 @@
 				gap: 1.5rem;
 				font-size: 0.875rem;
 				font-weight: 500;
+				
+				.active {
+					font-weight: bold;
+				}
 
 				li {
 					cursor: pointer;

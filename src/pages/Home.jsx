@@ -1,6 +1,6 @@
 import React from 'react';
 import HomeHeader from '../components/HomeHeader';
-import HomeRow from '../components/HomeRow';
+import Row from '../components/Row';
 import HomeFooter from '../components/HomeFooter';
 import HomeBanner from '../components/HomeBanner';
 import requests from '../axios/requests';
@@ -10,39 +10,39 @@ const Home = () => {
 		<div className='home'>
       <HomeHeader />
       <HomeBanner/>
-      <HomeRow
+      <Row
         title='NETFLIX ORIGINALS'
         fetchUrl={requests.fetchNetflixOriginals}
         isLargeRow
       />
 
-      <HomeRow
+      <Row
         title='Top Rated'
         fetchUrl={requests.fetchTopRated}
         isLargeRow
         
       />
-      <HomeRow
+      <Row
         title='Action Movies'
         fetchUrl={requests.fetchActionMovies}
         
       />
-      <HomeRow
+      <Row
         title='Comedy Movies'
         fetchUrl={requests.fetchComedyMovies}
         
       />
-      <HomeRow
+      <Row
         title='Horror Movies'
         fetchUrl={requests.fetchHorrorMovies}
         
       />
-      <HomeRow
+      <Row
         title='Romance Movies'
         fetchUrl={requests.fetchRomanceMovies}
         
       />
-      <HomeRow
+      <Row
         title='Documentaries'
         fetchUrl={requests.fetchDocumentaries}
         

@@ -445,6 +445,9 @@ body:hover {
   font-size: 0.875rem;
   font-weight: 500;
 }
+.home_header_container_long .bar ul .active {
+  font-weight: bold;
+}
 .home_header_container_long .bar ul li {
   cursor: pointer;
   color: rgb(229, 229, 229);
