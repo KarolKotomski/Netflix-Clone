@@ -29,14 +29,26 @@
 				gap: 1.5rem;
 				font-size: 0.875rem;
 				font-weight: 500;
-				
+
 				.active {
-					font-weight: bold;
+					color: $whiteColor;
+					li {
+						font-weight: 700;
+						cursor: default;
+						&:hover {
+							opacity: 1;
+						}
+					}
 				}
 
 				li {
 					cursor: pointer;
 					color: $greyColorHomePage;
+
+					&:hover {
+						opacity: 0.5;
+						transition: all 0.3s ease-out;
+					}
 				}
 			}
 		}

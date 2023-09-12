@@ -3,7 +3,7 @@ import logo from "../images/netflix_logo.png";
 import avatar from "../icons/avatar.jpg";
 import bell from "../icons/bell.png";
 import search from "../icons/search.png";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, Outlet } from "react-router-dom";
 
 const BrowseHeader = () => {
 	const [show, handleShow] = useState(false);
@@ -45,6 +45,7 @@ const BrowseHeader = () => {
 								<NavLink to='new&popular' onClick={() => window.scrollTo(0, 0)}>
 									<li>New & Popular</li>
 								</NavLink>
+								<Outlet/>
 								
 							</ul>
 						</div>

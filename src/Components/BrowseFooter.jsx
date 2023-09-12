@@ -4,11 +4,11 @@ import instagram from "../icons/insta_icon.png";
 import twitter from "../icons/twit_icon.png";
 import youtube from "../icons/yt_icon.png";
 
-const HomeFooter = () => {
+const BrowseFooter = () => {
 	return (
-		<div className='home_footer'>
+		<div className='browse_footer'>
 			<div className='container_long'>
-        <div className='home_footer_container_long'>
+        <div className='browse_footer_container_long'>
           <div className="icons">
             <img src={facebook} alt="facebook icon" />
             <img src={instagram} alt="instagram icon" />
@@ -38,4 +38,4 @@ const HomeFooter = () => {
 	);
 };
 
-export default HomeFooter;
+export default BrowseFooter;

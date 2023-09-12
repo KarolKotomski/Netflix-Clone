@@ -1,11 +1,11 @@
 import React from 'react';
+import Banner from '../components/Banner';
+import BrowseFooter from '../components/BrowseFooter';
 import BrowseHeader from '../components/BrowseHeader';
 import Row from '../components/Row';
-import HomeFooter from '../components/HomeFooter';
-import Banner from '../components/Banner';
 import requests from '../axios/requests';
 
-const Home = () => {
+const Browse = () => {
   return (
 		<div className='browse'>
       <BrowseHeader />
@@ -48,9 +48,9 @@ const Home = () => {
         
       />
    
-      <HomeFooter/>
+      <BrowseFooter/>
 		</div>
   )
 }
 
-export default Home
+export default Browse;
