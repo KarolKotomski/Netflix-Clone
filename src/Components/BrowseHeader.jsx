@@ -3,7 +3,7 @@ import logo from "../images/netflix_logo.png";
 import avatar from "../icons/avatar.jpg";
 import bell from "../icons/bell.png";
 import search from "../icons/search.png";
-import { Link, NavLink, Outlet } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const BrowseHeader = () => {
 	const [show, handleShow] = useState(false);
@@ -28,12 +28,12 @@ const BrowseHeader = () => {
 			<div className='container_long'>
 				<div className='browse_header_container_long'>
 					<div className='bar'>
-						<Link to='/browse' onClick={() => window.scrollTo(0, 0)}>
+						<Link to='home' onClick={() => window.scrollTo(0, 0)}>
 							<img src={logo} alt='netflix logo' />
 						</Link>
 						<div className='list'>
 							<ul>
-								<NavLink to='/browse' onClick={() => window.scrollTo(0, 0)}>
+								<NavLink to='home' onClick={() => window.scrollTo(0, 0)}>
 									<li>Home</li>
 								</NavLink>
 								<NavLink to='tvshows' onClick={() => window.scrollTo(0, 0)}>
@@ -45,8 +45,6 @@ const BrowseHeader = () => {
 								<NavLink to='new&popular' onClick={() => window.scrollTo(0, 0)}>
 									<li>New & Popular</li>
 								</NavLink>
-								<Outlet/>
-								
 							</ul>
 						</div>
 					</div>

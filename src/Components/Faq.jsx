@@ -7,7 +7,7 @@ const Faq = () => {
 	const [selected, setSelected] = useState(null);
 
 	const toggle = (i) => {
-		if (selected == i) {
+		if (selected === i) {
 			return setSelected(null);
 		}
 		setSelected(i);
@@ -23,12 +23,12 @@ const Faq = () => {
 							<div className='item' key={i} onClick={() => toggle(i)}>
 								<div
 									className={
-										selected == i ? "question rotated_sign" : "question"
+										selected === i ? "question rotated_sign" : "question"
 									}>
 									<h3>{item.question}</h3>
 									<img src={plus} alt='plus sign' />
 								</div>
-								<div className={selected == i ? "answer_show" : "answer"}>
+								<div className={selected === i ? "answer_show" : "answer"}>
 									<span>{item.answer}</span>
 								</div>
 							</div>
