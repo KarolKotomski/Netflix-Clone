@@ -6,7 +6,7 @@ import requests from "../axios/requests";
 const BrowseMovies = () => {
 	return (
 		<>
-			<Banner />
+			<Banner fetchUrl={requests.fetchNetflixOriginals}/>
 			<Row
 				title='NETFLIX ORIGINALS'
 				fetchUrl={requests.fetchNetflixOriginals}
@@ -17,16 +17,16 @@ const BrowseMovies = () => {
 				fetchUrl={requests.fetchTopRatedMovie}
 				isLargeRow
 			/>
-			<Row title='Action Movies' fetchUrl={requests.fetchActionMovies} />
-			<Row title='Comedy Movies' fetchUrl={requests.fetchComedyMovies} />
+			<Row title='Action' fetchUrl={requests.fetchActionMovies} />
+			<Row title='Comedy' fetchUrl={requests.fetchComedyMovies} />
 			<Row title='Documentaries' fetchUrl={requests.fetchDocumentaries} />
-			<Row title='Horror Movies' fetchUrl={requests.fetchHorrorMovies} />
-			<Row title='Romance Movies' fetchUrl={requests.fetchRomanceMovies} />
+			<Row title='Horror' fetchUrl={requests.fetchHorrorMovies} />
+			<Row title='Romance' fetchUrl={requests.fetchRomanceMovies} />
 			<Row
-				title='Science Fiction Movies'
+				title='Science Fiction'
 				fetchUrl={requests.fetchScienceFictionMovies}
 			/>
-			<Row title='War Movies' fetchUrl={requests.fetchWarMovie} />
+			<Row title='War' fetchUrl={requests.fetchWarMovie} />
 		</>
 	);
 };

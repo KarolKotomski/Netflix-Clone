@@ -42,9 +42,6 @@ const BrowseHeader = () => {
 								<NavLink to='movies' onClick={() => window.scrollTo(0, 0)}>
 									<li>Movies</li>
 								</NavLink>
-								<NavLink to='new&popular' onClick={() => window.scrollTo(0, 0)}>
-									<li>New & Popular</li>
-								</NavLink>
 							</ul>
 						</div>
 					</div>

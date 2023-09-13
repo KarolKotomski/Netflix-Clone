@@ -18,7 +18,6 @@ function App() {
 					<Route path='home' element={<BrowseHome />} />
 					<Route path='tvshows' element={<BrowseTvShows />} />
 					<Route path='movies' element={<BrowseMovies />} />
-					<Route path='new&popular' element />
 				</Route>
 			</Routes>
 		</BrowserRouter>
