@@ -5,6 +5,7 @@ import Landing from "./pages/Landing";
 import SignIn from "./pages/SignIn";
 import BrowseHome from "./components/BrowseHome";
 import BrowseTvShows from "./components/BrowseTvShows";
+import BrowseMovies from "./components/BrowseMovies";
 
 function App() {
 	return (
@@ -16,7 +17,7 @@ function App() {
 					<Route index element={<BrowseHome />} />
 					<Route path='home' element={<BrowseHome />} />
 					<Route path='tvshows' element={<BrowseTvShows />} />
-					<Route path='movies' element />
+					<Route path='movies' element={<BrowseMovies />} />
 					<Route path='new&popular' element />
 				</Route>
 			</Routes>
