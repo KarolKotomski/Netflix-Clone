@@ -6,6 +6,7 @@ import SignIn from "./pages/SignIn";
 import BrowseHome from "./components/BrowseHome";
 import BrowseTvShows from "./components/BrowseTvShows";
 import BrowseMovies from "./components/BrowseMovies";
+import NoMatch from "./components/NoMatch";
 
 function App() {
 	return (
@@ -19,6 +20,7 @@ function App() {
 					<Route path='tvshows' element={<BrowseTvShows />} />
 					<Route path='movies' element={<BrowseMovies />} />
 				</Route>
+				<Route path="*" element={<NoMatch />} />
 			</Routes>
 		</BrowserRouter>
 	);
