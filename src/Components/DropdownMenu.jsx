@@ -1,6 +1,7 @@
 import React from "react";
 import pencil from "../icons/pencil.png";
 import caret from "../icons/caret.png";
+import { Link } from "react-router-dom";
 
 const DropdownMenu = () => {
 	return (
@@ -42,9 +43,11 @@ const DropdownMenu = () => {
 					</div>
 				</div>
 			</div>
-			<div className='sign_out'>
-				<p>Sign out of Netflix</p>
-			</div>
+			<Link to='/' onClick={() => window.scrollTo(0, 0)}>
+				<div className='sign_out'>
+					<p>Sign out of Netflix</p>
+				</div>
+			</Link>
 		</div>
 	);
 };

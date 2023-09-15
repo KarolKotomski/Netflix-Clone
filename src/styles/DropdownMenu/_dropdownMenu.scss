@@ -23,8 +23,8 @@
 
 	&_wrapper {
 		padding: 0.75rem 0;
-		background-color: $transparentBlackColor;
-		border: 1px solid $greyColor;
+		background-color: $transparentBlackColor2;
+		border: 1px solid $frameBorderColor;
 		:hover {
 			text-decoration: underline;
 		}
@@ -60,9 +60,9 @@
 		font-size: 0.85rem;
 		padding: 0.325rem 0.65rem;
 		height: 2.9rem;
-		border: 1px solid $greyColor;
+		border: 1px solid $frameBorderColor;
 		border-top: none;
-		background-color: $transparentBlackColor;
+		background-color: $transparentBlackColor2;
 		&:hover {
 			text-decoration: underline;
 		}

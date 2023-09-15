@@ -4,8 +4,10 @@ $font: sans-serif;
 
 a,
 a:visited,
-a:active {
+a:active,
+a:hover {
 	text-decoration: none;
+	color: inherit;
 }
 
 //LANDING PAGE:

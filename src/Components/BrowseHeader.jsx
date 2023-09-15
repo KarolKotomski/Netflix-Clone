@@ -69,7 +69,7 @@ const BrowseHeader = () => {
 							<div className='caret'>
 								<img src={caret} alt='caret icon' />
 							</div>
-							{isActive ? <DropdownMenu /> : null}
+							{isActive && <DropdownMenu />}
 						</div>
 					</div>
 				</div>
