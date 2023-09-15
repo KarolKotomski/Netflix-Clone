@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
-import logo from "../images/netflix_logo.png";
 import avatar from "../icons/avatar.jpg";
-import caret from "../icons/caret.png";
 import bell from "../icons/bell.png";
+import caret from "../icons/caret.png";
+import logo from "../images/netflix_logo.png";
 import search from "../icons/search.png";
 import { Link, NavLink } from "react-router-dom";
+import DropdownMenu from "./DropdownMenu";
 
 const BrowseHeader = () => {
 	const [show, handleShow] = useState(false);
@@ -56,6 +57,7 @@ const BrowseHeader = () => {
 							<div className='caret'>
 								<img src={caret} alt='caret icon' />
 							</div>
+							<DropdownMenu/>
 						</div>
 					</div>
 				</div>

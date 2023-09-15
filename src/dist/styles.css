@@ -283,8 +283,9 @@ body:hover {
 .browse_header_container_long .user_panel .profile {
   display: flex;
   align-items: center;
-  cursor: pointer;
+  justify-content: space-between;
   gap: 0.2rem;
+  cursor: pointer;
 }
 .browse_header_container_long .user_panel .profile:hover .caret {
   transform: rotate(180deg);
@@ -308,6 +309,58 @@ body:hover {
 .black_background {
   background-color: rgb(20, 20, 20);
   transition: ease-in;
+}
+
+.dropdown_menu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 4.375rem;
+  right: 4.25rem;
+  background-color: rgba(0, 0, 0, 0.75);
+  width: 13.625rem;
+  border: 1px solid rgb(35, 35, 35);
+}
+.dropdown_menu_wrapper {
+  padding: 0.75rem 0;
+}
+.dropdown_menu_wrapper :hover {
+  text-decoration: underline;
+}
+.dropdown_menu_wrapper .item {
+  display: flex;
+  align-items: center;
+  padding: 0.325rem 0.65rem;
+  height: 2.25rem;
+}
+.dropdown_menu_wrapper .item_icon {
+  padding: 0 1rem 0 0.25rem;
+  display: flex;
+  align-items: center;
+}
+.dropdown_menu_wrapper .item_icon img {
+  height: 1.375rem;
+}
+.dropdown_menu_wrapper .item_text {
+  font-size: 0.85rem;
+}
+.dropdown_menu_wrapper .item_text p {
+  margin: 0;
+}
+.dropdown_menu .sign_out {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.85rem;
+  padding: 0.325rem 0.65rem;
+  height: 2.9rem;
+  border: 1px solid rgb(35, 35, 35);
+}
+.dropdown_menu .sign_out:hover {
+  text-decoration: underline;
+}
+.dropdown_menu .sign_out p {
+  margin: 0;
 }
 
 .faq_container {
