@@ -1,5 +1,9 @@
 import React from "react";
 import pencil from "../icons/pencil.png";
+import transfer from "../icons/transfer.png";
+import account from "../icons/account.png";
+import help from "../icons/help.png";
+
 import caret from "../icons/caret.png";
 import { Link } from "react-router-dom";
 
@@ -20,7 +24,7 @@ const DropdownMenu = () => {
 				</div>
 				<div className='item'>
 					<div className='item_icon'>
-						<img src={pencil} alt='pencil icon' />
+						<img src={transfer} alt='pencil icon' />
 					</div>
 					<div className='item_text'>
 						<p>Transfer Profile</p>
@@ -28,7 +32,7 @@ const DropdownMenu = () => {
 				</div>
 				<div className='item'>
 					<div className='item_icon'>
-						<img src={pencil} alt='pencil icon' />
+						<img src={account} alt='pencil icon' />
 					</div>
 					<div className='item_text'>
 						<p>Account</p>
@@ -36,7 +40,7 @@ const DropdownMenu = () => {
 				</div>
 				<div className='item'>
 					<div className='item_icon'>
-						<img src={pencil} alt='pencil icon' />
+						<img src={help} alt='pencil icon' />
 					</div>
 					<div className='item_text'>
 						<p>Help Center</p>
