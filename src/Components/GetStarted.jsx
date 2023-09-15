@@ -1,5 +1,6 @@
 import React from "react";
 import gs_arrow from "../icons/gs_arrow.png";
+import { Link } from "react-router-dom";
 
 const GetStarted = () => {
 	return (
@@ -19,10 +20,12 @@ const GetStarted = () => {
 								maxLength='50'
 								placeholder='Email address'
 							/>
-							<button>
-								Get Started
-								<img className='gs_arrow' src={gs_arrow} alt='arrow sign' />
-							</button>
+							<Link to='/signin' onClick={() => window.scrollTo(0, 0)}>
+								<button>
+									Get Started
+									<img className='gs_arrow' src={gs_arrow} alt='arrow sign' />
+								</button>
+							</Link>
 						</div>
 					</div>
 				</div>

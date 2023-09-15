@@ -29,14 +29,6 @@ const SignIn_Main = () => {
 						<Link to='/browse/home' onClick={() => window.scrollTo(0, 0)}>
 							<button type='submit'>Sign In</button>
 						</Link>
-						<div className='newTo'>
-							<p>
-								New to Netflix?
-								<Link to='/' onClick={() => window.scrollTo(0, 0)}>
-									<span> Sign up now</span>.
-								</Link>
-							</p>
-						</div>
 					</div>
 				</div>
 			</div>

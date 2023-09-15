@@ -7,10 +7,7 @@ const Hero = () => {
 			<div className='background_mask'></div>
 			<div className='container'>
 				<div className='hero_container'>
-					<h2>
-						The biggest local and international hits. The best stories. All
-						streaming here.
-					</h2>
+					<h2>Unlimited movies, TV shows, and more</h2>
 					<p>Watch anywhere. Cancel anytime.</p>
 					<GetStarted />
 				</div>
