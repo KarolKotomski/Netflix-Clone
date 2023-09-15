@@ -9,6 +9,15 @@ import DropdownMenu from "./DropdownMenu";
 
 const BrowseHeader = () => {
 	const [show, handleShow] = useState(false);
+	const [isActive, setIsActive] = useState(false);
+
+	const handleOpenMenu = () => {
+		setIsActive(true);
+	};
+
+	const handleCloseMenu = () => {
+		setIsActive(false);
+	};
 
 	const transitionHeader = () => {
 		if (window.scrollY > 100) {
@@ -50,14 +59,17 @@ const BrowseHeader = () => {
 					<div className='user_panel'>
 						<img src={search} alt='search' />
 						<img src={bell} alt='notifications bell' />
-						<div className='profile'>
+						<div
+							className='profile'
+							onMouseOver={() => handleOpenMenu()}
+							onMouseLeave={() => handleCloseMenu()}>
 							<div className='avatar'>
 								<img src={avatar} alt='profile icon' />
 							</div>
 							<div className='caret'>
 								<img src={caret} alt='caret icon' />
 							</div>
-							<DropdownMenu/>
+							{isActive ? <DropdownMenu /> : null}
 						</div>
 					</div>
 				</div>

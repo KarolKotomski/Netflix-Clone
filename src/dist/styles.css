@@ -315,14 +315,26 @@ body:hover {
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 4.375rem;
+  top: 2.8rem;
   right: 4.25rem;
-  background-color: rgba(0, 0, 0, 0.75);
   width: 13.625rem;
-  border: 1px solid rgb(35, 35, 35);
+}
+.dropdown_menu .arrow {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 1.2rem;
+}
+.dropdown_menu .arrow img {
+  position: relative;
+  bottom: -0.6rem;
+  width: 2rem;
+  height: 1.7rem;
+  transform: rotate(180deg);
 }
 .dropdown_menu_wrapper {
   padding: 0.75rem 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  border: 1px solid rgb(35, 35, 35);
 }
 .dropdown_menu_wrapper :hover {
   text-decoration: underline;
@@ -355,6 +367,8 @@ body:hover {
   padding: 0.325rem 0.65rem;
   height: 2.9rem;
   border: 1px solid rgb(35, 35, 35);
+  border-top: none;
+  background-color: rgba(0, 0, 0, 0.75);
 }
 .dropdown_menu .sign_out:hover {
   text-decoration: underline;

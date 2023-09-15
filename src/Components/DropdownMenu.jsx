@@ -1,9 +1,13 @@
 import React from "react";
 import pencil from "../icons/pencil.png";
+import caret from "../icons/caret.png";
 
 const DropdownMenu = () => {
 	return (
 		<div className='dropdown_menu'>
+			<div className='arrow'>
+				<img src={caret} alt='caret icon'></img>
+			</div>
 			<div className='dropdown_menu_wrapper'>
 				<div className='item'>
 					<div className='item_icon'>

@@ -4,14 +4,27 @@
 	display: flex;
 	flex-direction: column;
 	position: absolute;
-	top: 4.375rem;
+	top: 2.8rem;
 	right: 4.25rem;
-	background-color: $transparentBlackColor;
 	width: 13.625rem;
-	border: 1px solid $greyColor;
+
+	.arrow {
+		display: flex;
+		justify-content: flex-end;
+		padding-right: 1.2rem;
+		img {
+			position: relative;
+			bottom: -0.6rem;
+			width: 2rem;
+			height: 1.7rem;
+			transform: rotate(180deg);
+		}
+	}
 
 	&_wrapper {
 		padding: 0.75rem 0;
+		background-color: $transparentBlackColor;
+		border: 1px solid $greyColor;
 		:hover {
 			text-decoration: underline;
 		}
@@ -48,6 +61,8 @@
 		padding: 0.325rem 0.65rem;
 		height: 2.9rem;
 		border: 1px solid $greyColor;
+		border-top: none;
+		background-color: $transparentBlackColor;
 		&:hover {
 			text-decoration: underline;
 		}
