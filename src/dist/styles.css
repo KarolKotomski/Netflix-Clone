@@ -265,10 +265,10 @@ body:hover {
 .browse_header_container_long .bar ul li {
   cursor: pointer;
   color: rgb(229, 229, 229);
+  transition: all 0.3s ease-out;
 }
 .browse_header_container_long .bar ul li:hover {
   opacity: 0.5;
-  transition: all 0.3s ease-out;
 }
 .browse_header_container_long .user_panel {
   width: 20%;
@@ -277,17 +277,37 @@ body:hover {
   align-items: center;
   gap: 1.5rem;
 }
-.browse_header_container_long .user_panel .avatar {
-  height: 1.5rem;
-}
 .browse_header_container_long .user_panel img {
   cursor: pointer;
+}
+.browse_header_container_long .user_panel .profile {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 0.2rem;
+}
+.browse_header_container_long .user_panel .profile:hover .caret {
+  transform: rotate(180deg);
+}
+.browse_header_container_long .user_panel .profile .avatar {
+  display: flex;
+}
+.browse_header_container_long .user_panel .profile .avatar img {
+  height: 2rem;
+  border-radius: 0.3rem;
+}
+.browse_header_container_long .user_panel .profile .caret {
+  display: flex;
+  transition: transform 0.35s ease-out;
+}
+.browse_header_container_long .user_panel .profile .caret img {
+  height: 1.1rem;
+  width: 1.5em;
 }
 
 .black_background {
   background-color: rgb(20, 20, 20);
-  transition-timing-function: ease-in;
-  transition: all 0.8s;
+  transition: ease-in;
 }
 
 .faq_container {

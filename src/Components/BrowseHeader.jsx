@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import logo from "../images/netflix_logo.png";
 import avatar from "../icons/avatar.jpg";
+import caret from "../icons/caret.png";
 import bell from "../icons/bell.png";
 import search from "../icons/search.png";
 import { Link, NavLink } from "react-router-dom";
@@ -48,7 +49,14 @@ const BrowseHeader = () => {
 					<div className='user_panel'>
 						<img src={search} alt='search' />
 						<img src={bell} alt='notifications bell' />
-						<img className='avatar' src={avatar} alt='profile icon' />
+						<div className='profile'>
+							<div className='avatar'>
+								<img src={avatar} alt='profile icon' />
+							</div>
+							<div className='caret'>
+								<img src={caret} alt='caret icon' />
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
