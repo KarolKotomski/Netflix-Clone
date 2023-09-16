@@ -23,7 +23,8 @@
 		padding: 0 1rem;
 	}
 
-	h2 {
+	h2,
+	p {
 		text-align: center;
 	}
 
@@ -32,7 +33,7 @@
 	}
 }
 
-@media (max-width: 730px) {
+@media (max-width: 1075px) {
 	.hero {
 		h2 {
 			font-size: 2rem;
@@ -47,18 +48,21 @@
 		}
 	}
 }
-@media (max-width: 590px) {
+@media (max-width: 730px) {
 	.hero {
-		h2 {
-			font-size: 1.7rem;
-		}
+		&_container {
+			padding: 0 0.5rem;
+			h2 {
+				font-size: 1.5rem;
+			}
 
-		h3 {
-			font-size: 0.85rem;
-		}
+			h3 {
+				font-size: 0.85rem;
+			}
 
-		p {
-			font-size: 1rem;
+			p {
+				font-size: 1rem;
+			}
 		}
 	}
 }

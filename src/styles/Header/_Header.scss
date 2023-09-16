@@ -39,3 +39,12 @@
 		}
 	}
 }
+@media (max-width: 425px) {
+	.header_container {
+		padding: 0;
+		img,
+		button {
+			transform: scale(0.6);
+		}
+	}
+}
