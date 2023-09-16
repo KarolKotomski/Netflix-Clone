@@ -10,7 +10,7 @@ const Main = () => {
 	return (
 		<main className='main'>
 			<Hero />
-			{/* <Tv /> */}
+			<Tv />
 			{/* <Mobile />
 			<AppleTv />
 			<Kids />
