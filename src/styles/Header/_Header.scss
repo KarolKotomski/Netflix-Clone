@@ -29,3 +29,13 @@
 		padding: 0.25rem 1rem;
 	}
 }
+
+@media (max-width: 730px) {
+	.header_container {
+		padding: 0 0.5rem;
+		img,
+		button {
+			transform: scale(0.8);
+		}
+	}
+}

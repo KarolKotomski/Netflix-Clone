@@ -2,7 +2,6 @@
 
 .kids {
 	&_container {
-		@include sectionStyle();
 		.screen {
 			align-items: flex-end;
 		}

@@ -12,21 +12,21 @@ const GetStarted = () => {
 							Ready to watch? Enter your email to create or restart your
 							membership.
 						</h3>
-						<div className='main'>
-							<input
-								type='email'
-								name='email'
-								minLength='5'
-								maxLength='50'
-								placeholder='Email address'
-							/>
-							<Link to='/signin' onClick={() => window.scrollTo(0, 0)}>
-								<button>
-									Get Started
-									<img className='gs_arrow' src={gs_arrow} alt='arrow sign' />
-								</button>
-							</Link>
-						</div>
+					</div>
+					<div className='main'>
+						<input
+							type='email'
+							name='email'
+							minLength='5'
+							maxLength='50'
+							placeholder='Email address'
+						/>
+						<Link to='/signin' onClick={() => window.scrollTo(0, 0)}>
+							<button>
+								Get Started
+								<img className='gs_arrow' src={gs_arrow} alt='arrow sign' />
+							</button>
+						</Link>
 					</div>
 				</div>
 			</div>

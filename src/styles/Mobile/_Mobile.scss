@@ -5,8 +5,6 @@
 		@include spacingStyle();
 	}
 	&_container {
-		@include sectionStyle();
-
 		.screen {
 			align-items: flex-end;
 		}
@@ -31,6 +29,7 @@
 				.boxshot img {
 					height: 5rem;
 					padding-right: 0.75rem;
+					width: auto;
 				}
 
 				.content {
@@ -50,6 +49,7 @@
 
 					img {
 						height: 3.5rem;
+						width: auto;
 					}
 				}
 			}

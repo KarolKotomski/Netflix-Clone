@@ -8,7 +8,6 @@ const Header = () => {
 			<div className='container'>
 				<div className='header_container'>
 					<Link to='/' onClick={() => window.scrollTo(0, 0)}>
-						;
 						<img src={logo} alt='netflix logo' />
 					</Link>
 					<Link to='/signin' onClick={() => window.scrollTo(0, 0)}>
