@@ -13,7 +13,7 @@ const Main = () => {
 			<Tv />
 			<Mobile />
 			<AppleTv />
-			{/* <Kids /> */}
+			<Kids />
 			{/* <Faq /> */}
 		</main>
 	);

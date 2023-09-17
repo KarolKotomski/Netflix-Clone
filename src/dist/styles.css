@@ -744,8 +744,10 @@ body:hover {
     font-size: 0.8rem;
   }
 }
-.kids_container .screen {
-  align-items: flex-end;
+.kids_container {
+  display: flex;
+  align-items: center;
+  padding: 4.5rem 2rem;
 }
 .kids .spacing {
   background-color: rgb(35, 35, 35);
@@ -754,6 +756,43 @@ body:hover {
   bottom: 0.5rem;
 }
 
+@media (max-width: 1170px) {
+  .kids_container {
+    flex-direction: column-reverse;
+  }
+  .kids_container .text {
+    text-align: center;
+  }
+}
+@media (max-width: 700px) {
+  .kids_container {
+    padding-top: 2rem;
+    padding-bottom: 0;
+  }
+  .kids_container .screen {
+    transform: scale(0.7);
+    transform-origin: top center;
+    height: 24rem;
+  }
+  .kids_container .text h2 {
+    font-size: 2rem;
+  }
+  .kids_container .text p {
+    font-size: 1.25rem;
+  }
+}
+@media (max-width: 530px) {
+  .kids_container .screen {
+    transform: scale(0.45);
+    height: 16rem;
+  }
+  .kids_container .text h2 {
+    font-size: 1.6rem;
+  }
+  .kids_container .text p {
+    font-size: 1rem;
+  }
+}
 .mobile .spacing {
   background-color: rgb(35, 35, 35);
   height: 0.5rem;
