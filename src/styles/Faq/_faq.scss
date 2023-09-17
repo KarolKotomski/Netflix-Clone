@@ -2,9 +2,11 @@
 
 .faq {
 	&_container {
+		@include sectionStyle();
 		flex-direction: column;
 		h2 {
 			margin-bottom: 2rem;
+			text-align: center;
 		}
 
 		.full_list {
@@ -62,5 +64,40 @@
 
 	.spacing {
 		@include spacingStyle();
+	}
+}
+
+@media (max-width: 820px) {
+	.faq {
+		&_container {
+			padding-top: 2rem;
+			padding-bottom: 0;
+
+			h2 {
+				font-size: 2rem;
+			}
+		}
+	}
+}
+
+@media (max-width: 580px) {
+	.faq {
+		&_container {
+			h2 {
+				font-size: 1.6rem;
+			}
+			.full_list {
+				.item {
+					.question {
+						h3 {
+							font-size: 1rem;
+						}
+						img{
+							height: 1.5rem;
+						}
+					}
+				}
+			}
+		}
 	}
 }
