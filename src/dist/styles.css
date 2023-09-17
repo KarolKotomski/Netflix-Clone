@@ -485,6 +485,9 @@ body:hover {
   .faq_container .full_list .item .question img {
     height: 1.5rem;
   }
+  .faq_container .full_list .item .answer_show p {
+    font-size: 1rem;
+  }
 }
 .footer_container {
   display: flex;
