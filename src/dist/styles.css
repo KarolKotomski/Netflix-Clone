@@ -721,15 +721,17 @@ body:hover {
   position: relative;
   bottom: 0.5rem;
 }
-.mobile_container .screen {
-  align-items: flex-end;
+.mobile_container {
+  display: flex;
+  align-items: center;
+  padding: 4.5rem 2rem;
 }
-.mobile_container .wrapper {
+.mobile_container .screen .wrapper {
   position: relative;
   display: flex;
   justify-content: center;
 }
-.mobile_container .wrapper .download_box {
+.mobile_container .screen .wrapper .download_box {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -741,29 +743,66 @@ body:hover {
   padding: 0.5rem 0.75rem;
   background-color: black;
 }
-.mobile_container .wrapper .download_box .boxshot img {
+.mobile_container .screen .wrapper .download_box .boxshot img {
   height: 5rem;
   padding-right: 0.75rem;
   width: auto;
 }
-.mobile_container .wrapper .download_box .content {
+.mobile_container .screen .wrapper .download_box .content {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
-.mobile_container .wrapper .download_box .content .process {
+.mobile_container .screen .wrapper .download_box .content .process {
   font-size: 0.875rem;
   color: rgb(0, 113, 235);
 }
-.mobile_container .wrapper .download_box .download_circle {
+.mobile_container .screen .wrapper .download_box .download_circle {
   display: flex;
   align-items: center;
 }
-.mobile_container .wrapper .download_box .download_circle img {
+.mobile_container .screen .wrapper .download_box .download_circle img {
   height: 3.5rem;
   width: auto;
 }
 
+@media (max-width: 1170px) {
+  .mobile_container {
+    flex-direction: column-reverse;
+  }
+  .mobile_container .text {
+    text-align: center;
+  }
+}
+@media (max-width: 700px) {
+  .mobile_container {
+    padding-top: 2rem;
+    padding-bottom: 0;
+  }
+  .mobile_container .screen {
+    transform: scale(0.7);
+    transform-origin: top center;
+    height: 24rem;
+  }
+  .mobile_container .text h2 {
+    font-size: 2rem;
+  }
+  .mobile_container .text p {
+    font-size: 1.25rem;
+  }
+}
+@media (max-width: 530px) {
+  .mobile_container .screen {
+    transform: scale(0.45);
+    height: 16rem;
+  }
+  .mobile_container .text h2 {
+    font-size: 1.6rem;
+  }
+  .mobile_container .text p {
+    font-size: 1rem;
+  }
+}
 .noMatch {
   height: 100vh;
   background-image: url("../images/bg-lost-in-space.png");

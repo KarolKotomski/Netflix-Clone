@@ -11,10 +11,10 @@ const Main = () => {
 		<main className='main'>
 			<Hero />
 			<Tv />
-			{/* <Mobile />
-			<AppleTv />
-			<Kids />
-			<Faq /> */}
+			<Mobile />
+			{/* <AppleTv /> */}
+			{/* <Kids /> */}
+			{/* <Faq /> */}
 		</main>
 	);
 };
