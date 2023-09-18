@@ -1283,9 +1283,40 @@ body:hover {
 }
 .signIn_footer_container .title {
   width: 70%;
-  margin-bottom: 1.875rem;
+  margin-bottom: 1rem;
 }
 
+@media (max-width: 760px) {
+  .signIn_footer {
+    border-top: 1px solid rgb(115, 115, 115);
+  }
+  .signIn_footer_container .list {
+    width: 100%;
+  }
+  .signIn_footer_container .list ul {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .signIn_footer_container .title {
+    width: 100%;
+  }
+}
+@media (max-width: 530px) {
+  .signIn_footer_container .list ul {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 440px) {
+  .signIn_footer_container {
+    padding: 1rem;
+  }
+  .signIn_footer_container .list ul {
+    grid-template-columns: 1fr 1fr;
+  }
+  .signIn_footer_container .list ul li {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
 .signIn_main {
   background-image: url("../images/landing_background_picture.jpg");
   background-size: cover;
@@ -1296,7 +1327,9 @@ body:hover {
 }
 .signIn_main_container {
   height: 100vh;
-  padding-top: 5.375rem;
+  display: flex;
+  align-items: center;
+  padding-bottom: 10rem;
 }
 .signIn_main_container .netflix_logo {
   width: 10.5rem;
@@ -1314,7 +1347,6 @@ body:hover {
   flex-direction: column;
   padding: 3.75rem 4.25rem;
   border-radius: 0.25rem;
-  min-height: 30rem;
 }
 .signIn_main .wrapper button {
   background-color: rgb(229, 9, 20);
@@ -1359,6 +1391,28 @@ body:hover {
   cursor: pointer;
 }
 
+@media (max-width: 760px) {
+  .signIn_main {
+    background-image: none;
+  }
+  .signIn_main .wrapper {
+    width: 100%;
+    padding: 2rem;
+  }
+}
+@media (max-width: 440px) {
+  .signIn_main_container .netflix_logo {
+    width: 5rem;
+    height: auto;
+    position: absolute;
+    top: 2.5%;
+    left: 3%;
+    cursor: pointer;
+  }
+  .signIn_main .wrapper {
+    padding: 1rem;
+  }
+}
 .tv_container {
   display: flex;
   align-items: center;
