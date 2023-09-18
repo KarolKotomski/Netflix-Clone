@@ -206,11 +206,8 @@ body:hover {
 }
 
 @media (max-width: 1100px) {
-  .banner {
-    height: 40rem;
-  }
   .banner_container_long .content {
-    top: 18rem;
+    top: 24rem;
   }
   .banner_container_long .content .buttons img {
     height: 1.8rem;
@@ -221,7 +218,7 @@ body:hover {
     height: 2.5rem;
   }
   .banner_container_long .content .description {
-    width: 60%;
+    width: 100%;
   }
   .banner_container_long .content h1 {
     margin: 1rem 0;
@@ -235,7 +232,7 @@ body:hover {
     padding: 0 1rem;
   }
   .banner_container_long .content {
-    top: 19rem;
+    top: 24rem;
   }
   .banner_container_long .content .buttons img {
     height: 1.8rem;
@@ -244,9 +241,6 @@ body:hover {
   .banner_container_long .content .buttons .more_info_button {
     font-size: 1.3rem;
     height: 2.5rem;
-  }
-  .banner_container_long .content .description {
-    width: 100%;
   }
   .banner_container_long .content h1 {
     margin: 1rem 0;
@@ -273,7 +267,7 @@ body:hover {
     height: 30rem;
   }
   .banner .content {
-    top: 15rem;
+    top: 17rem;
   }
   .banner .content .buttons img {
     height: 1rem;
@@ -355,11 +349,11 @@ body:hover {
   background-color: transparent;
   padding: 0 3.75rem;
   height: 100%;
+  justify-content: space-between;
 }
 .browse_header_container_long .bar {
   display: flex;
   align-items: center;
-  width: 80%;
 }
 .browse_header_container_long .bar img {
   height: 1.6rem;
@@ -390,7 +384,6 @@ body:hover {
   opacity: 0.5;
 }
 .browse_header_container_long .user_panel {
-  width: 20%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -1203,6 +1196,30 @@ body:hover {
   color: rgb(229, 229, 229);
 }
 
+@media (max-width: 1100px) {
+  .row .title {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 820px) {
+  .row {
+    padding-left: 1rem;
+  }
+  .row .title {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 650px) {
+  .row .title {
+    font-size: 1rem;
+  }
+  .row .posters img {
+    max-height: 8rem;
+  }
+  .row .posters .poster_large {
+    max-height: 12rem;
+  }
+}
 .signIn_footer {
   background-color: rgba(0, 0, 0, 0.75);
   position: absolute;

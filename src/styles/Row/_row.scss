@@ -40,3 +40,35 @@
 		color: $greyColorHomePage;
 	}
 }
+
+@media (max-width: 1100px) {
+	.row {
+		.title {
+			font-size: 1.2rem;
+		}
+	}
+}
+@media (max-width: 820px) {
+	.row {
+		padding-left: 1rem;
+		.title {
+			font-size: 1.2rem;
+		}
+	}
+}
+@media (max-width: 650px) {
+	.row {
+		.title {
+			font-size: 1rem;
+		}
+		.posters {
+			img {
+				max-height: 8rem;
+			}
+
+			.poster_large {
+				max-height: 12rem;
+			}
+		}
+	}
+}
