@@ -984,6 +984,36 @@ body:hover {
   height: 3rem;
 }
 
+@media (max-width: 1020px) {
+  .noMatch .content h1 {
+    font-size: 4rem;
+  }
+  .noMatch .content p {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 760px) {
+  .noMatch .content h1 {
+    font-size: 3rem;
+  }
+  .noMatch .content p {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 465px) {
+  .noMatch_header_container_long {
+    padding: 0 1rem;
+  }
+  .noMatch_header_container_long img {
+    height: 1.3rem;
+  }
+  .noMatch .content h1 {
+    font-size: 1.9rem;
+  }
+  .noMatch .content p {
+    font-size: 1rem;
+  }
+}
 .row {
   background-color: rgb(20, 20, 20);
   padding-left: 3.75rem;

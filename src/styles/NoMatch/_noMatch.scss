@@ -70,3 +70,49 @@
 		}
 	}
 }
+
+@media (max-width: 1020px) {
+	.noMatch {
+		.content {
+			h1 {
+				font-size: 4rem;
+			}
+			p {
+				font-size: 1.5rem;
+			}
+		}
+	}
+}
+@media (max-width: 760px) {
+	.noMatch {
+		.content {
+			h1 {
+				font-size: 3rem;
+			}
+			p {
+				font-size: 1.2rem;
+			}
+		}
+	}
+}
+
+@media (max-width: 465px) {
+	.noMatch {
+		&_header {
+			&_container_long {
+				padding: 0 1rem;
+				img {
+					height: 1.3rem;
+				}
+			}
+		}
+		.content {
+			h1 {
+				font-size: 1.9rem;
+			}
+			p {
+				font-size: 1rem;
+			}
+		}
+	}
+}
