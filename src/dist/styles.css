@@ -296,7 +296,7 @@ body:hover {
 .browse_footer_container_long {
   display: flex;
   flex-direction: column;
-  padding: 4.5rem 2rem;
+  padding: 4.5rem 3.75rem;
   max-width: 75rem;
   margin: 0 auto;
 }
