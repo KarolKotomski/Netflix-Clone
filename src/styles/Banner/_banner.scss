@@ -40,6 +40,7 @@
 
 			.description {
 				width: 50%;
+				padding-right: 1rem;
 			}
 			.buttons {
 				display: flex;
@@ -53,7 +54,6 @@
 					outline: none;
 					cursor: pointer;
 					line-height: 2.4rem;
-					min-width: 10rem;
 					height: 3rem;
 					padding: 0.5rem 1rem;
 				}
@@ -90,8 +90,122 @@
 			.title {
 				font-size: 3rem;
 				font-weight: 800;
-				padding-bottom: 0.3rem;
 			}
+		}
+	}
+}
+
+@media (max-width: 1100px) {
+	.banner {
+		height: 40rem;
+		&_container_long {
+			.content {
+				top: 18rem;
+				.buttons {
+					img {
+						height: 1.8rem;
+					}
+					.play_button,
+					.more_info_button {
+						font-size: 1.3rem;
+						height: 2.5rem;
+					}
+				}
+				.description {
+					width: 60%;
+				}
+
+				h1 {
+					margin: 1rem 0;
+				}
+
+				.title {
+					font-size: 2.5rem;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 820px) {
+	.banner {
+		&_container_long {
+			padding: 0 1rem;
+			.content {
+				top: 19rem;
+				.buttons {
+					img {
+						height: 1.8rem;
+					}
+					.play_button,
+					.more_info_button {
+						font-size: 1.3rem;
+						height: 2.5rem;
+					}
+				}
+				.description {
+					width: 100%;
+				}
+
+				h1 {
+					margin: 1rem 0;
+				}
+
+				.title {
+					font-size: 2.5rem;
+				}
+			}
+		}
+	}
+}
+@media (max-width: 650px) {
+	.banner {
+		.content {
+			.buttons {
+				img {
+					height: 1.2rem;
+				}
+				.play_button,
+				.more_info_button {
+					height: 2rem;
+					font-size: 1rem;
+				}
+			}
+			.title {
+				font-size: 2.2rem;
+			}
+		}
+	}
+}
+@media (max-width: 550px) {
+	.banner {
+		height: 30rem;
+		.content {
+			top: 15rem;
+			.buttons {
+				img {
+					height: 1rem;
+				}
+				.play_button,
+				.more_info_button {
+					height: 1.5rem;
+					font-size: 0.7rem;
+				}
+			}
+			.description {
+				font-size: 0.7rem;
+			}
+
+			h1 {
+				margin: 0.5rem 0;
+			}
+
+			.title {
+				font-size: 1.8rem;
+			}
+		}
+		&_fade_bottom {
+			height: 30rem;
 		}
 	}
 }
