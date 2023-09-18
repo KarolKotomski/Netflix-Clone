@@ -8,7 +8,7 @@ const Browse = () => {
 		<div className='browse'>
 			<BrowseHeader />
 			<Outlet />
-			{/* <BrowseFooter /> */}
+			<BrowseFooter />
 		</div>
 	);
 };
