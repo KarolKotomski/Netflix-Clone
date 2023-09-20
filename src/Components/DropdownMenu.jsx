@@ -3,16 +3,11 @@ import pencil from "../icons/pencil.png";
 import transfer from "../icons/transfer.png";
 import account from "../icons/account.png";
 import help from "../icons/help.png";
-
-import caret from "../icons/caret.png";
 import { Link } from "react-router-dom";
 
 const DropdownMenu = () => {
 	return (
 		<div className='dropdown_menu'>
-			<div className='arrow'>
-				<img src={caret} alt='caret icon'></img>
-			</div>
 			<div className='dropdown_menu_wrapper'>
 				<div className='item'>
 					<div className='item_icon'>

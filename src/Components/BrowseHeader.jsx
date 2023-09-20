@@ -57,14 +57,21 @@ const BrowseHeader = () => {
 						</div>
 					</div>
 					<div className='user_panel'>
-						<img src={search} alt='search' />
-						<img src={bell} alt='notifications bell' />
+						<div className='search'>
+							<img src={search} alt='search' />
+						</div>
+						<div className='bell'>
+							<img src={bell} alt='notifications bell' />
+						</div>
 						<div
 							className='profile'
 							onMouseOver={() => handleOpenMenu()}
 							onMouseLeave={() => handleCloseMenu()}>
 							<div className='avatar'>
 								<img src={avatar} alt='profile icon' />
+								<div className={`arrow ${isActive && "open"}`}>
+									<img src={caret} alt='caret icon'></img>
+								</div>
 							</div>
 							<div className='caret'>
 								<img src={caret} alt='caret icon' />
