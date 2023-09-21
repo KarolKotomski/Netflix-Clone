@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import avatar from "../icons/avatar.jpg";
 import bell from "../icons/bell.png";
 import caret from "../icons/caret.png";
@@ -6,8 +6,12 @@ import logo from "../images/netflix_logo.png";
 import search from "../icons/search.png";
 import { Link, NavLink } from "react-router-dom";
 import DropdownMenu from "./DropdownMenu";
+import { MoviesContext } from "../context/MoviesContext";
+
 
 const BrowseHeader = () => {
+	const { query, handleSearch } = useContext(MoviesContext);
+
 	const [show, handleShow] = useState(false);
 	const [isActive, setIsActive] = useState(false);
 
@@ -58,6 +62,7 @@ const BrowseHeader = () => {
 					</div>
 					<div className='user_panel'>
 						<div className='search'>
+							<input type='text' value={query} onChange={handleSearch}/>
 							<img src={search} alt='search' />
 						</div>
 						<div className='bell'>

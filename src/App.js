@@ -7,22 +7,27 @@ import BrowseHome from "./components/BrowseHome";
 import BrowseTvShows from "./components/BrowseTvShows";
 import BrowseMovies from "./components/BrowseMovies";
 import NoMatch from "./components/NoMatch";
+import Search from "./components/Search";
+import { MoviesContextProvider } from "./context/MoviesContext";
 
 function App() {
 	return (
-		<BrowserRouter>
-			<Routes>
-				<Route path='/' element={<Landing />} />
-				<Route path='signin' element={<SignIn />} />
-				<Route path='browse' element={<Browse />}>
-					<Route index element={<BrowseHome />} />
-					<Route path='home' element={<BrowseHome />} />
-					<Route path='tvshows' element={<BrowseTvShows />} />
-					<Route path='movies' element={<BrowseMovies />} />
-				</Route>
-				<Route path="*" element={<NoMatch />} />
-			</Routes>
-		</BrowserRouter>
+		<MoviesContextProvider>
+			<BrowserRouter>
+				<Routes>
+					<Route path='/' element={<Landing />} />
+					<Route path='signin' element={<SignIn />} />
+					<Route path='browse' element={<Browse />}>
+						<Route index element={<BrowseHome />} />
+						<Route path='home' element={<BrowseHome />} />
+						<Route path='tvshows' element={<BrowseTvShows />} />
+						<Route path='movies' element={<BrowseMovies />} />
+						<Route path='search' element={<Search />}></Route>
+					</Route>
+					<Route path='*' element={<NoMatch />} />
+				</Routes>
+			</BrowserRouter>
+		</MoviesContextProvider>
 	);
 }
 
