@@ -18,7 +18,7 @@ const Banner = ({fetchUrl}) => {
 		}
 
 		fetchData();
-	}, []);
+	}, [fetchUrl]);
 
 	return (
 		<div

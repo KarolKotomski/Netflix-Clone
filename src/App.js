@@ -7,7 +7,6 @@ import BrowseHome from "./components/BrowseHome";
 import BrowseTvShows from "./components/BrowseTvShows";
 import BrowseMovies from "./components/BrowseMovies";
 import NoMatch from "./components/NoMatch";
-import Search from "./components/Search";
 import { MoviesContextProvider } from "./context/MoviesContext";
 
 function App() {
@@ -22,7 +21,6 @@ function App() {
 						<Route path='home' element={<BrowseHome />} />
 						<Route path='tvshows' element={<BrowseTvShows />} />
 						<Route path='movies' element={<BrowseMovies />} />
-						<Route path='search' element={<Search />}></Route>
 					</Route>
 					<Route path='*' element={<NoMatch />} />
 				</Routes>

@@ -1,29 +1,32 @@
 import React, { createContext, useState, useEffect } from "react";
 import axios from "../axios/axios";
-import requests from "../axios/requests";
 import Fuse from "fuse.js";
+
 
 export const MoviesContext = createContext();
 
 export const MoviesContextProvider = (props) => {
-	const [movies, setMovies] = useState([]);
-
 	const base_url = "https://image.tmdb.org/t/p/original/";
+
+	const [movies, setMovies] = useState([]);
+	const [fetchUrl, setFetchUrl] = useState("");
 
 	useEffect(() => {
 		async function fetchData() {
-			const request = await axios.get(requests.fetchNetflixOriginals);
-			setMovies(request.data.results);
-			return request;
+			if (fetchUrl) {
+				const request = await axios.get(fetchUrl);
+				setMovies(request.data.results);
+				return request;
+			}
 		}
 		fetchData();
-    }, [requests.fetchNetflixOriginals]);
+	}, [fetchUrl]);
 
-	//fuzzy searchbar functionality:
+	// fuzzy searchbar functionality:
 
 	const [query, setQuery] = useState("");
 	const fuse = new Fuse(movies, {
-		keys: ["title", "original_title"],
+		keys: ["title", "original_title", "original_name", "name"],
 	});
 
 	const results = fuse.search(query);
@@ -33,11 +36,13 @@ export const MoviesContextProvider = (props) => {
 
 	// gathered context values
 	const contextValue = {
-		movies,
 		base_url,
+		movies,
 		searchResults,
 		query,
 		handleSearch,
+		setFetchUrl,
+		fetchUrl,
 	};
 
 	return (

@@ -1,16 +1,19 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
+import { MoviesContext } from "../context/MoviesContext";
 import axios from "../axios/axios";
 
 const Row = ({ title, fetchUrl, isLargeRow = false }) => {
-	const [movies, setMovies] = useState([]);
+	const { base_url } = useContext(MoviesContext);
 
-	const base_url = "https://image.tmdb.org/t/p/original/"; 
+	const [movies, setMovies] = useState([]);
 
 	useEffect(() => {
 		async function fetchData() {
-			const request = await axios.get(fetchUrl);
-			setMovies(request.data.results);
-			return request;
+			if (fetchUrl) {
+				const request = await axios.get(fetchUrl);
+				setMovies(request.data.results);
+				return request;
+			}
 		}
 		fetchData();
 	}, [fetchUrl]);
@@ -24,7 +27,7 @@ const Row = ({ title, fetchUrl, isLargeRow = false }) => {
 				{movies.map(
 					(movie) =>
 						((isLargeRow && movie.poster_path) ||
-						(!isLargeRow && movie.backdrop_path)) && (
+							(!isLargeRow && movie.backdrop_path)) && (
 							<img
 								className={`${isLargeRow && "poster_large"}`}
 								src={`${base_url}${
