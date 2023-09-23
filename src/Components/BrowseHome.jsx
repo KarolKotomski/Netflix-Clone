@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import Banner from "./Banner";
 import Row from "./Row";
 import requests from "../axios/requests";
-import SearchRow from "./SearchRow";
 import { MoviesContext } from "../context/MoviesContext";
 
 const BrowseHome = () => {
@@ -30,7 +29,7 @@ const BrowseHome = () => {
 					<Row title='Romance Movies' fetchUrl={requests.fetchRomanceMovies} />
 				</>
 			)}
-			{query && <SearchRow title='Search Results'/>}
+			
 		</>
 	);
 };

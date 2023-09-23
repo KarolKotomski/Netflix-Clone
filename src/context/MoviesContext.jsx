@@ -30,10 +30,6 @@ export const MoviesContextProvider = (props) => {
 		fetchAllData();
 	}, []);
 
-	useEffect(() => {
-		console.log(allMovies);
-	}, [allMovies]);
-
 	// fuzzy searchbar functionality:
 
 	const [query, setQuery] = useState("");
