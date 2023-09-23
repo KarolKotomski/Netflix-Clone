@@ -8,12 +8,15 @@ import { Link, NavLink } from "react-router-dom";
 import DropdownMenu from "./DropdownMenu";
 import { MoviesContext } from "../context/MoviesContext";
 
-
 const BrowseHeader = () => {
-	const { query, handleSearch } = useContext(MoviesContext);
-
+	const { query, setQuery, handleSearch } = useContext(MoviesContext);
 	const [show, handleShow] = useState(false);
 	const [isActive, setIsActive] = useState(false);
+
+	const handleClick = () => {
+		window.scrollTo(0, 0);
+		setQuery("");
+	};
 
 	const handleOpenMenu = () => {
 		setIsActive(true);
@@ -43,18 +46,18 @@ const BrowseHeader = () => {
 			<div className='container_long'>
 				<div className='browse_header_container_long'>
 					<div className='bar'>
-						<Link to='home' onClick={() => window.scrollTo(0, 0)}>
+						<Link to='home' onClick={() => handleClick()}>
 							<img src={logo} alt='netflix logo' />
 						</Link>
 						<div className='list'>
 							<ul>
-								<NavLink to='home' onClick={() => window.scrollTo(0, 0)}>
+								<NavLink to='home' onClick={() => handleClick()}>
 									<li>Home</li>
 								</NavLink>
-								<NavLink to='tvshows' onClick={() => window.scrollTo(0, 0)}>
+								<NavLink to='tvshows' onClick={() => handleClick()}>
 									<li>TV Shows</li>
 								</NavLink>
-								<NavLink to='movies' onClick={() => window.scrollTo(0, 0)}>
+								<NavLink to='movies' onClick={() => handleClick()}>
 									<li>Movies</li>
 								</NavLink>
 							</ul>
@@ -62,7 +65,7 @@ const BrowseHeader = () => {
 					</div>
 					<div className='user_panel'>
 						<div className='search'>
-							<input type='text' value={query} onChange={handleSearch}/>
+							<input type='text' value={query} onChange={handleSearch} />
 							<img src={search} alt='search' />
 						</div>
 						<div className='bell'>

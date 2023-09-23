@@ -47,6 +47,7 @@ export const MoviesContextProvider = (props) => {
 		base_url,
 		searchResults,
 		query,
+		setQuery,
 		handleSearch,
 	};
 

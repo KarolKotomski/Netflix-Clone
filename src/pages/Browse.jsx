@@ -5,15 +5,13 @@ import { Outlet } from "react-router-dom";
 import { MoviesContext } from "../context/MoviesContext";
 import SearchRow from "../components/SearchRow";
 
-
-
 const Browse = () => {
-	const { query} = useContext(MoviesContext)
+	const { query } = useContext(MoviesContext);
 	return (
 		<div className='browse'>
 			<BrowseHeader />
+			{query && <SearchRow title='Search Results' />}
 			<Outlet />
-			{query && <SearchRow title='Search Results'/>}
 			<BrowseFooter />
 		</div>
 	);
