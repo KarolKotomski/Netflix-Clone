@@ -1,31 +1,43 @@
 import React, { createContext, useState, useEffect } from "react";
 import axios from "../axios/axios";
 import Fuse from "fuse.js";
-
+import requests from "../axios/requests";
 
 export const MoviesContext = createContext();
 
 export const MoviesContextProvider = (props) => {
 	const base_url = "https://image.tmdb.org/t/p/original/";
 
-	const [movies, setMovies] = useState([]);
-	const [fetchUrl, setFetchUrl] = useState("");
+	const [allMovies, setAllMovies] = useState([]);
+
 
 	useEffect(() => {
-		async function fetchData() {
-			if (fetchUrl) {
-				const request = await axios.get(fetchUrl);
-				setMovies(request.data.results);
-				return request;
+		async function fetchAllData() {
+			const endpoints = Object.values(requests).map((url) =>
+				axios.get(url).then((response) => response.data.results)
+			);
+			try {
+				const responses = (await Promise.all(endpoints)).flat(Infinity);
+				const uniqueMoviesArray = responses.filter(
+					(item, index, self) =>
+						index === self.findIndex((t) => t.id === item.id)
+				);
+				setAllMovies(uniqueMoviesArray);
+			} catch (error) {
+				console.error("Error during fetching the data", error);
 			}
 		}
-		fetchData();
-	}, [fetchUrl]);
+		fetchAllData();
+	}, []);
+
+	useEffect(() => {
+		console.log(allMovies);
+	}, [allMovies]);
 
 	// fuzzy searchbar functionality:
 
 	const [query, setQuery] = useState("");
-	const fuse = new Fuse(movies, {
+	const fuse = new Fuse(allMovies, {
 		keys: ["title", "original_title", "original_name", "name"],
 	});
 
@@ -37,12 +49,9 @@ export const MoviesContextProvider = (props) => {
 	// gathered context values
 	const contextValue = {
 		base_url,
-		movies,
 		searchResults,
 		query,
 		handleSearch,
-		setFetchUrl,
-		fetchUrl,
 	};
 
 	return (

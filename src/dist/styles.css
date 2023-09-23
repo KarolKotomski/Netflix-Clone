@@ -151,7 +151,7 @@ body:hover {
 }
 .banner_container_long .content {
   position: absolute;
-  top: 20rem;
+  top: 16rem;
   z-index: 1;
 }
 .banner_container_long .content button:hover {
@@ -207,7 +207,7 @@ body:hover {
 
 @media (max-width: 1100px) {
   .banner_container_long .content {
-    top: 24rem;
+    top: 22rem;
   }
   .banner_container_long .content .buttons img {
     height: 1.8rem;
@@ -232,7 +232,7 @@ body:hover {
     padding: 0 1rem;
   }
   .banner_container_long .content {
-    top: 24rem;
+    top: 20rem;
   }
   .banner_container_long .content .buttons img {
     height: 1.8rem;
@@ -267,7 +267,7 @@ body:hover {
     height: 30rem;
   }
   .banner .content {
-    top: 17rem;
+    top: 15rem;
   }
   .banner .content .buttons img {
     height: 1rem;
