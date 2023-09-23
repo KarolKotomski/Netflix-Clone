@@ -8,8 +8,9 @@ export const MoviesContext = createContext();
 export const MoviesContextProvider = (props) => {
 	const base_url = "https://image.tmdb.org/t/p/original/";
 
+	// fetching all data from TMDB:
+	
 	const [allMovies, setAllMovies] = useState([]);
-
 
 	useEffect(() => {
 		async function fetchAllData() {

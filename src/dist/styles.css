@@ -1224,11 +1224,6 @@ body:hover {
   color: rgb(229, 229, 229);
 }
 
-.search_row {
-  padding-top: 10rem;
-  padding-bottom: 10rem;
-}
-
 @media (max-width: 1100px) {
   .row .title {
     font-size: 1.2rem;
@@ -1253,6 +1248,11 @@ body:hover {
     max-height: 12rem;
   }
 }
+.search_row {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
 .signIn_footer {
   background-color: rgba(0, 0, 0, 0.75);
   position: absolute;
