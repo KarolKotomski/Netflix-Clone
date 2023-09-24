@@ -112,6 +112,66 @@
 					}
 				}
 			}
+			.search {
+				display: flex;
+				align-items: center;
+				position: relative;
+
+				img {
+					height: 1.5rem;
+				}
+
+				&_bar {
+					display: flex;
+					align-items: center;
+					height: 2.4rem;
+					background-color: $inputBackgroundColor;
+					position: absolute;
+					right: 0;
+					width: 0;
+					overflow: hidden;
+					
+					.open {
+						width: auto;
+						border: 1px $whiteColor solid;
+					}
+
+					&_wrapper_icon {
+						height: 100%;
+						padding: 0 0.5rem;
+						background-color: $inputBackgroundColor;
+						display: flex;
+						align-items: center;
+					}
+
+					&_wrapper_input_field {
+						background-color: $inputBackgroundColor;
+						height: 100%;
+						display: flex;
+
+						input {
+							color: $whiteColor;
+							background-color: $inputBackgroundColor;
+							border: none;
+							&:focus {
+								outline: none;
+							}
+						}
+					}
+					&_wrapper_close {
+						height: 100%;
+						padding: 0 0.5rem;
+						display: flex;
+						align-items: center;
+						background-color: $inputBackgroundColor;
+
+						img {
+							transform: rotate(45deg);
+							height: 1.75rem;
+						}
+					}
+				}
+			}
 		}
 	}
 }
@@ -194,6 +254,7 @@
 
 			.user_panel {
 				gap: 0.6rem;
+
 				img {
 					height: 0.8rem;
 				}

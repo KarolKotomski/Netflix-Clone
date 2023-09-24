@@ -14,13 +14,11 @@ const SignIn_Main = () => {
 						<h1>Sign In</h1>
 						<input
 							type='email'
-							name=''
 							id=''
 							placeholder='Email or phone number'
 						/>
 						<input
 							type='password'
-							name=''
 							id=''
 							placeholder='Password'
 							minLength='4'

@@ -2,6 +2,7 @@ import React, { useEffect, useState, useContext } from "react";
 import avatar from "../icons/avatar.jpg";
 import bell from "../icons/bell.png";
 import caret from "../icons/caret.png";
+import close from "../icons/plus_icon.png";
 import logo from "../images/netflix_logo.png";
 import search from "../icons/search.png";
 import { Link, NavLink } from "react-router-dom";
@@ -65,7 +66,17 @@ const BrowseHeader = () => {
 					</div>
 					<div className='user_panel'>
 						<div className='search'>
-							<input type='text' value={query} onChange={handleSearch} />
+							<div className='search_bar'>
+								<div className='search_bar_wrapper_icon'>
+									<img src={search} alt='search' />
+								</div>
+								<div className='search_bar_wrapper_input_field'>
+									<input type='text' value={query} onChange={handleSearch} />
+								</div>
+								<div className="search_bar_wrapper_close">
+								<img src={close} alt='search' />
+								</div>
+							</div>
 							<img src={search} alt='search' />
 						</div>
 						<div className='bell'>
