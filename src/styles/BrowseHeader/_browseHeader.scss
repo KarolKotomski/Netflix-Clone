@@ -130,16 +130,18 @@
 				position: absolute;
 				right: 7.5rem;
 				overflow: hidden;
-				transition: width 0.3s ease-in-out;
+				
 
 				&.open {
-					width: auto;
+					width: 15rem;
 					border: 1px $whiteColor solid;
+					margin-left: 100%;
+					transition: width 0.35s ease-in-out;
 				}
 
 				&_wrapper_icon {
 					height: 100%;
-					padding: 0 0.5rem;
+					padding: 0 0.8rem 0 0.5rem;
 					background-color: $inputBackgroundColor;
 					display: flex;
 					align-items: center;
@@ -153,11 +155,18 @@
 					background-color: $inputBackgroundColor;
 					height: 100%;
 					display: flex;
+					align-items: center;
+					width: 15rem;
 
 					input {
 						color: $whiteColor;
 						background-color: $inputBackgroundColor;
 						border: none;
+						width: 100%;
+						&::placeholder{
+							color: $greyColorHomePage3;
+						}
+
 						&:focus {
 							outline: none;
 						}

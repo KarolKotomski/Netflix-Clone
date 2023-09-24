@@ -464,15 +464,16 @@ body:hover {
   position: absolute;
   right: 7.5rem;
   overflow: hidden;
-  transition: width 0.3s ease-in-out;
 }
 .browse_header_container_long .user_panel .search_bar.open {
-  width: auto;
+  width: 15rem;
   border: 1px white solid;
+  margin-left: 100%;
+  transition: width 0.35s ease-in-out;
 }
 .browse_header_container_long .user_panel .search_bar_wrapper_icon {
   height: 100%;
-  padding: 0 0.5rem;
+  padding: 0 0.8rem 0 0.5rem;
   background-color: rgba(22, 22, 22, 0.7);
   display: flex;
   align-items: center;
@@ -485,11 +486,20 @@ body:hover {
   background-color: rgba(22, 22, 22, 0.7);
   height: 100%;
   display: flex;
+  align-items: center;
+  width: 15rem;
 }
 .browse_header_container_long .user_panel .search_bar_wrapper_input_field input {
   color: white;
   background-color: rgba(22, 22, 22, 0.7);
   border: none;
+  width: 100%;
+}
+.browse_header_container_long .user_panel .search_bar_wrapper_input_field input::-moz-placeholder {
+  color: rgb(128, 128, 128);
+}
+.browse_header_container_long .user_panel .search_bar_wrapper_input_field input::placeholder {
+  color: rgb(128, 128, 128);
 }
 .browse_header_container_long .user_panel .search_bar_wrapper_input_field input:focus {
   outline: none;

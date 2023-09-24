@@ -16,7 +16,7 @@ const BrowseHeader = () => {
 	const [isSearchActive, setIsSearchActive] = useState(false);
 
 	const searchInputRef = useRef(null);
-	const searchInputfield = useRef(null);
+	const searchInputField = useRef(null);
 
 	const handleClick = () => {
 		window.scrollTo(0, 0);
@@ -26,7 +26,7 @@ const BrowseHeader = () => {
 	// Search Menu:
 	const handleOpenSearch = () => {
 		setIsSearchActive(true);
-		searchInputfield.current.focus();
+		searchInputField.current.focus();
 	};
 
 	const handleCloseSearch = () => {
@@ -60,6 +60,7 @@ const BrowseHeader = () => {
 
 	// When clicked outside the input:
 	const handleOutsideClick = (e) => {
+
 		if (searchInputRef.current && !searchInputRef.current.contains(e.target)) {
 			handleCloseSearch();
 		}
@@ -108,7 +109,8 @@ const BrowseHeader = () => {
 									value={query}
 									onChange={handleSearch}
 									placeholder='Type your title'
-									ref={searchInputfield}
+									ref={searchInputField}
+									maxLength={15}
 								/>
 							</div>
 							<div
