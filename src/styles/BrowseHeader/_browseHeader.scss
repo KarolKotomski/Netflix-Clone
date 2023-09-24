@@ -59,6 +59,7 @@
 			height: 100%;
 			gap: 1.5rem;
 			align-items: center;
+			position: relative;
 
 			img {
 				cursor: pointer;
@@ -115,60 +116,72 @@
 			.search {
 				display: flex;
 				align-items: center;
-				position: relative;
 
 				img {
 					height: 1.5rem;
 				}
+			}
+			.search_bar {
+				display: flex;
+				align-items: center;
+				height: 2.25rem;
+				background-color: $inputBackgroundColor;
+				width: 0;
+				position: absolute;
+				right: 7.5rem;
+				overflow: hidden;
+				transition: width 0.3s ease-in-out;
 
-				&_bar {
+				&.open {
+					width: auto;
+					border: 1px $whiteColor solid;
+				}
+
+				&_wrapper_icon {
+					height: 100%;
+					padding: 0 0.5rem;
+					background-color: $inputBackgroundColor;
 					display: flex;
 					align-items: center;
-					height: 2.4rem;
+					cursor: default;
+					img {
+						cursor: default;
+					}
+				}
+
+				&_wrapper_input_field {
 					background-color: $inputBackgroundColor;
-					position: absolute;
-					right: 0;
-					width: 0;
-					overflow: hidden;
-					
-					.open {
-						width: auto;
-						border: 1px $whiteColor solid;
-					}
+					height: 100%;
+					display: flex;
 
-					&_wrapper_icon {
-						height: 100%;
-						padding: 0 0.5rem;
+					input {
+						color: $whiteColor;
 						background-color: $inputBackgroundColor;
-						display: flex;
-						align-items: center;
-					}
-
-					&_wrapper_input_field {
-						background-color: $inputBackgroundColor;
-						height: 100%;
-						display: flex;
-
-						input {
-							color: $whiteColor;
-							background-color: $inputBackgroundColor;
-							border: none;
-							&:focus {
-								outline: none;
-							}
+						border: none;
+						&:focus {
+							outline: none;
 						}
 					}
-					&_wrapper_close {
-						height: 100%;
-						padding: 0 0.5rem;
-						display: flex;
-						align-items: center;
-						background-color: $inputBackgroundColor;
+				}
+				&_wrapper_close {
+					height: 100%;
+					padding: 0 0.5rem;
+					display: flex;
+					align-items: center;
+					background-color: $inputBackgroundColor;
 
-						img {
-							transform: rotate(45deg);
-							height: 1.75rem;
-						}
+					img {
+						transform: rotate(45deg);
+						height: 1.75rem;
+					}
+
+					.visible {
+						opacity: 1;
+					}
+
+					.invisible {
+						opacity: 0;
+						cursor: default;
 					}
 				}
 			}
