@@ -25,7 +25,7 @@ export const MoviesContextProvider = (props) => {
 				);
 				setAllMovies(uniqueMoviesArray);
 			} catch (error) {
-				console.error("Error during fetching the data", error);
+				console.error("Error during fetching the data from the server", error);
 			}
 		}
 		fetchAllData();

@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useState, useRef } from "react";
 import { MoviesContext } from "../context/MoviesContext";
 import axios from "../axios/axios";
 import slider_arrow_right from "../icons/slider_arrow_right.png";
@@ -8,6 +8,23 @@ const Row = ({ title, fetchUrl, isLargeRow = false }) => {
 	const { base_url, query, searchResults } = useContext(MoviesContext);
 
 	const [movies, setMovies] = useState([]);
+	const [isMoved, setIsMoved] = useState(false);
+
+	const rowRef = useRef(null);
+
+	const handleClick = (direction) => {
+		setIsMoved(true);
+		if (rowRef.current) {
+			const { scrollLeft, clientWidth } = rowRef.current;
+
+			const scrollTo =
+				direction === "left"
+					? scrollLeft - clientWidth
+					: scrollLeft + clientWidth;
+
+			rowRef.current.scrollTo({ left: scrollTo, behavior: "smooth" });
+		}
+	};
 
 	useEffect(() => {
 		async function fetchData() {
@@ -25,36 +42,44 @@ const Row = ({ title, fetchUrl, isLargeRow = false }) => {
 			<div className='title'>
 				<h2>{title}</h2>
 			</div>
-			<div className='posters'>
-				{(query ? searchResults : movies).map(
-					(movie) =>
-						((isLargeRow && movie.poster_path) ||
-							(!isLargeRow && movie.backdrop_path)) && (
-							<img
-								className={`${
-									isLargeRow
-										? "standard_size_picture poster_large"
-										: "standard_size_picture"
-								}`}
-								src={`${base_url}${
-									isLargeRow ? movie.poster_path : movie.backdrop_path
-								}`}
-								alt={movie.name}
-								key={movie.id}></img>
-						)
-				)}
-				<div className='row_wrapper_left'>
-					<img
-						className='arrow_left'
-						src={slider_arrow_left}
-						alt='slider arrow'
-					/>
+			<div className='slider'>
+				<div className='posters' ref={rowRef}>
+					{(query ? searchResults : movies).map(
+						(movie) =>
+							((isLargeRow && movie.poster_path) ||
+								(!isLargeRow && movie.backdrop_path)) && (
+								<img
+									className={`${
+										isLargeRow
+											? "standard_size_picture poster_large"
+											: "standard_size_picture"
+									}`}
+									src={`${base_url}${
+										isLargeRow ? movie.poster_path : movie.backdrop_path
+									}`}
+									alt={movie.name}
+									key={movie.id}></img>
+							)
+					)}
 				</div>
-				<div className='row_wrapper_right'>
+				{isMoved && (
+					<div
+						className='slider_wrapper_left'
+						onClick={() => handleClick("left")}>
+						<img
+							className='arrow_left'
+							src={slider_arrow_left}
+							alt='slider left arrow'
+						/>
+					</div>
+				)}
+				<div
+					className='slider_wrapper_right'
+					onClick={() => handleClick("right")}>
 					<img
 						className='arrow_right'
 						src={slider_arrow_right}
-						alt='slider arrow'
+						alt='slider right arrow'
 					/>
 				</div>
 			</div>
