@@ -82,7 +82,7 @@ const BrowseHeader = () => {
 		return () => {
 			document.removeEventListener("mousedown", handleOutsideClick);
 		};
-	}, []);
+	});
 
 	return (
 		<header className={`browse_header ${show && "black_background"}`}>
