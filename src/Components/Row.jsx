@@ -5,7 +5,7 @@ import slider_arrow_right from "../icons/slider_arrow_right.png";
 import slider_arrow_left from "../icons/slider_arrow_left.png";
 
 const Row = ({ title, fetchUrl, isLargeRow = false }) => {
-	const { base_url } = useContext(MoviesContext);
+	const { base_url, query, searchResults } = useContext(MoviesContext);
 
 	const [movies, setMovies] = useState([]);
 
@@ -21,12 +21,12 @@ const Row = ({ title, fetchUrl, isLargeRow = false }) => {
 	}, [fetchUrl]);
 
 	return (
-		<main className='row'>
+		<main className={`row ${query && "row_search"}`}>
 			<div className='title'>
 				<h2>{title}</h2>
 			</div>
 			<div className='posters'>
-				{movies.map(
+				{(query ? searchResults : movies).map(
 					(movie) =>
 						((isLargeRow && movie.poster_path) ||
 							(!isLargeRow && movie.backdrop_path)) && (

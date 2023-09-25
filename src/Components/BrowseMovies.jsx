@@ -8,7 +8,7 @@ const BrowseMovies = () => {
 	const { query } = useContext(MoviesContext);
 	return (
 		<>
-			{!query && (
+			{!query ? (
 				<>
 					<Banner fetchUrl={requests.fetchNetflixOriginals} />
 					<Row
@@ -32,6 +32,8 @@ const BrowseMovies = () => {
 					/>
 					<Row title='War' fetchUrl={requests.fetchWarMovie} />
 				</>
+			) : (
+				<Row title='Search Results' />
 			)}
 		</>
 	);
