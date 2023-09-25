@@ -23,6 +23,10 @@ const Row = ({ title, fetchUrl, isLargeRow = false }) => {
 					: scrollLeft + clientWidth;
 
 			rowRef.current.scrollTo({ left: scrollTo, behavior: "smooth" });
+
+			if (scrollTo <= 0) {
+				setIsMoved(false);
+			}
 		}
 	};
 

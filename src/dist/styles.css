@@ -1287,15 +1287,15 @@ body:hover {
 .row .slider {
   position: relative;
 }
+.row .slider:hover .slider_wrapper_left,
+.row .slider:hover .slider_wrapper_right {
+  opacity: 1;
+}
 .row .slider .posters {
   display: flex;
   overflow-y: hidden;
   overflow-x: scroll;
   align-items: center;
-}
-.row .slider .posters:hover .row_wrapper_left,
-.row .slider .posters:hover .row_wrapper_right {
-  opacity: 1;
 }
 .row .slider .posters .standard_size_picture {
   max-height: 10rem;
@@ -1321,10 +1321,10 @@ body:hover {
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 2rem;
+  width: 2.5rem;
   background-color: rgba(0, 0, 0, 0.5);
   cursor: pointer;
-  opacity: 1;
+  opacity: 0;
 }
 .row .slider_wrapper_left img, .row .slider_wrapper_right img {
   height: 2rem;
