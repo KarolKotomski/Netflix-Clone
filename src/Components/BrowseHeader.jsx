@@ -7,12 +7,14 @@ import logo from "../images/netflix_logo.png";
 import search from "../icons/search.png";
 import { Link, NavLink } from "react-router-dom";
 import DropdownMenu from "./DropdownMenu";
+import DropdownNotifications from "./DropdownNotifications";
 import { MoviesContext } from "../context/MoviesContext";
 
 const BrowseHeader = () => {
 	const { query, setQuery, handleSearch } = useContext(MoviesContext);
 	const [show, handleShow] = useState(false);
 	const [isDropActive, setIsDropActive] = useState(false);
+	const [isDropNotifActive, setIsDropNotifActive] = useState(false);
 	const [isSearchActive, setIsSearchActive] = useState(false);
 
 	const searchInputRef = useRef(null);
@@ -42,6 +44,15 @@ const BrowseHeader = () => {
 		setIsDropActive(false);
 	};
 
+	// DropdownNotifications Menu:
+	const handleOpenDropNotif = () => {
+		setIsDropNotifActive(true);
+	};
+
+	const handleCloseDropNotif = () => {
+		setIsDropNotifActive(false);
+	};
+
 	// Transition Header:
 	const transitionHeader = () => {
 		if (window.scrollY > 100) {
@@ -60,7 +71,6 @@ const BrowseHeader = () => {
 
 	// When clicked outside the input:
 	const handleOutsideClick = (e) => {
-
 		if (searchInputRef.current && !searchInputRef.current.contains(e.target)) {
 			handleCloseSearch();
 		}
@@ -111,7 +121,7 @@ const BrowseHeader = () => {
 									placeholder='Type your title'
 									ref={searchInputField}
 									maxLength={15}
-									name="search"
+									name='search'
 								/>
 							</div>
 							<div
@@ -129,8 +139,15 @@ const BrowseHeader = () => {
 								<img src={search} alt='search' />
 							</div>
 						)}
-						<div className='bell'>
+						<div
+							className='bell'
+							onMouseOver={() => handleOpenDropNotif()}
+							onMouseLeave={() => handleCloseDropNotif()}>
 							<img src={bell} alt='notifications bell' />
+							<div className={`arrow ${isDropNotifActive && "open"}`}>
+								<img src={caret} alt='caret icon'></img>
+							</div>
+							{isDropNotifActive && <DropdownNotifications />}
 						</div>
 						<div
 							className='profile'

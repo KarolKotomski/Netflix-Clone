@@ -68,6 +68,24 @@
 			.bell {
 				display: flex;
 				align-items: center;
+				flex-direction: column;
+				position: relative;
+				align-self: flex-start;
+				margin-top: 1.4375rem;
+
+				.arrow {
+					height: 0;
+					overflow: hidden;
+					img {
+						transform: rotate(180deg);
+						height: 2rem;
+					}
+				}
+
+				.open {
+					height: auto;
+					overflow: auto;
+				}
 			}
 
 			.profile {
@@ -217,6 +235,9 @@
 				.profile {
 					margin-top: 0.95rem;
 				}
+				.bell {
+					margin-top: 1.25rem;
+				}
 			}
 		}
 	}
@@ -257,6 +278,16 @@
 						padding-top: 0.3rem;
 					}
 				}
+
+				.bell {
+					margin-top: 1rem;
+					.arrow {
+						img {
+							height: 1.4rem;
+						}
+					}
+				}
+
 				.search {
 					img {
 						height: 1rem;
@@ -309,6 +340,14 @@
 						padding-top: 0.1rem;
 						img {
 							height: 0.7rem;
+						}
+					}
+				}
+				.bell {
+					margin-top: 0.85rem;
+					.arrow {
+						img {
+							height: 1rem;
 						}
 					}
 				}
