@@ -186,7 +186,7 @@ body:hover {
   margin: 0;
 }
 .banner_container_long .content .buttons .play_button img {
-  rotate: 90deg;
+  transform: rotate(90deg);
 }
 .banner_container_long .content .buttons .more_info_button {
   margin-left: 1rem;
@@ -1280,8 +1280,6 @@ body:hover {
   padding-left: 3.75rem;
   padding-top: 1.5rem;
   /* Hide scrollbar for Chrome, Safari and Opera */
-  /* Hide scrollbar for IE, Edge and Firefox */
-  scrollbar-width: none;
 }
 .row ::-webkit-scrollbar {
   display: none;
@@ -1290,16 +1288,19 @@ body:hover {
   display: flex;
   overflow-y: hidden;
   overflow-x: scroll;
+  align-items: center;
+  position: relative;
+  touch-action: pan-y;
 }
-.row .posters :hover {
-  transform: scale(1.08);
-}
-.row .posters img {
+.row .posters .standard_size_picture {
   max-height: 10rem;
   margin-right: 1rem;
   border-radius: 0.2rem;
   cursor: pointer;
   transition: transform 450ms;
+}
+.row .posters .standard_size_picture:hover {
+  transform: scale(1.08);
 }
 .row .posters .poster_large {
   max-height: 15rem;
@@ -1307,6 +1308,35 @@ body:hover {
 .row .title {
   font-size: 1.5rem;
   color: rgb(229, 229, 229);
+}
+.row_wrapper_left, .row_wrapper_right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2.5rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+.row_wrapper_left img, .row_wrapper_right img {
+  height: 2rem;
+  width: 1.5rem;
+  transition: transform 0.15s ease-in-out;
+}
+.row_wrapper_left:hover img, .row_wrapper_right:hover img {
+  transform: scale(1.2);
+}
+.row_wrapper_left {
+  left: 0;
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
+.row_wrapper_right {
+  right: 0;
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
 }
 
 @media (max-width: 1100px) {

@@ -29,7 +29,6 @@ const BrowseHome = () => {
 					<Row title='Romance Movies' fetchUrl={requests.fetchRomanceMovies} />
 				</>
 			)}
-			
 		</>
 	);
 };

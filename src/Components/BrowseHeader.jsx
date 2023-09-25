@@ -111,6 +111,7 @@ const BrowseHeader = () => {
 									placeholder='Type your title'
 									ref={searchInputField}
 									maxLength={15}
+									name="search"
 								/>
 							</div>
 							<div
