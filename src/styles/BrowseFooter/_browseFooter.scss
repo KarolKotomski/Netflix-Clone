@@ -59,6 +59,7 @@
 @media (max-width: 750px) {
 	.browse_footer {
 		&_container_long {
+			padding: 2rem 1rem 0rem 1rem;
 			.list {
 				ul {
 					grid-template-columns: 1fr 1fr 1fr;
