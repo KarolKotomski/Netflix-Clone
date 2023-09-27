@@ -1393,10 +1393,10 @@ body:hover {
 }
 @media (max-width: 450px) {
   .row .slider .posters .standard_size_picture {
-    max-height: 4rem;
+    max-height: 6rem;
   }
   .row .slider .posters .poster_large {
-    max-height: 8rem;
+    max-height: 10rem;
   }
 }
 .signIn_footer {
