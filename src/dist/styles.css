@@ -1380,9 +1380,6 @@ body:hover {
   }
 }
 @media (max-width: 650px) {
-  .row {
-    padding-top: 0.5rem;
-  }
   .row .title h2 {
     font-size: 1.2rem;
   }
