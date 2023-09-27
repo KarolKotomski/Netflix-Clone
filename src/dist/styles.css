@@ -1339,10 +1339,6 @@ body:hover {
 .row .slider .posters .poster_large {
   max-height: 15rem;
 }
-.row .slider .title {
-  font-size: 1.5rem;
-  color: rgb(229, 229, 229);
-}
 .row .slider_wrapper_left, .row .slider_wrapper_right {
   display: flex;
   justify-content: center;
@@ -1373,34 +1369,41 @@ body:hover {
   border-top-left-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem;
 }
+.row .title h2 {
+  font-size: 1.5rem;
+  color: rgb(229, 229, 229);
+}
 
 .row_search {
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
 
-@media (max-width: 1100px) {
-  .row .title {
-    font-size: 1.2rem;
-  }
-}
 @media (max-width: 820px) {
   .row {
     padding-left: 1rem;
   }
-  .row .title {
-    font-size: 1.2rem;
-  }
 }
 @media (max-width: 650px) {
-  .row .title {
-    font-size: 1rem;
+  .row {
+    padding-top: 0.5rem;
   }
-  .row .posters img {
+  .row .title h2 {
+    font-size: 1.2rem;
+  }
+  .row .slider .posters .standard_size_picture {
+    max-height: 7rem;
+  }
+  .row .slider .posters .poster_large {
+    max-height: 13rem;
+  }
+}
+@media (max-width: 450px) {
+  .row .slider .posters .standard_size_picture {
+    max-height: 4rem;
+  }
+  .row .slider .posters .poster_large {
     max-height: 8rem;
-  }
-  .row .posters .poster_large {
-    max-height: 12rem;
   }
 }
 .signIn_footer {
