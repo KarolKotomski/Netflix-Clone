@@ -1487,6 +1487,7 @@ body:hover {
 
 @media (max-width: 760px) {
   .signIn_footer {
+    position: inherit;
     border-top: 1px solid rgb(115, 115, 115);
   }
   .signIn_footer_container .list {
@@ -1592,7 +1593,15 @@ body:hover {
 
 @media (max-width: 760px) {
   .signIn_main {
+    padding-top: 5rem;
+    height: -moz-fit-content;
+    height: fit-content;
     background-image: none;
+  }
+  .signIn_main_container {
+    padding-bottom: 0;
+    height: -moz-fit-content;
+    height: fit-content;
   }
   .signIn_main .wrapper {
     width: 100%;
@@ -1600,6 +1609,9 @@ body:hover {
   }
 }
 @media (max-width: 440px) {
+  .signIn_main {
+    padding-top: 3rem;
+  }
   .signIn_main_container .netflix_logo {
     width: 5rem;
     height: auto;
@@ -1610,6 +1622,10 @@ body:hover {
   }
   .signIn_main .wrapper {
     padding: 1rem;
+  }
+  .signIn_main .wrapper h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
   }
 }
 .tv_container {

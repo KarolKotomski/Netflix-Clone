@@ -75,7 +75,13 @@
 
 @media (max-width: 760px) {
 	.signIn_main {
+		padding-top: 5rem;
+		height: fit-content;
 		background-image: none;
+		&_container {
+			padding-bottom: 0;
+			height: fit-content;
+		}
 
 		.wrapper {
 			width: 100%;
@@ -85,6 +91,7 @@
 }
 @media (max-width: 440px) {
 	.signIn_main {
+		padding-top: 3rem;
 		&_container {
 			.netflix_logo {
 				width: 5rem;
@@ -98,6 +105,10 @@
 
 		.wrapper {
 			padding: 1rem;
+			h1 {
+				font-size: 1.5rem;
+				margin-bottom: 1rem;
+			}
 		}
 	}
 }

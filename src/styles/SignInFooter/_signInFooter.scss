@@ -56,8 +56,10 @@
 
 @media (max-width: 760px) {
 	.signIn_footer {
+		position: inherit;
 		border-top: 1px solid $greyColorSignIn;
 		&_container {
+			
 			.list {
 				width: 100%;
 

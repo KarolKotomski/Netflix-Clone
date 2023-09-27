@@ -14,14 +14,14 @@ const SignIn_Main = () => {
 						<h1>Sign In</h1>
 						<input
 							type='email'
-							id=''
 							placeholder='Email or phone number'
+							minLength='5'
+							maxLength='60'
 						/>
 						<input
 							type='password'
-							id=''
 							placeholder='Password'
-							minLength='4'
+							minLength='5'
 							maxLength='60'
 						/>
 						<Link to='/browse/home' onClick={() => window.scrollTo(0, 0)}>
