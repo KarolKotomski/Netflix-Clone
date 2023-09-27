@@ -1388,6 +1388,7 @@ body:hover {
   }
   .row .slider .posters .standard_size_picture {
     max-height: 7rem;
+    margin-right: 0.5rem;
   }
   .row .slider .posters .poster_large {
     max-height: 13rem;
