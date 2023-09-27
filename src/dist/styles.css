@@ -333,9 +333,6 @@ body:hover {
   }
 }
 @media (max-width: 750px) {
-  .browse_footer_container_long {
-    padding: 2rem 1rem 0rem 1rem;
-  }
   .browse_footer_container_long .list ul {
     grid-template-columns: 1fr 1fr 1fr;
   }
@@ -398,8 +395,9 @@ body:hover {
   justify-content: flex-end;
   height: 100%;
   gap: 1.5rem;
-  align-items: center;
+  align-items: flex-start;
   position: relative;
+  padding-top: 1.4375rem;
 }
 .browse_header_container_long .user_panel img {
   cursor: pointer;
@@ -410,7 +408,6 @@ body:hover {
   flex-direction: column;
   position: relative;
   align-self: flex-start;
-  margin-top: 1.4375rem;
 }
 .browse_header_container_long .user_panel .bell .arrow {
   height: 0;
@@ -429,7 +426,6 @@ body:hover {
   cursor: pointer;
   position: relative;
   align-self: flex-start;
-  margin-top: 1.4375rem;
 }
 .browse_header_container_long .user_panel .profile:hover .caret img {
   transform: rotate(180deg);
@@ -476,7 +472,8 @@ body:hover {
   background-color: rgba(22, 22, 22, 0.7);
   width: 0;
   position: absolute;
-  right: 120%;
+  right: 7.5rem;
+  top: 1.125rem;
   overflow: hidden;
 }
 .browse_header_container_long .user_panel .search_bar.open {
@@ -558,11 +555,14 @@ body:hover {
   .browse_header_container_long .user_panel {
     gap: 1.2rem;
   }
+  .browse_header_container_long .user_panel .bell .arrow img {
+    height: 1.4rem;
+  }
   .browse_header_container_long .user_panel .profile .caret {
     padding-top: 0.3rem;
   }
-  .browse_header_container_long .user_panel .bell .arrow img {
-    height: 1.4rem;
+  .browse_header_container_long .user_panel .search_bar {
+    right: 6.25rem;
   }
 }
 @media (max-width: 450px) {
@@ -581,28 +581,27 @@ body:hover {
     padding-inline-start: 0.7rem;
   }
   .browse_header_container_long .user_panel {
-    gap: 0.6rem;
+    gap: 1rem;
+    padding-top: 0.85rem;
   }
   .browse_header_container_long .user_panel img {
-    height: 1rem;
+    height: 1.3rem;
   }
   .browse_header_container_long .user_panel .search img {
-    height: 1rem;
+    height: 1.3rem;
   }
-  .browse_header_container_long .user_panel .profile {
-    margin-top: 1rem;
+  .browse_header_container_long .user_panel .search_bar {
+    right: 5.2rem;
+    top: 0.4375rem;
   }
   .browse_header_container_long .user_panel .profile .avatar img {
-    height: 1rem;
+    height: 1.3rem;
   }
   .browse_header_container_long .user_panel .profile .caret {
-    padding-top: 0.07rem;
+    padding-top: 0.15rem;
   }
   .browse_header_container_long .user_panel .profile .caret img {
     height: 0.7rem;
-  }
-  .browse_header_container_long .user_panel .bell {
-    margin-top: 1rem;
   }
   .browse_header_container_long .user_panel .bell .arrow img {
     height: 1rem;
