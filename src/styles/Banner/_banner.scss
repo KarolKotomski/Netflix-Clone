@@ -28,10 +28,11 @@
 	&_container_long {
 		padding: 0 3.75rem;
 		height: 100%;
+		position: relative;
 
 		.content {
 			position: absolute;
-			top: 16rem;
+			bottom: 0;
 			z-index: 1;
 
 			button:hover {
@@ -99,7 +100,6 @@
 	.banner {
 		&_container_long {
 			.content {
-				top: 22rem;
 				.buttons {
 					img {
 						height: 1.8rem;
@@ -109,9 +109,6 @@
 						font-size: 1.3rem;
 						height: 2.5rem;
 					}
-				}
-				.description {
-					width: 100%;
 				}
 
 				h1 {
@@ -131,7 +128,6 @@
 		&_container_long {
 			padding: 0 1rem;
 			.content {
-				top: 20rem;
 				.buttons {
 					img {
 						height: 1.8rem;
@@ -142,6 +138,11 @@
 						height: 2.5rem;
 					}
 				}
+
+				.description {
+					width: 100%;
+				}
+
 				h1 {
 					margin: 1rem 0;
 				}
@@ -176,7 +177,6 @@
 	.banner {
 		height: 30rem;
 		.content {
-			top: 15rem;
 			.buttons {
 				img {
 					height: 1rem;

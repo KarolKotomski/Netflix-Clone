@@ -22,6 +22,12 @@ const Banner = ({ fetchUrl }) => {
 		fetchData();
 	}, [fetchUrl]);
 
+	const truncate = (string, number) => {
+		return string?.length > number
+			? string.substr(0, number - 1) + "..."
+			: string;
+	};
+
 	return (
 		<div
 			className='banner'
@@ -49,7 +55,7 @@ const Banner = ({ fetchUrl }) => {
 							</button>
 						</div>
 
-						<p className='description'>{movie?.overview}</p>
+						<p className='description'>{truncate(movie?.overview, 200)}</p>
 					</div>
 				</div>
 			</div>
