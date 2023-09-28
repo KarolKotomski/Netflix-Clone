@@ -1,4 +1,4 @@
-![netflix](https://github.com/KarolKotomski/Netflix-Clone/assets/137051383/f9e9e891-30f3-4463-bf1b-9797d845c47a)
+![netflix](https://github.com/KarolKotomski/Netflix-Clone/assets/137051383/f8f58977-2283-4452-a37d-a39625238783)
 
 # Netflix Clone
 
