@@ -1,6 +1,4 @@
-![netflix logo](https://github.com/KarolKotomski/Netflix-Clone/assets/137051383/676dfc61-3bc6-41b0-bece-e33676bfba57)
-
-
+![netflix](https://github.com/KarolKotomski/Netflix-Clone/assets/137051383/f9e9e891-30f3-4463-bf1b-9797d845c47a)
 
 # Netflix Clone
 
@@ -9,7 +7,7 @@ This is a clone application of one of the popular VOD streaming services - Netfl
 ## Tech Stack
 
 - React JS
-- SASS
+- SASS/SCSS
 - The Movie Database (TMDB) API
 
 ## Demo
