@@ -15,14 +15,14 @@ const SignIn_Main = () => {
 						<input
 							type='email'
 							placeholder='Email or phone number'
-							minLength='5'
-							maxLength='60'
+							minLength={5}
+							maxLength={60}
 						/>
 						<input
 							type='password'
 							placeholder='Password'
-							minLength='5'
-							maxLength='60'
+							minLength={5}
+							maxLength={60}
 						/>
 						<Link to='/browse/home' onClick={() => window.scrollTo(0, 0)}>
 							<button type='submit'>Sign In</button>

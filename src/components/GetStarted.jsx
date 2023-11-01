@@ -16,9 +16,8 @@ const GetStarted = () => {
 					<div className='main'>
 						<input
 							type='email'
-							name='email'
-							minLength='5'
-							maxLength='50'
+							minLength={5}
+							maxLength={50}
 							placeholder='Email address'
 						/>
 						<Link to='/signin' onClick={() => window.scrollTo(0, 0)}>

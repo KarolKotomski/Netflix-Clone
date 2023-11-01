@@ -19,7 +19,7 @@ const DropdownMenu = () => {
 				</div>
 				<div className='item'>
 					<div className='item_icon'>
-						<img src={transfer} alt='pencil icon' />
+						<img src={transfer} alt='transfer icon' />
 					</div>
 					<div className='item_text'>
 						<p>Transfer Profile</p>
@@ -27,7 +27,7 @@ const DropdownMenu = () => {
 				</div>
 				<div className='item'>
 					<div className='item_icon'>
-						<img src={account} alt='pencil icon' />
+						<img src={account} alt='account icon' />
 					</div>
 					<div className='item_text'>
 						<p>Account</p>
@@ -35,7 +35,7 @@ const DropdownMenu = () => {
 				</div>
 				<div className='item'>
 					<div className='item_icon'>
-						<img src={help} alt='pencil icon' />
+						<img src={help} alt='help icon' />
 					</div>
 					<div className='item_text'>
 						<p>Help Center</p>
