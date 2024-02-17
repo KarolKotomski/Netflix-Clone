@@ -11,7 +11,6 @@ export const MoviesContextProvider = (props) => {
 	// fetching all data from TMDB:
 	
 	const [allMovies, setAllMovies] = useState([]);
-
 	useEffect(() => {
 		async function fetchAllData() {
 			const endpoints = Object.values(requests).map((url) =>
