@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import GetStarted from "./GetStarted";
 import plus from "../icons/plus_icon.png";
-import { faqData } from "./faqData";
+import { faqData } from "../utils/faqData";
 
 const Faq = () => {
 	const [selected, setSelected] = useState(null);
