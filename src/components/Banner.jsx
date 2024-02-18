@@ -2,12 +2,11 @@ import axios from "../axios/axios";
 import triangle from "../icons/triangle.png";
 import info from "../icons/info.png";
 import { useQuery } from "react-query";
-import requests from "../axios/requests";
 
-const Banner = () => {
-	const { data, isLoading, error } = useQuery(["banner"], () => {
+const Banner = ({ fetchUrl }) => {
+	const { data, isLoading, error } = useQuery([], () => {
 		return axios
-			.get(requests.fetchNetflixOriginalsTv)
+			.get(fetchUrl)
 			.then(
 				(res) =>
 					res.data.results[

@@ -43,10 +43,10 @@ const Row = ({ title, fetchUrl, isLargeRow = false }) => {
 			<div className='slider'>
 				<div className='posters' ref={rowRef}>
 					{(query ? searchResults : data)?.map(
-						(movie) =>
+						(movie, index) =>
 							((isLargeRow && movie.poster_path) ||
 								(!isLargeRow && movie.backdrop_path)) && (
-								<div className='single_poster'>
+								<div className='single_poster' key={index}>
 									<img
 										className={`${
 											isLargeRow
