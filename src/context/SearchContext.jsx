@@ -3,9 +3,9 @@ import axios from "../axios/axios";
 import Fuse from "fuse.js";
 import requests from "../axios/requests";
 
-export const MoviesContext = createContext();
+export const SearchContext = createContext();
 
-export const MoviesContextProvider = (props) => {
+export const SearchContextProvider = (props) => {
 	const base_url = "https://image.tmdb.org/t/p/original/";
 
 	// fetching all data from TMDB:
@@ -52,8 +52,8 @@ export const MoviesContextProvider = (props) => {
 	};
 
 	return (
-		<MoviesContext.Provider value={contextValue}>
+		<SearchContext.Provider value={contextValue}>
 			{props.children}
-		</MoviesContext.Provider>
+		</SearchContext.Provider>
 	);
 };

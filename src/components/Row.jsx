@@ -1,5 +1,5 @@
 import React, { useContext, useState, useRef } from "react";
-import { MoviesContext } from "../context/MoviesContext";
+import { SearchContext } from "../context/SearchContext";
 import axios from "../axios/axios";
 import slider_arrow_right from "../icons/slider_arrow_right.png";
 import slider_arrow_left from "../icons/slider_arrow_left.png";
@@ -7,7 +7,7 @@ import { useQuery } from "react-query";
 
 const Row = ({ title, fetchUrl, isLargeRow = false }) => {
 	const [isMoved, setIsMoved] = useState(false);
-	const { base_url, query, searchResults } = useContext(MoviesContext);
+	const { base_url, query, searchResults } = useContext(SearchContext);
 
 	const { data, error } = useQuery([title], () => {
 		return axios.get(fetchUrl).then((res) => res.data.results);

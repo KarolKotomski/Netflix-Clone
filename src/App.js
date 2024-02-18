@@ -7,7 +7,7 @@ import BrowseHome from "./components/BrowseHome";
 import BrowseTvShows from "./components/BrowseTvShows";
 import BrowseMovies from "./components/BrowseMovies";
 import NoMatch from "./components/NoMatch";
-import { MoviesContextProvider } from "./context/MoviesContext";
+import { SearchContextProvider } from "./context/SearchContext";
 import { QueryClient, QueryClientProvider } from "react-query";
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
 
 	return (
 		<QueryClientProvider client={client}>
-			<MoviesContextProvider>
+			<SearchContextProvider>
 				<BrowserRouter>
 					<Routes>
 						<Route path='/' element={<Landing />} />
@@ -35,7 +35,7 @@ function App() {
 						<Route path='*' element={<NoMatch />} />
 					</Routes>
 				</BrowserRouter>
-			</MoviesContextProvider>
+			</SearchContextProvider>
 		</QueryClientProvider>
 	);
 }

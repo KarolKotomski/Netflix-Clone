@@ -2,10 +2,10 @@ import React, { useContext } from "react";
 import Banner from "./Banner";
 import Row from "./Row";
 import requests from "../axios/requests";
-import { MoviesContext } from "../context/MoviesContext";
+import { SearchContext } from "../context/SearchContext";
 
 const BrowseHome = () => {
-	const { query } = useContext(MoviesContext);
+	const { query } = useContext(SearchContext);
 	return (
 		<>
 			{!query ? (

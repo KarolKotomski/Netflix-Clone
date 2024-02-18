@@ -8,10 +8,10 @@ import search from "../icons/search.png";
 import { Link, NavLink } from "react-router-dom";
 import DropdownMenu from "./DropdownMenu";
 import DropdownNotifications from "./DropdownNotifications";
-import { MoviesContext } from "../context/MoviesContext";
+import { SearchContext } from "../context/SearchContext";
 
 const BrowseHeader = () => {
-	const { query, setQuery, handleSearch } = useContext(MoviesContext);
+	const { query, setQuery, handleSearch } = useContext(SearchContext);
 	const [show, handleShow] = useState(false);
 	const [isDropActive, setIsDropActive] = useState(false);
 	const [isDropNotifActive, setIsDropNotifActive] = useState(false);
