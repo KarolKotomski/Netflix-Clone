@@ -36,7 +36,7 @@ const Row = ({ title, fetchUrl, isLargeRow = false }) => {
 	};
 
 	return (
-		<section className={`row${query && "row_search"}`}>
+		<section className={`row ${query && "row_search"}`}>
 			<div className='title'>
 				<h2>{title}</h2>
 			</div>
