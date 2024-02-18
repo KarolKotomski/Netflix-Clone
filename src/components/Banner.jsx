@@ -39,20 +39,22 @@ const Banner = ({ fetchUrl }) => {
 								? "Loading..."
 								: data?.title || data?.name || data?.original_name}
 						</h1>
-						<div className='buttons'>
-							<button className='play_button'>
-								<img
-									className='traingle'
-									src={triangle}
-									alt='triangle play sign'
-								/>
-								Play
-							</button>
-							<button className='more_info_button'>
-								<img className='info' src={info} alt='info sign' />
-								More Info
-							</button>
-						</div>
+						{data && (
+							<div className='buttons'>
+								<button className='play_button'>
+									<img
+										className='traingle'
+										src={triangle}
+										alt='triangle play sign'
+									/>
+									Play
+								</button>
+								<button className='more_info_button'>
+									<img className='info' src={info} alt='info sign' />
+									More Info
+								</button>
+							</div>
+						)}
 
 						<p className='description'>{truncate(data?.overview, 200)}</p>
 					</div>
