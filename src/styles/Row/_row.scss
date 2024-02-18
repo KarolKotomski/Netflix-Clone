@@ -25,19 +25,31 @@
 			overflow-x: scroll;
 			align-items: center;
 
-			.standard_size_picture {
-				max-height: 10rem;
-				margin-right: 1rem;
-				border-radius: 0.2rem;
-				cursor: pointer;
+			.single_poster {
+				position: relative;
 				transition: transform 450ms;
 				&:hover {
 					transform: scale(1.08);
 				}
-			}
+				cursor: pointer;
 
-			.poster_large {
-				max-height: 15rem;
+				.standard_size_picture {
+					max-height: 10rem;
+					margin-right: 1rem;
+					border-radius: 0.2rem;
+				}
+
+				.poster_large {
+					max-height: 15rem;
+				}
+
+				.poster_title {
+					position: absolute;
+					padding: 0.4rem 0.8rem;
+					bottom: -0.8rem;
+					color: white;
+					background-color: rgb(0, 0, 0, 0.6);
+				}
 			}
 		}
 

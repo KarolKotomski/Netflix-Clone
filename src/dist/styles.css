@@ -204,6 +204,12 @@ body:hover {
 .banner_container_long .content .title {
   font-size: 3rem;
   font-weight: 800;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  border-radius: 0.3rem;
 }
 
 @media (max-width: 1100px) {
@@ -1320,18 +1326,28 @@ body:hover {
   overflow-x: scroll;
   align-items: center;
 }
-.row .slider .posters .standard_size_picture {
+.row .slider .posters .single_poster {
+  position: relative;
+  transition: transform 450ms;
+  cursor: pointer;
+}
+.row .slider .posters .single_poster:hover {
+  transform: scale(1.08);
+}
+.row .slider .posters .single_poster .standard_size_picture {
   max-height: 10rem;
   margin-right: 1rem;
   border-radius: 0.2rem;
-  cursor: pointer;
-  transition: transform 450ms;
 }
-.row .slider .posters .standard_size_picture:hover {
-  transform: scale(1.08);
-}
-.row .slider .posters .poster_large {
+.row .slider .posters .single_poster .poster_large {
   max-height: 15rem;
+}
+.row .slider .posters .single_poster .poster_title {
+  position: absolute;
+  padding: 0.4rem 0.8rem;
+  bottom: -0.8rem;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 .row .slider_wrapper_left, .row .slider_wrapper_right {
   display: flex;
