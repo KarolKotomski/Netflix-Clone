@@ -6,6 +6,7 @@ import { Suspense, lazy } from "react";
 import BrowseHome from "./components/BrowseHome";
 import BrowseTvShows from "./components/BrowseTvShows";
 import BrowseMovies from "./components/BrowseMovies";
+import Fallback from "./components/Fallback";
 
 function App() {
 	const client = new QueryClient({
@@ -25,7 +26,7 @@ function App() {
 		<QueryClientProvider client={client}>
 			<SearchContextProvider>
 				<BrowserRouter>
-					<Suspense fallback={<div>Loading...</div>}>
+					<Suspense fallback={<Fallback />}>
 						<Routes>
 							<Route path='/' element={<Landing />} />
 							<Route path='signin' element={<SignIn />} />
