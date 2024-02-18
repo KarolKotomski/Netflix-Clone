@@ -7,7 +7,9 @@ const Browse = () => {
 	return (
 		<div className='browse'>
 			<BrowseHeader />
-			<Outlet />
+			<main>
+				<Outlet />
+			</main>
 			<BrowseFooter />
 		</div>
 	);

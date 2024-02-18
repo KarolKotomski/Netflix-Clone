@@ -1,14 +1,19 @@
-import React, { useContext, useEffect, useState, useRef } from "react";
+import React, { useContext, useState, useRef } from "react";
 import { MoviesContext } from "../context/MoviesContext";
 import axios from "../axios/axios";
 import slider_arrow_right from "../icons/slider_arrow_right.png";
 import slider_arrow_left from "../icons/slider_arrow_left.png";
+import { useQuery } from "react-query";
 
 const Row = ({ title, fetchUrl, isLargeRow = false }) => {
+	const [isMoved, setIsMoved] = useState(false);
 	const { base_url, query, searchResults } = useContext(MoviesContext);
 
-	const [movies, setMovies] = useState([]);
-	const [isMoved, setIsMoved] = useState(false);
+	const { data, error } = useQuery([title], () => {
+		return axios.get(fetchUrl).then((res) => res.data.results);
+	});
+
+	error && console.error("error:", error.message);
 
 	const rowRef = useRef(null);
 
@@ -30,25 +35,14 @@ const Row = ({ title, fetchUrl, isLargeRow = false }) => {
 		}
 	};
 
-	useEffect(() => {
-		async function fetchData() {
-			if (fetchUrl) {
-				const request = await axios.get(fetchUrl);
-				setMovies(request.data.results);
-				return request;
-			}
-		}
-		fetchData();
-	}, [fetchUrl]);
-
 	return (
-		<main className={`row${query && " row_search"}`}>
+		<section className={`row${query && "row_search"}`}>
 			<div className='title'>
 				<h2>{title}</h2>
 			</div>
 			<div className='slider'>
 				<div className='posters' ref={rowRef}>
-					{(query ? searchResults : movies).map(
+					{(query ? searchResults : data)?.map(
 						(movie) =>
 							((isLargeRow && movie.poster_path) ||
 								(!isLargeRow && movie.backdrop_path)) && (
@@ -87,7 +81,7 @@ const Row = ({ title, fetchUrl, isLargeRow = false }) => {
 					/>
 				</div>
 			</div>
-		</main>
+		</section>
 	);
 };
 

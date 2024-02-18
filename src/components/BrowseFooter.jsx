@@ -6,15 +6,15 @@ import youtube from "../icons/yt_icon.png";
 
 const BrowseFooter = () => {
 	return (
-		<div className='browse_footer'>
+		<footer className='browse_footer'>
 			<div className='container_long'>
-        <div className='browse_footer_container_long'>
-          <div className="icons">
-            <img src={facebook} alt="facebook icon" />
-            <img src={instagram} alt="instagram icon" />
-            <img src={twitter} alt="twitter icon" />
-            <img src={youtube} alt="youtube icon" />
-          </div>
+				<div className='browse_footer_container_long'>
+					<div className='icons'>
+						<img src={facebook} alt='facebook icon' />
+						<img src={instagram} alt='instagram icon' />
+						<img src={twitter} alt='twitter icon' />
+						<img src={youtube} alt='youtube icon' />
+					</div>
 					<div className='list'>
 						<ul>
 							<li>Audio description</li>
@@ -34,7 +34,7 @@ const BrowseFooter = () => {
 					</div>
 				</div>
 			</div>
-		</div>
+		</footer>
 	);
 };
 

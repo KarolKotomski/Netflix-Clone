@@ -11,7 +11,13 @@ import { MoviesContextProvider } from "./context/MoviesContext";
 import { QueryClient, QueryClientProvider } from "react-query";
 
 function App() {
-	const client = new QueryClient({});
+	const client = new QueryClient({
+		defaultOptions: {
+			queries: {
+				refetchOnWindowFocus: false,
+			},
+		},
+	});
 
 	return (
 		<QueryClientProvider client={client}>

@@ -5,7 +5,7 @@ import { useQuery } from "react-query";
 import requests from "../axios/requests";
 
 const Banner = () => {
-	const { data, isLoading } = useQuery(["banner"], () => {
+	const { data, isLoading, error } = useQuery(["banner"], () => {
 		return axios
 			.get(requests.fetchNetflixOriginalsTv)
 			.then(
@@ -16,6 +16,8 @@ const Banner = () => {
 			);
 	});
 
+	error && console.error("error:", error.message);
+
 	const truncate = (string, number) => {
 		return string?.length > number
 			? string.substr(0, number - 1) + "..."
@@ -23,7 +25,7 @@ const Banner = () => {
 	};
 
 	return (
-		<div
+		<section
 			className='banner'
 			style={{
 				backgroundImage:
@@ -58,7 +60,7 @@ const Banner = () => {
 				</div>
 			</div>
 			<div className='banner_fade_bottom'></div>
-		</div>
+		</section>
 	);
 };
 
