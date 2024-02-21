@@ -14,7 +14,7 @@ const Banner = ({ fetchUrl, queryId }) => {
 		}
 	);
 
-	const randomBannerImageIndex = data
+	const randomBannerIndex = data
 		? data[Math.floor(Math.random() * data.length - 1)]
 		: null;
 
@@ -31,8 +31,8 @@ const Banner = ({ fetchUrl, queryId }) => {
 			className='banner'
 			style={{
 				backgroundImage:
-					randomBannerImageIndex &&
-					`url("https://image.tmdb.org/t/p/original/${randomBannerImageIndex.backdrop_path}")`,
+					randomBannerIndex &&
+					`url("https://image.tmdb.org/t/p/original/${randomBannerIndex.backdrop_path}")`,
 			}}>
 			<div className='container_long'>
 				<div className='banner_container_long'>
@@ -40,9 +40,9 @@ const Banner = ({ fetchUrl, queryId }) => {
 						<h1 className='title'>
 							{isLoading
 								? "Loading..."
-								: randomBannerImageIndex?.title ||
-								  randomBannerImageIndex?.name ||
-								  randomBannerImageIndex?.original_name}
+								: randomBannerIndex?.title ||
+								  randomBannerIndex?.name ||
+								  randomBannerIndex?.original_name}
 						</h1>
 						{data && (
 							<div className='buttons'>
@@ -61,7 +61,9 @@ const Banner = ({ fetchUrl, queryId }) => {
 							</div>
 						)}
 
-						<p className='description'>{truncate(data?.overview, 200)}</p>
+						<p className='description'>
+							{truncate(randomBannerIndex?.overview, 200)}
+						</p>
 					</div>
 				</div>
 			</div>
