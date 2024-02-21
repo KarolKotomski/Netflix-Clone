@@ -25,7 +25,7 @@ export const SearchContextProvider = ({ children }) => {
 			return uniqueData;
 		},
 		{
-			staleTime: 300000,
+			staleTime: 600000,
 		}
 	);
 
