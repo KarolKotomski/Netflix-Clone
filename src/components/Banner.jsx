@@ -4,7 +4,7 @@ import info from "../icons/info.png";
 import { useQuery } from "react-query";
 
 const Banner = ({ fetchUrl, queryId }) => {
-	const { data, isLoading, error } = useQuery(
+	const { data, isLoading, isError, error } = useQuery(
 		queryId,
 		() => {
 			return axios.get(fetchUrl).then((res) => res.data.results);
@@ -18,7 +18,7 @@ const Banner = ({ fetchUrl, queryId }) => {
 		? data[Math.floor(Math.random() * data.length - 1)]
 		: null;
 
-	error && console.error("error:", error.message);
+	isError && console.error("error:", error.message);
 
 	const truncate = (string, number) => {
 		return string?.length > number
@@ -42,9 +42,9 @@ const Banner = ({ fetchUrl, queryId }) => {
 								? "Loading..."
 								: randomBannerIndex?.title ||
 								  randomBannerIndex?.name ||
-								  randomBannerIndex?.original_name}
+								randomBannerIndex?.original_name}
 						</h1>
-						{data && (
+						{randomBannerIndex && (
 							<div className='buttons'>
 								<button className='play_button'>
 									<img
