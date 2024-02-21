@@ -15,7 +15,7 @@ const Row = ({ title, fetchUrl, isLargeRow = false }) => {
 			return axios.get(fetchUrl).then((res) => res.data.results);
 		},
 		{
-			staleTime: 300000,
+			staleTime: 600000,
 		}
 	);
 

@@ -7,19 +7,16 @@ const Banner = ({ fetchUrl, queryId }) => {
 	const { data, isLoading, error } = useQuery(
 		queryId,
 		() => {
-			return axios
-				.get(fetchUrl)
-				.then(
-					(res) =>
-						res.data.results[
-							Math.floor(Math.random() * res.data.results.length - 1)
-						]
-				);
+			return axios.get(fetchUrl).then((res) => res.data.results);
 		},
 		{
-			staleTime: 300000,
+			staleTime: 600000,
 		}
 	);
+
+	const randomBannerImageIndex = data
+		? data[Math.floor(Math.random() * data.length - 1)]
+		: null;
 
 	error && console.error("error:", error.message);
 
@@ -34,8 +31,8 @@ const Banner = ({ fetchUrl, queryId }) => {
 			className='banner'
 			style={{
 				backgroundImage:
-					data &&
-					`url("https://image.tmdb.org/t/p/original/${data.backdrop_path}")`,
+					randomBannerImageIndex &&
+					`url("https://image.tmdb.org/t/p/original/${randomBannerImageIndex.backdrop_path}")`,
 			}}>
 			<div className='container_long'>
 				<div className='banner_container_long'>
@@ -43,7 +40,9 @@ const Banner = ({ fetchUrl, queryId }) => {
 						<h1 className='title'>
 							{isLoading
 								? "Loading..."
-								: data?.title || data?.name || data?.original_name}
+								: randomBannerImageIndex?.title ||
+								  randomBannerImageIndex?.name ||
+								  randomBannerImageIndex?.original_name}
 						</h1>
 						{data && (
 							<div className='buttons'>
