@@ -11,17 +11,23 @@ export const SearchContextProvider = ({ children }) => {
 
 	// fetching all data from TMDB:
 
-	const { data, error } = useQuery(["all"], async () => {
-		const endpoints = Object.values(requests).map((url) =>
-			axios.get(url).then((response) => response.data.results)
-		);
-		const responses = await Promise.all(endpoints);
-		const mergedData = responses.flat();
-		const uniqueData = mergedData.filter(
-			(item, index, self) => index === self.findIndex((t) => t.id === item.id)
-		);
-		return uniqueData;
-	});
+	const { data, error } = useQuery(
+		"all",
+		async () => {
+			const endpoints = Object.values(requests).map((url) =>
+				axios.get(url).then((response) => response.data.results)
+			);
+			const responses = await Promise.all(endpoints);
+			const mergedData = responses.flat();
+			const uniqueData = mergedData.filter(
+				(item, index, self) => index === self.findIndex((t) => t.id === item.id)
+			);
+			return uniqueData;
+		},
+		{
+			staleTime: 300000,
+		}
+	);
 
 	error && console.error("error:", error.message);
 

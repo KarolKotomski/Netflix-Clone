@@ -3,17 +3,23 @@ import triangle from "../icons/triangle.png";
 import info from "../icons/info.png";
 import { useQuery } from "react-query";
 
-const Banner = ({ fetchUrl }) => {
-	const { data, isLoading, error } = useQuery([], () => {
-		return axios
-			.get(fetchUrl)
-			.then(
-				(res) =>
-					res.data.results[
-						Math.floor(Math.random() * res.data.results.length - 1)
-					]
-			);
-	});
+const Banner = ({ fetchUrl, queryId }) => {
+	const { data, isLoading, error } = useQuery(
+		queryId,
+		() => {
+			return axios
+				.get(fetchUrl)
+				.then(
+					(res) =>
+						res.data.results[
+							Math.floor(Math.random() * res.data.results.length - 1)
+						]
+				);
+		},
+		{
+			staleTime: 300000,
+		}
+	);
 
 	error && console.error("error:", error.message);
 

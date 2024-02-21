@@ -9,9 +9,15 @@ const Row = ({ title, fetchUrl, isLargeRow = false }) => {
 	const [isMoved, setIsMoved] = useState(false);
 	const { base_url, query, searchResults } = useContext(SearchContext);
 
-	const { data, error } = useQuery([title], () => {
-		return axios.get(fetchUrl).then((res) => res.data.results);
-	});
+	const { data, error } = useQuery(
+		[title],
+		() => {
+			return axios.get(fetchUrl).then((res) => res.data.results);
+		},
+		{
+			staleTime: 300000,
+		}
+	);
 
 	error && console.error("error:", error.message);
 

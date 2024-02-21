@@ -10,7 +10,7 @@ const BrowseMovies = () => {
 		<>
 			{!query ? (
 				<>
-					<Banner fetchUrl={requests.fetchNetflixOriginals} />
+					<Banner fetchUrl={requests.fetchNetflixOriginals} queryId="movies-banner"/>
 					<Row
 						title='NETFLIX ORIGINALS'
 						fetchUrl={requests.fetchNetflixOriginals}

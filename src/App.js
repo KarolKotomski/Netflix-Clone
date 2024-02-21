@@ -2,6 +2,7 @@ import "./dist/styles.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { SearchContextProvider } from "./context/SearchContext";
 import { QueryClient, QueryClientProvider } from "react-query";
+import { ReactQueryDevtools } from "react-query/devtools";
 import { Suspense, lazy } from "react";
 import BrowseHome from "./components/BrowseHome";
 import BrowseTvShows from "./components/BrowseTvShows";
@@ -41,6 +42,7 @@ function App() {
 					</Suspense>
 				</BrowserRouter>
 			</SearchContextProvider>
+			<ReactQueryDevtools initialIsOpen={false} position='bottom-right' />
 		</QueryClientProvider>
 	);
 }
