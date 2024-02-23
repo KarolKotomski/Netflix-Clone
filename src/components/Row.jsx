@@ -1,23 +1,19 @@
 import React, { useContext, useState, useRef } from "react";
 import { SearchContext } from "../context/SearchContext";
-import axios from "../axios/axios";
 import slider_arrow_right from "../icons/slider_arrow_right.png";
 import slider_arrow_left from "../icons/slider_arrow_left.png";
-import { useQuery } from "react-query";
+import { useTMDBdata } from "../hooks/useTMDBdata";
 
-const Row = ({ title, fetchUrl, isLargeRow = false }) => {
+const Row = ({
+	title,
+	fetchUrl = false,
+	isLargeRow = false,
+	queryId = false,
+}) => {
 	const [isMoved, setIsMoved] = useState(false);
 	const { base_url, query, searchResults } = useContext(SearchContext);
 
-	const { data, error } = useQuery(
-		[title],
-		() => {
-			return axios.get(fetchUrl).then((res) => res.data.results);
-		},
-		{
-			staleTime: 600000,
-		}
-	);
+	const { data, error } = useTMDBdata(fetchUrl, queryId);
 
 	error && console.error("error:", error.message);
 

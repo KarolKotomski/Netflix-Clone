@@ -10,23 +10,52 @@ const BrowseHome = () => {
 		<>
 			{!query ? (
 				<>
-					<Banner fetchUrl={requests.fetchNetflixOriginalsTv} queryId="tv-banner"/>
+					<Banner
+						fetchUrl={requests.fetchNetflixOriginalsTv}
+						queryId='NetflixOriginalsTV'
+					/>
 					<Row
 						title='NETFLIX ORIGINALS'
 						fetchUrl={requests.fetchNetflixOriginals}
+						queryId='NetflixOriginalsMovies'
 						isLargeRow
 					/>
 					<Row
 						title='Top Rated'
 						fetchUrl={requests.fetchTopRatedMovie}
+						queryId='TopRatedMovies'
 						isLargeRow
 					/>
-					<Row title='Action Movies' fetchUrl={requests.fetchActionMovies} />
-					<Row title='Comedy TV Shows' fetchUrl={requests.fetchComedyTV} />
-					<Row title='Documentaries' fetchUrl={requests.fetchDocumentaries} />
-					<Row title='Horror Movies' fetchUrl={requests.fetchHorrorMovies} />
-					<Row title='News TV Shows' fetchUrl={requests.fetchNewsTV} />
-					<Row title='Romance Movies' fetchUrl={requests.fetchRomanceMovies} />
+					<Row
+						title='Action Movies'
+						fetchUrl={requests.fetchActionMovies}
+						queryId='ActionMovies'
+					/>
+					<Row
+						title='Comedy TV Shows'
+						fetchUrl={requests.fetchComedyTV}
+						queryId='ComedyTV'
+					/>
+					<Row
+						title='Documentaries'
+						fetchUrl={requests.fetchDocumentaries}
+						queryId='DocumentaryMovies'
+					/>
+					<Row
+						title='Horror Movies'
+						fetchUrl={requests.fetchHorrorMovies}
+						queryId='HorrorMovies'
+					/>
+					<Row
+						title='News TV Shows'
+						fetchUrl={requests.fetchNewsTV}
+						queryId='NewsTV'
+					/>
+					<Row
+						title='Romance Movies'
+						fetchUrl={requests.fetchRomanceMovies}
+						queryId='RomanceMovies'
+					/>
 				</>
 			) : (
 				<Row title='Search Results' />
