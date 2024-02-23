@@ -2,8 +2,9 @@ import triangle from "../icons/triangle.png";
 import info from "../icons/info.png";
 import { useTMDBdata } from "../hooks/useTMDBdata";
 
-const Banner = ({ fetchUrl, queryId }) => {
-	const { data, isLoading, isError, error } = useTMDBdata(fetchUrl, queryId);
+const Banner = ({ content }) => {
+	const { queryKey, fetchUrl } = content;
+	const { data, isLoading, isError, error } = useTMDBdata(queryKey, fetchUrl);
 
 	const randomBannerIndex = data
 		? data[Math.floor(Math.random() * data.length - 1)]

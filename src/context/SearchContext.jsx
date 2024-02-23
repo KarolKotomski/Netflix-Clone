@@ -2,7 +2,7 @@ import React, { createContext, useEffect, useState } from "react";
 import axios from "../axios/axios";
 import Fuse from "fuse.js";
 import requests from "../axios/requests";
-import { useQuery } from "react-query";
+import { useQueries } from "react-query";
 
 export const SearchContext = createContext();
 
@@ -11,23 +11,25 @@ export const SearchContextProvider = ({ children }) => {
 
 	// fetching all data from TMDB:
 
-	const { data, error } = useQuery(
-		"all",
-		async () => {
-			const endpoints = Object.values(requests).map((url) =>
-				axios.get(url).then((response) => response.data.results)
-			);
-			const responses = await Promise.all(endpoints);
-			const mergedData = responses.flat();
-			const uniqueData = mergedData.filter(
-				(item, index, self) => index === self.findIndex((t) => t.id === item.id)
-			);
-			return uniqueData;
-		},
-		{
-			staleTime: 600000,
-		}
-	);
+	// const { data, error } = useQuery(
+	// 	"all",
+	// 	async () => {
+	// 		const endpoints = Object.values(requests).map((url) =>
+	// 			axios.get(url).then((response) => response.data.results)
+	// 		);
+	// 		const responses = await Promise.all(endpoints);
+	// 		const mergedData = responses.flat();
+	// 		const uniqueData = mergedData.filter(
+	// 			(item, index, self) => index === self.findIndex((t) => t.id === item.id)
+	// 		);
+	// 		return uniqueData;
+	// 	},
+	// 	{
+	// 		staleTime: 600000,
+	// 	}
+	// );
+
+	const {data, error} = useQueries([])
 
 	error && console.error("error:", error.message);
 
