@@ -1,18 +1,9 @@
-import axios from "../axios/axios";
 import triangle from "../icons/triangle.png";
 import info from "../icons/info.png";
-import { useQuery } from "react-query";
+import { useTMDBdata } from "../hooks/useTMDBdata";
 
 const Banner = ({ fetchUrl, queryId }) => {
-	const { data, isLoading, isError, error } = useQuery(
-		queryId,
-		() => {
-			return axios.get(fetchUrl).then((res) => res.data.results);
-		},
-		{
-			staleTime: 600000,
-		}
-	);
+	const { data, isLoading, isError, error } = useTMDBdata(fetchUrl, queryId);
 
 	const randomBannerIndex = data
 		? data[Math.floor(Math.random() * data.length - 1)]
@@ -42,7 +33,7 @@ const Banner = ({ fetchUrl, queryId }) => {
 								? "Loading..."
 								: randomBannerIndex?.title ||
 								  randomBannerIndex?.name ||
-								randomBannerIndex?.original_name}
+								  randomBannerIndex?.original_name}
 						</h1>
 						{randomBannerIndex && (
 							<div className='buttons'>
