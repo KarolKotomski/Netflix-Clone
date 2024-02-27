@@ -1,12 +1,8 @@
-import axios from "../axios/axios";
 import { useQuery } from "react-query";
+import { fetchData } from "../axios/functions";
 
 export const useTMDBdata = (queryKey, fetchUrl) => {
-	const fetchData = () => {
-		return axios.get(fetchUrl).then((res) => res.data.results);
-	};
-
-	return useQuery(queryKey, fetchData, {
+	return useQuery(queryKey, () => fetchData(fetchUrl), {
 		staleTime: Infinity,
 	});
 };

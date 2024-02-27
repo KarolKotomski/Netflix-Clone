@@ -25,7 +25,7 @@ function App() {
 
 	return (
 		<QueryClientProvider client={client}>
-			<SearchContextProvider>
+			
 				<BrowserRouter>
 					<Suspense fallback={<Fallback />}>
 						<Routes>
@@ -37,11 +37,12 @@ function App() {
 								<Route path='tvshows' element={<BrowseTvShows />} />
 								<Route path='movies' element={<BrowseMovies />} />
 							</Route>
+							
 							<Route path='*' element={<NoMatch />} />
 						</Routes>
 					</Suspense>
 				</BrowserRouter>
-			</SearchContextProvider>
+		
 			<ReactQueryDevtools initialIsOpen={false} position='bottom-right' />
 		</QueryClientProvider>
 	);

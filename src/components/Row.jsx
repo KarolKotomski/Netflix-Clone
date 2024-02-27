@@ -4,14 +4,12 @@ import slider_arrow_right from "../icons/slider_arrow_right.png";
 import slider_arrow_left from "../icons/slider_arrow_left.png";
 import { useTMDBdata } from "../hooks/useTMDBdata";
 
-const Row = ({ title, isLargeRow = false, content={} }) => {
+const Row = ({ title, isLargeRow = false, content = {} }) => {
 	const { queryKey, fetchUrl } = content;
 	const [isMoved, setIsMoved] = useState(false);
 	const { base_url, query, searchResults } = useContext(SearchContext);
 
-	const { data, error } = useTMDBdata(queryKey, fetchUrl);
-
-	error && console.error("error:", error.message);
+	const { data } = useTMDBdata(queryKey, fetchUrl);
 
 	const rowRef = useRef(null);
 

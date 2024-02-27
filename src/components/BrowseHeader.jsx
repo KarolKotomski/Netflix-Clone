@@ -9,6 +9,7 @@ import { Link, NavLink } from "react-router-dom";
 import DropdownMenu from "./DropdownMenu";
 import DropdownNotifications from "./DropdownNotifications";
 import { SearchContext } from "../context/SearchContext";
+import { useAllTMDBdata } from "../hooks/useAllTMDBdata";
 
 const BrowseHeader = () => {
 	const { query, setQuery, handleSearch } = useContext(SearchContext);
@@ -18,7 +19,9 @@ const BrowseHeader = () => {
 	const [isSearchActive, setIsSearchActive] = useState(false);
 
 	const searchInputRef = useRef(null);
-	const searchInputField = useRef(null);
+	const searchInputFieldRef = useRef(null);
+
+	const tmdbRequests = useAllTMDBdata(isSearchActive);
 
 	const handleClick = () => {
 		window.scrollTo(0, 0);
@@ -28,29 +31,11 @@ const BrowseHeader = () => {
 	// Search Menu:
 	const handleOpenSearch = () => {
 		setIsSearchActive(true);
-		searchInputField.current.focus();
+		searchInputFieldRef.current.focus();
 	};
 
 	const handleCloseSearch = () => {
 		setIsSearchActive(false);
-	};
-
-	// Dropdown Menu:
-	const handleOpenDrop = () => {
-		setIsDropActive(true);
-	};
-
-	const handleCloseDrop = () => {
-		setIsDropActive(false);
-	};
-
-	// DropdownNotifications Menu:
-	const handleOpenDropNotif = () => {
-		setIsDropNotifActive(true);
-	};
-
-	const handleCloseDropNotif = () => {
-		setIsDropNotifActive(false);
 	};
 
 	// Transition Header:
@@ -119,7 +104,7 @@ const BrowseHeader = () => {
 									value={query}
 									onChange={handleSearch}
 									placeholder='Type your title'
-									ref={searchInputField}
+									ref={searchInputFieldRef}
 									maxLength={15}
 									name='search'
 								/>
@@ -141,8 +126,8 @@ const BrowseHeader = () => {
 						)}
 						<div
 							className='bell'
-							onMouseOver={() => handleOpenDropNotif()}
-							onMouseLeave={() => handleCloseDropNotif()}>
+							onMouseOver={() => setIsDropNotifActive(true)}
+							onMouseLeave={() => setIsDropNotifActive(false)}>
 							<img src={bell} alt='notifications bell' />
 							<div className={`arrow ${isDropNotifActive && "open"}`}>
 								<img src={caret} alt='caret icon'></img>
@@ -151,8 +136,8 @@ const BrowseHeader = () => {
 						</div>
 						<div
 							className='profile'
-							onMouseOver={() => handleOpenDrop()}
-							onMouseLeave={() => handleCloseDrop()}>
+							onMouseOver={() => setIsDropActive(true)}
+							onMouseLeave={() => setIsDropActive(false)}>
 							<div className='avatar'>
 								<img src={avatar} alt='profile icon' />
 								<div className={`arrow ${isDropActive && "open"}`}>
