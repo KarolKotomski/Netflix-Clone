@@ -1,14 +1,18 @@
 import triangle from "../icons/triangle.png";
 import info from "../icons/info.png";
 import { useTMDBdata } from "../hooks/useTMDBdata";
+import { useMemo } from "react";
 
 const Banner = ({ content }) => {
 	const { queryKey, fetchUrl } = content;
 	const { data, isLoading, isError, error } = useTMDBdata(queryKey, fetchUrl);
 
-	const randomBannerIndex = data
-		? data[Math.floor(Math.random() * data.length - 1)]
-		: null;
+	const randomBannerIndex = useMemo(() => {
+		if (data && data.length > 0) {
+			return data[Math.floor(Math.random() * data.length)];
+		}
+		return null;
+	}, [data]);
 
 	isError && console.error("error:", error.message);
 

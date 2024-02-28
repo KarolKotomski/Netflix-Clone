@@ -12,7 +12,8 @@ import { SearchContext } from "../context/SearchContext";
 import { useAllTMDBdata } from "../hooks/useAllTMDBdata";
 
 const BrowseHeader = () => {
-	const { query, setQuery, handleSearch } = useContext(SearchContext);
+	const { query, setQuery, handleSearch, setAllData } =
+		useContext(SearchContext);
 	const [show, handleShow] = useState(false);
 	const [isDropActive, setIsDropActive] = useState(false);
 	const [isDropNotifActive, setIsDropNotifActive] = useState(false);
@@ -21,7 +22,17 @@ const BrowseHeader = () => {
 	const searchInputRef = useRef(null);
 	const searchInputFieldRef = useRef(null);
 
-	const tmdbRequests = useAllTMDBdata(isSearchActive);
+	const allRequests = useAllTMDBdata();
+
+	useEffect(() => {
+		if (isSearchActive) {
+			const flatDataArray = allRequests.flatMap((request) => request.data);
+			const uniqueDataArray = flatDataArray.filter(
+				(item, index, self) => index === self.findIndex((t) => t.id === item.id)
+			);
+			setAllData(uniqueDataArray);
+		}
+	}, [isSearchActive]);
 
 	const handleClick = () => {
 		window.scrollTo(0, 0);
