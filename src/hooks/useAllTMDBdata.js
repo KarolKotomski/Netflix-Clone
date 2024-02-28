@@ -7,7 +7,6 @@ export const useAllTMDBdata = () => {
 		return {
 			queryKey: queryKey,
 			queryFn: () => fetchData(fetchUrl),
-			staleTime: Infinity,
 		};
 	});
 
