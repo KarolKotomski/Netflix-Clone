@@ -1,23 +1,15 @@
 import { useQueries } from "react-query";
 import { fetchData } from "../axios/functions";
 import requests from "../axios/requests";
-import { useEffect, useState } from "react";
 
-export const useAllTMDBdata = (isSearchActive) => {
-	const [allQueries, setAllQueries] = useState([]);
+export const useAllTMDBdata = () => {
+	const queries = requests.map(({ queryKey, fetchUrl }) => {
+		return {
+			queryKey: queryKey,
+			queryFn: () => fetchData(fetchUrl),
+			staleTime: Infinity,
+		};
+	});
 
-	useEffect(() => {
-		if (isSearchActive) {
-			const queries = requests.map((request) => {
-				return {
-					queryKey: request.queryKey,
-					queryFn: () => fetchData(request.fetchUrl),
-					staleTime: Infinity,
-				};
-			});
-			setAllQueries(queries);
-		}
-	}, [isSearchActive]);
-
-	return useQueries(allQueries);
+	return useQueries(queries);
 };
