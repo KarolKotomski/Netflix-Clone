@@ -29,8 +29,8 @@ const Faq = () => {
 									<img src={plus} alt='plus sign' />
 								</div>
 								<div className={selected === i ? "answer_show" : "answer"}>
-									{item.answer.split("\n").map((line, j) => (
-										<p key={j}>{line}</p>
+									{item.answer.split("\n").map((paragraph, index) => (
+										<p key={index}>{paragraph}</p>
 									))}
 								</div>
 							</div>
